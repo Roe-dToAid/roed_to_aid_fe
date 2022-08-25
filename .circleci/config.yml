@@ -10,11 +10,11 @@ jobs:
       - node/install-packages:
           pkg-manager: npm
       - run:
+          command: npm run cypress
           name: Run tests
-          command: npm run cy:run
-      - run :
-          name : Run build
+      - run:
           command: npm run build
+          name: Build app
       - persist_to_workspace:
           root: ~/project
           paths:
@@ -22,4 +22,4 @@ jobs:
 workflows:
   test_my_app:
     jobs:
-      - cypress/run
+      - build_and_test
