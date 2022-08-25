@@ -17,7 +17,7 @@ jobs:
           command: yarn build
           name: Build app
       - persist_to_workspace:
-          root: ~/project
+          root: ~/roed_to_aid_fe
           paths:
             - .
 
@@ -25,7 +25,7 @@ jobs:
     executor: heroku/default
     steps:
       - attach_workspace:
-          at: ~/project
+          at: ~/roed_to_aid_fe
       - heroku/deploy-via-git:
           force: true # force push when pushing to the heroku remote, see: https://devcenter.heroku.com/articles/git
 
