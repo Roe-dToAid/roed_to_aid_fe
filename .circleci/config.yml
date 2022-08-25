@@ -11,7 +11,8 @@ jobs:
       - node/install-packages:
           pkg-manager: npm
       - run:
-          command: npm test
+          command: npm run cypress
+#           command: npm test
           name: Run tests
       - run:
           command: npm run build
