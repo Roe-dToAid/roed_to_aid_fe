@@ -1,7 +1,7 @@
 version: 2.1
 orbs:
   node: circleci/node@5.0.2
-  cypress: cypress-io/cypress@2.1.0
+
 jobs:
   build_and_test:
     executor: node/default
@@ -10,10 +10,10 @@ jobs:
       - node/install-packages:
           pkg-manager: npm
       - run:
-          command: npm run cy:run
+          command: npm test
           name: Run tests
       - run:
-          command: npm run build
+          command: yarn build
           name: Build app
       - persist_to_workspace:
           root: ~/project
