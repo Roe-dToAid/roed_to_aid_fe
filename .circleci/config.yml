@@ -17,6 +17,6 @@ jobs:
           name: Run build
           command: npm run build
       - persist_to_workspace:
-          root: ~/project
+          root: ~/roed_to_aid_fe
           paths:
             - .
