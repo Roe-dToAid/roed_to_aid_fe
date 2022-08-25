@@ -13,7 +13,7 @@ jobs:
           command: npm test
           name: Run tests
       - run:
-          command: yarn build
+          command: npm run build
           name: Build app
       - persist_to_workspace:
           root: ~/project
