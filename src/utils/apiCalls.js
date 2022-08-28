@@ -10,12 +10,12 @@ export const getAllAuthorizedClinics = async () => {
   return await response.json();
 };
 
-// export const getAllMisinformationClinics = async () => {
-//   const URL =
-//     "https://roed-to-aide-be.herokuapp.com/api/v1/misinformation_centers";
-//   const response = await fetch(URL, { method: "GET" });
-//   return await response.json();
-// };
+export const getAllMisinformationClinics = async () => {
+  const URL =
+    "https://roed-to-aide-be.herokuapp.com/api/v1/misinformation_centers";
+  const response = await fetch(URL, { method: "GET" });
+  return await response.json();
+};
 
 export const getAllResources = async () => {
   const URL = "https://roed-to-aide-be.herokuapp.com/api/v1/resources";
