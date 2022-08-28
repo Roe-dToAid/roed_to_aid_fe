@@ -9,6 +9,11 @@ export const NavBar = () => {
       <Link to="/" className="logo-link">
         <div className="logo-container">
           <img src={logo} alt="logo" className="logo-img"></img>
+          <div className="nav-tabs">
+            <h1>ABOUT</h1>
+            <h1>FIND A CLINIC</h1>
+            <h1>STATE STATUS</h1>
+          </div>
         </div>
       </Link>
     </nav>
