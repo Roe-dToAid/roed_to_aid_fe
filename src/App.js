@@ -16,7 +16,7 @@ const App = () => {
   const [misinformationCenters, setMisinformationCenters] = useState([]);
 
   useEffect(() => {
-    getAllStatePolicies().then((data) => setPolicies(data.data));
+    getAllStatePolicies().then((data) => setPolicies(data.data.state));
     getAllResources().then((data) => setResources(data.data));
     getAllAuthorizedClinics().then((data) => setAuthorizedClinics(data.data));
     getAllMisinformationClinics().then((data) =>
