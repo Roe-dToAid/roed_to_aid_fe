@@ -1,0 +1,20 @@
+.nav-container {
+background-color: #EAB93D ;
+  padding: 0 1.5rem;
+}
+
+.logo-link {
+    text-decoration: none;
+    color: black;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nav-tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

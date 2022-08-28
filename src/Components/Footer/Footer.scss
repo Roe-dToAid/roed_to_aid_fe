@@ -1,0 +1,19 @@
+.footer-logo-container {
+  background-color: #3c3525;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.team-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: baseline;
+  color: #ffffff;
+}
+
+.be-container {
+    margin: 2rem;
+}
