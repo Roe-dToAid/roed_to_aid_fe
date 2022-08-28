@@ -6,11 +6,21 @@ import { Link } from "react-router-dom";
 export const Footer = () => {
   return (
     <footer className="footer">
-      <a>
-        FrontEnd Team: Rachel Allen Catlyn Bowles Irmak Erdem Lidia Karpinski
-        <br />
-        BackEnd Team: Casey Fazio Wesley Garcia Bryce Wein
-      </a>
+      <div className="footer-logo-container">
+        <div className="footer-img-container">
+          <img src={logo} alt="logo" className="logo-img"></img>
+        </div>
+        <div className="team-container">
+          <div className="fe-container">
+            FrontEnd Team: <br /> Rachel Allen <br />
+            Catlyn Bowles <br /> Irmak Erdem <br /> Lidia Karpinski
+          </div>
+          <div className="be-container">
+            BackEnd Team: <br /> Casey Fazio <br /> Wesley Garcia <br />
+            Bryce Wein
+          </div>
+        </div>
+      </div>
     </footer>
   );
 };
