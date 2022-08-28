@@ -3,7 +3,7 @@ import "./NavBar.scss";
 import logo from "./../../assets/Roe'dToAidLogo.png";
 import { Link } from "react-router-dom";
 
-export const NavBar = () => {
+const NavBar = () => {
   return (
     <nav className="nav-container">
       <Link to="/" className="logo-link">
@@ -19,3 +19,5 @@ export const NavBar = () => {
     </nav>
   );
 };
+
+export default NavBar;

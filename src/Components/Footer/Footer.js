@@ -3,7 +3,7 @@ import "./Footer.scss";
 import logo from "./../../assets/Roe'dToAidLogo.png";
 import { Link } from "react-router-dom";
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-logo-container">
@@ -24,3 +24,5 @@ export const Footer = () => {
     </footer>
   );
 };
+
+export default Footer;
