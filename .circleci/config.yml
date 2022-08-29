@@ -1,26 +1,67 @@
+# version: 2.1
+# orbs:
+#   node: circleci/node@5.0.2
+#   cypress: cypress-io/cypress@2.1.0
+
+# jobs:
+#   build_and_test:
+#     executor: node/default
+#     steps:
+#       - checkout
+#       - node/install-packages:
+#           pkg-manager: npm 
+#       - run:
+#           command: npm test
+#           name: Run tests
+#       - run:
+#           command: npm run build
+#           name: Build app
+#       - persist_to_workspace:
+#           root: ~/project
+#           paths:
+#             - .
+# workflows:
+#   test_my_app:
+#     jobs:
+#       - build_and_test
+
+
 version: 2.1
 orbs:
-  node: circleci/node@5.0.2
+  node: circleci/node@4.7
   cypress: cypress-io/cypress@2.1.0
+  heroku: circleci/heroku@1.2.6
 
 jobs:
-  build_and_test:
+  build:
     executor: node/default
     steps:
       - checkout
       - node/install-packages:
-          pkg-manager: npm 
+          pkg-manager: npm
       - run:
-          command: npm test
-          name: Run tests
-      - run:
+          name: Run build
           command: npm run build
-          name: Build app
       - persist_to_workspace:
           root: ~/project
           paths:
             - .
+  deploy:
+    executor: heroku/default
+    steps:
+      - attach_workspace:
+          at: ~/project
 workflows:
-  test_my_app:
+  test_roed_to_aid_fe:
     jobs:
-      - build_and_test
+      - cypress/run:
+          start: npm start
+      - build
+      - deploy:
+          requires:
+            - cypress/run
+            - build
+          filters:
+            branches:
+              only: main
+
