@@ -8,6 +8,7 @@ const StatePoliciesView = () => {
   useEffect(() => {
     getAllStatePolicies().then((data) => setPolicies(data.data.state));
   }, []);
+  console.log(policies);
   return <h1>policies</h1>;
 };
 
