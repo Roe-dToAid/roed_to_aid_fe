@@ -45,12 +45,10 @@ jobs:
           root: ~/project
           paths:
             - .
- 
+
 workflows:
   test_roed_to_aid_fe:
     jobs:
       - cypress/run:
           start: npm start
       - build
-
- 
