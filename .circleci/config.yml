@@ -52,11 +52,5 @@ workflows:
       - cypress/run:
           start: npm start
       - build
-      - deploy:
-          requires:
-            - cypress/run
-            - build
-          filters:
-            branches:
-              only: main
 
+ 
