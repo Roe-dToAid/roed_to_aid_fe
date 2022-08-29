@@ -1,5 +1,6 @@
 import React from "react";
-import { Route, Router, Switch } from "react-router-dom";
+import { Route } from "react-router-dom";
+//put Switch back
 import HomeView from "../../Views/HomeView/HomeView";
 import AboutView from "../../Views/AboutView/AboutView";
 import ClinicsView from "../../Views/ClinicsView/ClinicsView";
