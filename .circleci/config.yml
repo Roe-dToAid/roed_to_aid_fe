@@ -30,7 +30,6 @@ version: 2.1
 orbs:
   node: circleci/node@4.7
   cypress: cypress-io/cypress@2.1.0
-  heroku: circleci/heroku@1.2.6
 
 jobs:
   build:
@@ -46,11 +45,7 @@ jobs:
           root: ~/project
           paths:
             - .
-  deploy:
-    executor: heroku/default
-    steps:
-      - attach_workspace:
-          at: ~/project
+ 
 workflows:
   test_roed_to_aid_fe:
     jobs:
