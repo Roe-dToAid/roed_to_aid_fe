@@ -7,18 +7,16 @@ import { gql, useQuery } from '@apollo/client';
 
 import "./App.scss";
 
-const GET_STATES = gql`
-query GetStates {
-  states {
-    id
-  }
-}
-`;
-
 const App = () => {
-  
+
+  const GET_STATES = gql`
+    query GetStates {
+      states {
+        id
+      }
+    }
+  `;
   console.log(GET_STATES)
-  const { loading, error, data } = useQuery(GET_STATES);
   return (
     <main className="App">
       <NavBar />
