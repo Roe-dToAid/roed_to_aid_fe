@@ -4,11 +4,17 @@ import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import { ApolloProvider } from "@apollo/react-hooks";
-import client from "./apolloClient";
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+const client = new ApolloClient({
+  uri: 'https://roed-to-aide-be.herokuapp.com/graphql?api_key=ca912ed1df0d1c0f014ec94e3c731881',
+  // uri: 'https://roed-to-aide-be.herokuapp.com/graphql',
+  cache: new InMemoryCache()
+});
+
 root.render(
   <ApolloProvider client={client}>
     <BrowserRouter>
