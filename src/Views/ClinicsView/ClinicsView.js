@@ -1,23 +1,54 @@
 import React from "react";
-// // import { useEffect, useState } from "react";
-// import {
-//   getAllResources,
-//   getAllMisinformationClinics,
-//   getAllAuthorizedClinics,
-// } from "../../utils/apiCalls";
+import { useQuery, gql } from '@apollo/client'
+
+
+const GET_CLINICS = gql`
+  query {
+    state(abbreviation: "TX") {
+      name
+      id
+      abbreviation
+      resources {
+        id
+        stateId
+        name
+        website
+        service
+        active
+        bipocFocus
+      }
+      misinformationCenters {
+        id
+        stateId
+        name
+        address
+        source
+        city
+        zip
+      }
+      authorizedClinics {
+        id
+        stateId
+        name
+        city
+        zip
+        phone
+        services
+        website
+        address
+        source
+      }
+    }
+  }
+`;
+
 
 const ClinicsView = () => {
-  //   const [authorizedClinics, setAuthorizedClinics] = useState([]);
-  //   const [misinformationCenters, setMisinformationCenters] = useState([]);
-  //   const [resources, setResources] = useState([]);
-
-  // useEffect(() => {
-  //     getAllResources().then((data) => setResources(data.data));
-  //     getAllAuthorizedClinics().then((data) => setAuthorizedClinics(data.data));
-  //     getAllMisinformationClinics().then((data) =>
-  //       setMisinformationCenters(data.data)
-  //     );
-  //   }, []);
+  let { data, loading, error } = useQuery(GET_CLINICS)
+  if (loading) console.log('Loading...');
+  if (error) console.log("error!", error.message)
+  if (data) console.log(data)
+  
   return <h1>clinics</h1>;
 };
 
