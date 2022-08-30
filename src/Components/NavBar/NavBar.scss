@@ -3,7 +3,8 @@ background-color: #EAB93D ;
   padding: 0 1.5rem;
 }
 
-.logo-link {
+.logo-link,
+.nav-tabs {
     text-decoration: none;
     color: black;
 }
@@ -14,6 +15,7 @@ background-color: #EAB93D ;
     justify-content: space-between;
 }
 .nav-tabs {
+    text-decoration: none;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
