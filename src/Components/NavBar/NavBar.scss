@@ -1,6 +1,10 @@
 .nav-container {
 background-color: #EAB93D ;
   padding: 0 1.5rem;
+  text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .logo-link,
@@ -9,11 +13,11 @@ background-color: #EAB93D ;
     color: black;
 }
 
-.logo-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
+// .logo-container {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+// }
 .nav-tabs {
     text-decoration: none;
     display: flex;
