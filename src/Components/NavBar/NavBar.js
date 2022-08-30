@@ -2,12 +2,10 @@ import React from "react";
 import "./NavBar.scss";
 import logo from "./../../assets/Roe'dToAidLogo.png";
 import { Link } from "react-router-dom";
-import Routes from "../Routes/Routes";
 
 const NavBar = () => {
   return (
     <nav className="nav-container">
-      <Routes>
         <Link to="/" className="logo-link">
           <div className="logo-container">
             <img src={logo} alt="logo" className="logo-img"></img>
@@ -18,7 +16,6 @@ const NavBar = () => {
             </div>
           </div>
         </Link>
-      </Routes>
     </nav>
   );
 };
