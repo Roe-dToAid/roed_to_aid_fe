@@ -1,19 +1,20 @@
 .nav-container {
 background-color: #EAB93D ;
   padding: 0 1.5rem;
-}
-
-.logo-link {
-    text-decoration: none;
-    color: black;
-}
-
-.logo-container {
+  text-decoration: none;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+
+.logo-link,
 .nav-tabs {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-tabs {
+    text-decoration: none;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

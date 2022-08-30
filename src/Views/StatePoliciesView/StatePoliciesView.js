@@ -1,14 +1,43 @@
 import React from "react";
-import { useEffect, useState } from "react";
-import { getAllStatePolicies } from "../../utils/apiCalls";
+import { useQuery, gql } from '@apollo/client'
+
+const GET_POLICIES = gql`
+  query {
+    states {
+      name
+      id
+      abbreviation
+      legal
+      legalDescription
+      source
+      createdAt
+      updatedAt
+    }
+  }
+`;
+
+// const GET_POLICIES = gql`
+//   query {
+//     state(abbreviation: "TX") {
+//       name
+//       id
+//       abbreviation
+//       legal
+//       legalDescription
+//       source
+//       createdAt
+//       updatedAt
+//     }
+//   }
+// `;
+
 
 const StatePoliciesView = () => {
-  const [policies, setPolicies] = useState([]);
-
-  useEffect(() => {
-    getAllStatePolicies().then((data) => setPolicies(data.data.state));
-  }, []);
-  console.log(policies);
+  let { data, loading, error } = useQuery(GET_POLICIES)
+  if (loading) console.log('Loading...');
+  if (error) console.log("error!", error.message)
+  if (data) console.log(data)
+  
   return <h1>policies</h1>;
 };
 
