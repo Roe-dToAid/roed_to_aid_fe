@@ -55,11 +55,13 @@ const StatePoliciesView = () => {
   return (
     <section className='policy-body'>
       <h1 className='policy-header'>Check State Abortion Status</h1>
-      <h2>Legal</h2>
-      <h2>At Risk</h2>
-      <h2>Illegal</h2>
-      <div className='contents'>
-        {data ? policyCards() : <h3>Loading...</h3>}
+      <div className="content-body">
+        <div className='legal-key'>
+          <h2>Legal</h2>
+          <h2>At Risk</h2>
+          <h2>Illegal</h2>
+        </div>
+          {data ? policyCards() : <h3>Loading...</h3>}
       </div>
     </section>
     );
