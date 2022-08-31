@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import { useQuery, gql } from '@apollo/client'
 import PolicyCard from "./PolicyCard/PolicyCard";
 import LegalKey from "./LegalKey/LegalKey";
@@ -56,15 +56,30 @@ const StatePoliciesView = () => {
     }) : null
   }
 
-  const searchItems = (value) => {
-    setSearchInput(value)
-    if (searchInput !== '') {
+  const handleSearchChange = event => {
+    setSearchInput(event.target.value);
+  };
+
+  useEffect(() => {
+      if (searchInput !== '') {
       const filteredData = data.states.filter((item) => {
-        return item.name.toLowerCase().includes(value.toLowerCase())
+        return item.name.toLowerCase().includes(searchInput.toLowerCase())
       })
       setFilteredResults(filteredData)
-    } 
-  }
+    }
+  }, [searchInput]);
+
+  // const searchItems = (value) => {
+  //   setSearchInput(value)
+  //   if (searchInput !== '') {
+  //     const filteredData = data.states.filter((item) => {
+  //       return item.name.toLowerCase().includes(value.toLowerCase())
+  //     })
+  //     setFilteredResults(filteredData)
+  //   } else {
+  //     setFilteredResults(data.states)
+  //   }
+  // }
 
   return (
     <section className='policy-body'>
@@ -72,11 +87,11 @@ const StatePoliciesView = () => {
       <input 
         type='search'
         placeholder='Search for state...'
-        onChange={(e) => searchItems(e.target.value)}
+        onChange={(e) => handleSearchChange(e)}
       />
       <div className="content-body">
         <LegalKey />
-        {searchInput.length ? generatePolicyCards(filteredResults) : data ? generatePolicyCards(data.states) : <h3>Loading...</h3>}
+        {searchInput ? generatePolicyCards(filteredResults) : data ? generatePolicyCards(data.states) : <h3>Loading...</h3>}
       </div>
     </section>
     );
