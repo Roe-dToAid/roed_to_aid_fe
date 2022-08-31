@@ -60,7 +60,7 @@ const StatePoliciesView = () => {
     setSearchInput(value)
     if (searchInput !== '') {
       const filteredData = data.states.filter((item) => {
-        return item.name.toLowerCase().includes(searchInput.toLowerCase())
+        return item.name.toLowerCase().includes(value.toLowerCase())
       })
       setFilteredResults(filteredData)
     } 
@@ -70,7 +70,7 @@ const StatePoliciesView = () => {
     <section className='policy-body'>
       <h1 className='policy-header'>Check state abortion status</h1>
       <input 
-        type='text'
+        type='search'
         placeholder='Search for state...'
         onChange={(e) => searchItems(e.target.value)}
       />
