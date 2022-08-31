@@ -1,0 +1,18 @@
+.info-container {
+  display: flex;
+  flex-direction: row;
+  border: .1rem solid;
+  width: 80%;
+}
+
+.name-container, 
+.legal-description {
+  margin: 1rem;
+}
+
+.name-container {
+  background-color: #768CA0;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
