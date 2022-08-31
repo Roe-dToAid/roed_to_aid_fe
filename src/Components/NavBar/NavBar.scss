@@ -5,6 +5,8 @@ background-color: #EAB93D ;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-flow: row nowrap
+    ;
 }
 
 .logo-link,
