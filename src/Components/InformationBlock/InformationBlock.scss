@@ -1,0 +1,23 @@
+.information-containers {
+  padding: 1rem;
+}
+
+.authorized-clinics-block {
+  border: 0.25rem solid #768ca0;
+  margin: .4rem;
+  .authorized-header {
+    color: #ffffff;
+    background-color: #768ca0;
+    padding-top: .05rem;
+
+  }
+}
+.misinformation-centers-block {
+  border: 0.25rem solid #df6349;
+  margin: .4rem;
+  .misinformation-header {
+    color: #ffffff;
+    background-color: #df6349;
+    padding-top: .05rem;
+  }
+}

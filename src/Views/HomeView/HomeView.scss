@@ -1,6 +1,16 @@
-.welcome-container {
+.home-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    align-content: center;
+}
+
+.group-image {
+    width: 100%;
+}
+.information-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 45%; 
 }
