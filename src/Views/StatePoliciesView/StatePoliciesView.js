@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery, gql } from '@apollo/client'
 import PolicyCard from "./PolicyCard/PolicyCard";
+import LegalKey from "./LegalKey/LegalKey";
 import './StatePolicies.scss'
 
 
@@ -56,12 +57,8 @@ const StatePoliciesView = () => {
     <section className='policy-body'>
       <h1 className='policy-header'>Check State Abortion Status</h1>
       <div className="content-body">
-        <div className='legal-key'>
-          <h2>Legal</h2>
-          <h2>At Risk</h2>
-          <h2>Illegal</h2>
-        </div>
-          {data ? policyCards() : <h3>Loading...</h3>}
+        <LegalKey />
+        {data ? policyCards() : <h3>Loading...</h3>}
       </div>
     </section>
     );

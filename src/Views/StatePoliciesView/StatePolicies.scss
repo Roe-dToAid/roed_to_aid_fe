@@ -12,6 +12,27 @@
 }
 
 h2 {
-  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
+  width: 20rem;
+  color: white;
+  margin: .3rem;
+}
 
+.legal-key {
+  margin: 3rem;
+}
+
+.legal {
+  background-color: #768CA0;
+}
+
+.illegal {
+  background-color: #DF6349;
+}
+
+.at-risk {
+  background-color: #D27736;
 }

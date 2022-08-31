@@ -1,17 +1,25 @@
 .info-strip {
   display: flex;
   flex-direction: row;
-  border: .1rem solid;
+  border: .1rem solid #768CA0;
+  margin: .3rem;
+  width: 60%;
 }
 
 .name-container, 
 .legal-description {
-  margin: 1rem;
+  padding: 1.5rem;
 }
 
 .name-container {
-  background-color: #768CA0;
-  height: 100%;
-  width: 100%;
+  // background-color: #768CA0;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+}
+
+.legal-description {
+  width: 70%;
 }
