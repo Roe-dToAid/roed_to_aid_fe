@@ -1,0 +1,32 @@
+// * {
+//   border: 2px solid green;
+// }
+
+.about-container, .team-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  padding: 2rem;
+}
+
+.team-container {
+  img {
+    width: 60%;
+  }
+}
+
+.illustration {
+  height: 60%;
+  width: 60%;
+}
+
+.mission-container, .inclusivity-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+h2, h3, h4 {
+  font-size: 1.5rem;
+}
