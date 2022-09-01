@@ -22,7 +22,7 @@ const HomeView = () => {
       <div className="preview-block-container">
         <PreviewBlocks />
       </div>
-      <div>
+      <div className="quote-block-container">
         <QuoteBlock />
       </div>
     </div>

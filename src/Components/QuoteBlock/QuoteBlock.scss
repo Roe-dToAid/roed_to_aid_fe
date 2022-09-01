@@ -1,0 +1,11 @@
+.quote-container {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  text-align: center;
+  p {
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+}

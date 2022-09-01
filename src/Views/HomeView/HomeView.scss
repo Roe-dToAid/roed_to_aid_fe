@@ -36,6 +36,18 @@
   width: 100%;
   gap: 1.5rem;
 }
+
+.quote-block-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  width: 100%;
+  gap: 1.5rem;
+}
+
 @media (min-width: 768px) {
   .welcome-container {
     display: flex;
