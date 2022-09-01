@@ -1,11 +1,11 @@
 import React, {useEffect, useState, useRef } from "react";
 import { useQuery, gql } from '@apollo/client'
-import PolicyCard from "./PolicyCard/PolicyCard";
-import LegalKey from "./LegalKey/LegalKey";
+import PolicyCard from "../../Components/PolicyCard/PolicyCard";
+import LegalKey from "../../Components/LegalKey/LegalKey";
 import fight from "./../../assets/fight.png";
-import female from "./../../assets/female.png";
-import NoResults from "./NoResults/NoResults";
-import SearchBar from './SearchBar/SearchBar'
+import fists from "./../../assets/Asset 1.png";
+import NoResults from "../../Components/NoResults/NoResults";
+import SearchBar from '../../Components/SearchBar/SearchBar'
 import './StatePolicies.scss'
 
 const GET_POLICIES = gql`
@@ -72,7 +72,7 @@ const StatePoliciesView = () => {
         <div className='key-container'>
           <img className='policy-images' src={fight} height='200' alt='fight for your right megaphone'></img>
           <LegalKey filterByLegality={filterByLegality} clearSearch={clearSearch}/>
-          <img className='policy-images' src={female} height='200' alt='future is female with fists'></img>
+          <img className='policy-images' src={fists} height='200' alt='future is female with fists'></img>
         </div>
           {searchInput && legalResults ? generatePolicyCards(filteredResults.filter(res => legalResults.includes(res))) :
             searchInput ? generatePolicyCards(filteredResults) : 
