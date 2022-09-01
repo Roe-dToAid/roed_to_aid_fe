@@ -4,7 +4,7 @@ const SearchBar = ({inputRef, handleSearchChange}) => {
   return (
     <input 
       ref={inputRef}
-      className="search"
+      className='search'
       type='search'
       placeholder='Search for state...'
       onChange={(e) => handleSearchChange(e.target.value)}

@@ -3,22 +3,20 @@
   flex-direction: row;
   border: .1rem solid #768CA0;
   margin: .3rem;
-  width: 60%;
+  width: 60%; 
+  .name-container, 
+  .legal-description {
+    padding: 1.5rem;
+  }
+  .name-container {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+  }
+  .legal-description {
+    width: 70%;
+  }
 }
 
-.name-container, 
-.legal-description {
-  padding: 1.5rem;
-}
-
-.name-container {
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30%;
-}
-
-.legal-description {
-  width: 70%;
-}
