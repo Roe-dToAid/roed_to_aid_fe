@@ -13,8 +13,14 @@ import "./AboutView.scss";
 const AboutView = () => {
   return (
     <>
+      <h1>About Roe'd to Aid</h1>
+      <h2>Our Mission</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <img src={yesImage} alt="person holding up fist"></img>
+      <h3>Inclusivity Counts</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <img src={flowerSymbolImage} alt="female symbol with flowers"></img>
+      <h4>Meet the Team</h4>
       <img src={catlynPhoto} alt="headshot of Catlyn"></img>
       <img src={irmakPhoto} alt="headshot of Irmak"></img>
       <img src={lidiaPhoto} alt="headshot of Lidia"></img>
