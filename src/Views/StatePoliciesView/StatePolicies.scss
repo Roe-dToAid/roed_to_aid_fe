@@ -22,11 +22,17 @@ h2 {
   width: 20rem;
   color: white;
   margin: .3rem;
-  cursor: pointer;
 }
 
 .legal-key {
   margin: 1rem;
+}
+
+.legal, 
+.illegal, 
+.at-risk,
+.clear {
+  cursor: pointer;
 }
 
 .legal {

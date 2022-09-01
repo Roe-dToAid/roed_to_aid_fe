@@ -71,7 +71,8 @@ const StatePoliciesView = () => {
         />
         <img src='../../assets/feminist lettering compositions and stickers 2 png-10.png'></img>
         <LegalKey filterByLegality={filterByLegality} clearSearch={clearSearch}/>
-        {searchInput ? generatePolicyCards(filteredResults) : 
+        {searchInput && legalLevel ? generatePolicyCards(filteredResults.filter(res => legalLevel.includes(res))) :
+          searchInput ? generatePolicyCards(filteredResults) : 
           legalLevel ? generatePolicyCards(legalLevel)
           : data ? generatePolicyCards(data.states) : <h3>Loading...</h3>}
       </div>
