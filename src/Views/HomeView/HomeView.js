@@ -1,5 +1,5 @@
 import React from "react";
-import groupImage from "./../../assets/DiverseGroup.png";
+import groupImage from "./../../assets/roed-to-aid-hero.jpg";
 import InformationBlock from "../../Components/InformationBlock/InformationBlock";
 import PreviewBlocks from "../../Components/PreviewBlocks/PreviewBlocks";
 
