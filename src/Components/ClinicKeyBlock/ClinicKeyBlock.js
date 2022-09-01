@@ -5,9 +5,9 @@ import "./ClinicKeyBlock.scss";
 const ClinicKeyBlock = () => {
   return (
     <div className="clinic-key-block-container">
-      <div className="authorized-key-block">
-        <div className="authorized-header">
-          <h2>Authorized</h2>
+      <div className="key-block authorized">
+        <div className="header">
+          <h3>Authorized</h3>
         </div>
         <p>
           Blue clinics are verified safe and provide access to abortion care.
@@ -18,9 +18,9 @@ const ClinicKeyBlock = () => {
         alt="illustration of woman"
         className="my-body-image"
       ></img>
-      <div className="misinformation-key-block">
-        <div className="misinformation-header">
-          <h2>Misinformation</h2>
+      <div className="key-block misinformation">
+        <div className="header">
+          <h3>Misinformation</h3>
         </div>
         <p>
           Red clinics are "crisis centers" and are considered unsafe/harmful.
