@@ -24,6 +24,13 @@ h2 {
   margin: .3rem;
 }
 
+.key-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .legal-key {
   margin: 1rem;
 }

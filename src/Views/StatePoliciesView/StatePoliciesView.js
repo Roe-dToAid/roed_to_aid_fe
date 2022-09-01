@@ -2,6 +2,9 @@ import React, {useEffect, useState, useRef } from "react";
 import { useQuery, gql } from '@apollo/client'
 import PolicyCard from "./PolicyCard/PolicyCard";
 import LegalKey from "./LegalKey/LegalKey";
+import fight from "./../../assets/fight.png";
+import female from "./../../assets/female.png";
+import NoResults from "./NoResults/NoResults";
 import './StatePolicies.scss'
 
 
@@ -72,12 +75,15 @@ const StatePoliciesView = () => {
           placeholder='Search for state...'
           onChange={(e) => handleSearchChange(e)}
         />
-        <img src='../../assets/feminist lettering compositions and stickers 2 png-10.png'></img>
-        <LegalKey filterByLegality={filterByLegality} clearSearch={clearSearch}/>
-        {searchInput && legalLevel ? generatePolicyCards(filteredResults.filter(res => legalLevel.includes(res))) :
-          searchInput ? generatePolicyCards(filteredResults) : 
-          legalLevel ? generatePolicyCards(legalLevel)
-          : data ? generatePolicyCards(data.states) : <h3>Loading...</h3>}
+        <div className='key-container'>
+          <img src={fight} height='200' ></img>
+          <LegalKey filterByLegality={filterByLegality} clearSearch={clearSearch}/>
+          <img src={female} height='200' ></img>
+        </div>
+          {searchInput && legalLevel ? generatePolicyCards(filteredResults.filter(res => legalLevel.includes(res))) :
+            searchInput ? generatePolicyCards(filteredResults) : 
+            legalLevel ? generatePolicyCards(legalLevel) :
+            data ? generatePolicyCards(data.states) : <h3>Loading...</h3>}
       </div>
     </section>
     );
