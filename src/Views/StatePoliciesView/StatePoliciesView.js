@@ -40,7 +40,7 @@ const StatePoliciesView = () => {
       const filteredData = data.states.filter((item) => item.name.toLowerCase().includes(searchInput.toLowerCase()))
       setFilteredResults(filteredData)
     }
-  }, [searchInput]);
+  }, [searchInput, data]);
   
   const generatePolicyCards = (states) => {
     return states.length ? states.map(state => {
