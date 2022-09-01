@@ -1,7 +1,7 @@
 import React from "react";
-import myBodyImage from "./../../assets/feminist lettering compositions and stickers 2 png-03.png";
 import { useQuery, gql } from "@apollo/client";
 import "./ClinicsView.scss";
+import ClinicKeyBlock from "../../Components/ClinicKeyBlock/ClinicKeyBlock";
 
 const GET_CLINICS = gql`
   query {
@@ -53,11 +53,7 @@ const ClinicsView = () => {
     <>
       <h2>Find a safe clinic</h2>
       <div className="heading-container">
-        <img
-          src={myBodyImage}
-          alt="illustration of woman"
-          className="my-body-image"
-        ></img>
+        <ClinicKeyBlock />
       </div>
     </>
   );

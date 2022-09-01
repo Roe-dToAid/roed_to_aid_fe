@@ -1,0 +1,40 @@
+.clinic-key-block-container {
+  img {
+    width: 25%;
+  }
+}
+
+.authorized-key-block {
+  border: 0.25rem solid #768ca0;
+  p {
+    text-align: center;
+    padding: 0.5rem 1.5rem;
+  }
+  .authorized-header {
+    color: #ffffff;
+    background-color: #768ca0;
+    padding-top: 0.05rem;
+    text-align: center;
+    padding: 0.75rem;
+    h2 {
+      margin: 0;
+    }
+  }
+}
+.misinformation-key-block {
+  border: 0.25rem solid #df6349;
+  p {
+    text-align: center;
+    padding: 0.5rem 1.5rem;
+  }
+  .misinformation-header {
+    color: #ffffff;
+    background-color: #df6349;
+    padding-top: 0.05rem;
+    text-align: center;
+    padding: 0.75rem;
+    h2 {
+      margin: 0;
+    }
+  }
+}
