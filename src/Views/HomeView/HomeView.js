@@ -2,7 +2,7 @@ import React from "react";
 import groupImage from "./../../assets/roed-to-aid-hero.jpg";
 import InformationBlock from "../../Components/InformationBlock/InformationBlock";
 import PreviewBlocks from "../../Components/PreviewBlocks/PreviewBlocks";
-
+import QuoteBlock from "../../Components/QuoteBlock/QuoteBlock";
 import "./HomeView.scss";
 
 const HomeView = () => {
@@ -21,6 +21,9 @@ const HomeView = () => {
       </div>
       <div className="preview-block-container">
         <PreviewBlocks />
+      </div>
+      <div>
+        <QuoteBlock />
       </div>
     </div>
   );
