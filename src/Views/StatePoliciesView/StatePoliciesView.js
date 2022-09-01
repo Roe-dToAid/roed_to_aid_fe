@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useRef } from "react";
 import { useQuery, gql } from '@apollo/client'
 import PolicyCard from "./PolicyCard/PolicyCard";
 import LegalKey from "./LegalKey/LegalKey";
@@ -25,6 +25,7 @@ const StatePoliciesView = () => {
   const [searchInput, setSearchInput] = useState('')
   const [legalLevel, setLegalLevel] = useState('')
   const [filteredResults, setFilteredResults] = useState([])
+  const inputRef = useRef(null)
   
   const handleSearchChange = event => {
     setSearchInput(event.target.value);
@@ -43,6 +44,7 @@ const StatePoliciesView = () => {
   }
 
   const clearSearch = () => {
+    inputRef.current.value = ''
     setLegalLevel('')
     setSearchInput('')
   }
@@ -64,7 +66,8 @@ const StatePoliciesView = () => {
     <section className='policy-body'>
       <h1 className='policy-header'>Check state abortion status</h1>
       <div className="content-body">
-        <input className="search"
+        <input ref={inputRef}
+          className="search"
           type='search'
           placeholder='Search for state...'
           onChange={(e) => handleSearchChange(e)}
