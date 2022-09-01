@@ -72,9 +72,9 @@ const StatePoliciesView = () => {
       <div className="content-body">
         <SearchBar inputRef={inputRef} handleSearchChange={handleSearchChange}/>
         <div className='key-container'>
-          <img src={fight} height='200' ></img>
+          <img src={fight} height='200' alt='fight for your right megaphone'></img>
           <LegalKey filterByLegality={filterByLegality} clearSearch={clearSearch}/>
-          <img src={female} height='200' ></img>
+          <img src={female} height='200' alt='future is female with fists'></img>
         </div>
           {searchInput && legalLevel ? generatePolicyCards(filteredResults.filter(res => legalLevel.includes(res))) :
             searchInput ? generatePolicyCards(filteredResults) : 
