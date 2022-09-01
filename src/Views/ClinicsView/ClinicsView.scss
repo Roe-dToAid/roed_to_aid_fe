@@ -1,1 +1,13 @@
+.heading-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 1.5rem;
+  gap: 1.5rem;
+}
 
+@media (min-width: 890px) {
+  .heading-container {
+    flex-wrap: nowrap;
+  }
+}

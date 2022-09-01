@@ -34,7 +34,7 @@ const ToggleClinicsButton = () => {
           aria-label="authorized only"
           className="toggle-button"
         >
-          Authorized Only
+          Authorized
         </ToggleButton>
       </ToggleButtonGroup>
     </div>

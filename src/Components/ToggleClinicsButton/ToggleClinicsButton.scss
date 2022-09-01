@@ -1,0 +1,16 @@
+.toggle-button {
+  // font-size: 2.75vw !important;
+  color: #000000 !important;
+  background-color: #F0D0A3 !important;
+  cursor: pointer;
+}
+
+.toggle-button:hover {
+  background-color: #D27736 !important;
+  transform: none;
+}
+
+.Mui-selected {
+  background-color: #EAB93D !important;
+  border: solid 2px #000000 !important;
+}
