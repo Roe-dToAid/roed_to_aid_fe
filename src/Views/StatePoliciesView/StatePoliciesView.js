@@ -3,14 +3,13 @@ import { useQuery, gql } from '@apollo/client'
 import PolicyCard from "./PolicyCard/PolicyCard";
 import LegalKey from "./LegalKey/LegalKey";
 import './StatePolicies.scss'
-import { clear } from "@testing-library/user-event/dist/clear";
+
+
 
 const GET_POLICIES = gql`
   query {
     states {
-      id
       name
-      abbreviation
       legal
       legalDescription
     }
@@ -39,7 +38,6 @@ const StatePoliciesView = () => {
   }, [searchInput]);
 
   const filterByLegality = (legalSearch) => {
-    setSearchInput('')
     const filteredByStatus = data.states.filter((state) => state.legal === legalSearch)
     setLegalLevel(filteredByStatus)
   }
@@ -50,18 +48,16 @@ const StatePoliciesView = () => {
   }
 
   const generatePolicyCards = (states) => {
-    return data.states.length ? states.map(state => {
+    return data.states.length && states.map(state => {
       return (
         <PolicyCard 
-          id={state.id}
           key={state.id}
           name={state.name}
-          abbreviation={state.abbreviation}
           legal={state.legal}
           legalDescription={state.legalDescription}
         />
       )
-    }) : null
+    }) 
   }
 
   return (
@@ -73,6 +69,7 @@ const StatePoliciesView = () => {
           placeholder='Search for state...'
           onChange={(e) => handleSearchChange(e)}
         />
+        <img src='../../assets/feminist lettering compositions and stickers 2 png-10.png'></img>
         <LegalKey filterByLegality={filterByLegality} clearSearch={clearSearch}/>
         {searchInput ? generatePolicyCards(filteredResults) : 
           legalLevel ? generatePolicyCards(legalLevel)

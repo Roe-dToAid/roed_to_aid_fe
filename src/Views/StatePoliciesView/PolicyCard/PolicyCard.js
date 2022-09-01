@@ -2,7 +2,7 @@ import React from 'react'
 import './PolicyCard.scss'
 
 
-const PolicyCard = ({id, name, abbreviation, legal, legalDescription}) => {
+const PolicyCard = ({name, legal, legalDescription}) => {
   const setColor = () => {
     return legal === '1' ? '#D27736' : 
     legal === '2' ? '#DF6349' : '#768CA0' 
