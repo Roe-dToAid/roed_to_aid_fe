@@ -3,34 +3,19 @@ import { useQuery, gql } from '@apollo/client'
 import PolicyCard from "./PolicyCard/PolicyCard";
 import LegalKey from "./LegalKey/LegalKey";
 import './StatePolicies.scss'
+import { clear } from "@testing-library/user-event/dist/clear";
 
-
-// const GET_POLICIES = gql`
-//   query {
-  //     state(abbreviation: "TX") {
-    //       name
-    //       id
-    //       abbreviation
-    //       legal
-    //       legalDescription
-    //       source
-    //       createdAt
-    //       updatedAt
-    //     }
-    //   }
-    // `;
-    const GET_POLICIES = gql`
-      query {
-        states {
-          id
-          name
-          abbreviation
-          legal
-          legalDescription
-        }
-      }
-    `;
-    
+const GET_POLICIES = gql`
+  query {
+    states {
+      id
+      name
+      abbreviation
+      legal
+      legalDescription
+    }
+  }
+`;
     
 const StatePoliciesView = () => {
   let { data, loading, error } = useQuery(GET_POLICIES)
@@ -39,8 +24,31 @@ const StatePoliciesView = () => {
   if (data) console.log(data)
 
   const [searchInput, setSearchInput] = useState('')
+  const [legalLevel, setLegalLevel] = useState('')
   const [filteredResults, setFilteredResults] = useState([])
   
+  const handleSearchChange = event => {
+    setSearchInput(event.target.value);
+  };
+
+  useEffect(() => {
+      if (searchInput !== '') {
+      const filteredData = data.states.filter((item) => item.name.toLowerCase().includes(searchInput.toLowerCase()))
+      setFilteredResults(filteredData)
+    }
+  }, [searchInput]);
+
+  const filterByLegality = (legalSearch) => {
+    setSearchInput('')
+    const filteredByStatus = data.states.filter((state) => state.legal === legalSearch)
+    setLegalLevel(filteredByStatus)
+  }
+
+  const clearSearch = () => {
+    setLegalLevel('')
+    setSearchInput('')
+  }
+
   const generatePolicyCards = (states) => {
     return data.states.length ? states.map(state => {
       return (
@@ -56,42 +64,19 @@ const StatePoliciesView = () => {
     }) : null
   }
 
-  const handleSearchChange = event => {
-    setSearchInput(event.target.value);
-  };
-
-  useEffect(() => {
-      if (searchInput !== '') {
-      const filteredData = data.states.filter((item) => {
-        return item.name.toLowerCase().includes(searchInput.toLowerCase())
-      })
-      setFilteredResults(filteredData)
-    }
-  }, [searchInput]);
-
-  // const searchItems = (value) => {
-  //   setSearchInput(value)
-  //   if (searchInput !== '') {
-  //     const filteredData = data.states.filter((item) => {
-  //       return item.name.toLowerCase().includes(value.toLowerCase())
-  //     })
-  //     setFilteredResults(filteredData)
-  //   } else {
-  //     setFilteredResults(data.states)
-  //   }
-  // }
-
   return (
     <section className='policy-body'>
       <h1 className='policy-header'>Check state abortion status</h1>
-      <input 
-        type='search'
-        placeholder='Search for state...'
-        onChange={(e) => handleSearchChange(e)}
-      />
       <div className="content-body">
-        <LegalKey />
-        {searchInput ? generatePolicyCards(filteredResults) : data ? generatePolicyCards(data.states) : <h3>Loading...</h3>}
+        <input className="search"
+          type='search'
+          placeholder='Search for state...'
+          onChange={(e) => handleSearchChange(e)}
+        />
+        <LegalKey filterByLegality={filterByLegality} clearSearch={clearSearch}/>
+        {searchInput ? generatePolicyCards(filteredResults) : 
+          legalLevel ? generatePolicyCards(legalLevel)
+          : data ? generatePolicyCards(data.states) : <h3>Loading...</h3>}
       </div>
     </section>
     );
