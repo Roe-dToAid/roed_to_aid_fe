@@ -1,23 +1,46 @@
 .nav-container {
-background-color: #EAB93D ;
-  padding: 0 1.5rem;
+  background-color: #eab93d;
+  gap: 0 5rem;
+  padding: 1.5rem;
+  padding-bottom: 0;
   text-decoration: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-flow: row nowrap
-    ;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  img {
+    height: 4rem;
+  }
+}
+
+.nav-tabs-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
 .logo-link,
 .nav-tabs {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 .nav-tabs {
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  height: 4rem;
+}
+
+@media (min-width: 549px) {
+  .nav-container {
     justify-content: space-between;
+    padding: 1rem 1.5rem;
+  }
 }
