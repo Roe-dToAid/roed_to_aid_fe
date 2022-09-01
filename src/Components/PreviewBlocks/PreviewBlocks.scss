@@ -4,26 +4,22 @@ button {
     font-family: 'Rubik', sans-serif;
     width: 10rem;
     border: 0.125rem solid #768ca0;
+    margin: auto;
 }
 
 button:hover {
     transform: scale(1.1);
 }
 
-.preview-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: #A46F89;
-    padding: 1rem;
-    width: 100%;
-}
-
-.clinic-preview, .policy-preview, .about-preview {
+.preview {
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+align-items: center;
+justify-content: flex-end;
 background-color: #ffffff;
-padding: 1rem;
-margin: 2rem;
-width: 16rem;
-height: 10rem;
+padding: 1.5rem;
+width: 18rem;
+text-align: center;
+height: 15rem;
 }

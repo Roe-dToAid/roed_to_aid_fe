@@ -1,23 +1,44 @@
-.information-containers {
-  padding: 1rem;
-}
 
 .authorized-clinics-block {
   border: 0.25rem solid #768ca0;
-  margin: .4rem;
+  p {
+    text-align: center;
+    padding: .5rem 1.5rem;
+  }
   .authorized-header {
     color: #ffffff;
     background-color: #768ca0;
     padding-top: .05rem;
+    text-align: center;
+    padding: .75rem;
+    h2 {
+      margin: 0;
+    }
 
   }
 }
 .misinformation-centers-block {
   border: 0.25rem solid #df6349;
-  margin: .4rem;
+  p {
+    text-align: center;
+    padding: .5rem 1.5rem;
+  }
   .misinformation-header {
     color: #ffffff;
     background-color: #df6349;
     padding-top: .05rem;
+    text-align: center;
+    padding: .75rem;
+    h2 {
+      margin: 0;
+    }
   }
+}
+
+@media (min-width: 768px){
+  .authorized-clinics-block, .misinformation-centers-block {
+    width: 45%;
+    align-items: stretch;
+  }
+  
 }

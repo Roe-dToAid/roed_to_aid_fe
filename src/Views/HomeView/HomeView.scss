@@ -1,15 +1,39 @@
 .home-container {
     display: flex;
     flex-direction: column;
-    margin: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    // margin: 1.5rem;
+}
+.welcome-container {
+    img{
+        width: 100%;
+    }
+    h2 {
+        padding: 1.5rem;
+        text-align: center;
+    }
 }
 
-.group-image {
-    width: 100%;
-}
-.information-block {
+.information-block-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 45%; 
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.preview-block-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #A46F89;
+    padding: 2rem;
+    width: 100%;
+    gap: 1.5rem;
 }

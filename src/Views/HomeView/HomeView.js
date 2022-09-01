@@ -8,7 +8,7 @@ import "./HomeView.scss";
 const HomeView = () => {
   return (
     <div className="home-container">
-      <div className="welcome-container-">
+      <div className="welcome-container">
         <img
           src={groupImage}
           alt="image-of-diverse-people"
@@ -16,15 +16,11 @@ const HomeView = () => {
         ></img>
         <h2>A safe space to find a safe place.</h2>
       </div>
-      <br />
-      <br />
-      <div className="information-block">
+      <div className="information-block-container">
         <InformationBlock />
-        {/* <br />
-        <br /> */}
-        <div className="preview-block-container">
-          <PreviewBlocks />
-        </div>
+      </div>
+      <div className="preview-block-container">
+        <PreviewBlocks />
       </div>
     </div>
   );
