@@ -8,8 +8,6 @@ import NoResults from "./NoResults/NoResults";
 import SearchBar from './SearchBar/SearchBar'
 import './StatePolicies.scss'
 
-
-
 const GET_POLICIES = gql`
   query {
     states {
@@ -27,7 +25,7 @@ const StatePoliciesView = () => {
   if (data) console.log(data)
 
   const [searchInput, setSearchInput] = useState('')
-  const [legalLevel, setLegalLevel] = useState('')
+  const [legalResults, setLegalResults] = useState('')
   const [filteredResults, setFilteredResults] = useState([])
   const inputRef = useRef(null)
   
@@ -36,7 +34,7 @@ const StatePoliciesView = () => {
   };
   
   useEffect(() => {
-    if (searchInput !== '') {
+    if (searchInput) {
       const filteredData = data.states.filter((item) => item.name.toLowerCase().includes(searchInput.toLowerCase()))
       setFilteredResults(filteredData)
     }
@@ -57,12 +55,12 @@ const StatePoliciesView = () => {
 
   const filterByLegality = (legalSearch) => {
     const filteredByStatus = data.states.filter((state) => state.legal === legalSearch)
-    setLegalLevel(filteredByStatus)
+    setLegalResults(filteredByStatus)
   }
 
   const clearSearch = () => {
     inputRef.current.value = ''
-    setLegalLevel('')
+    setLegalResults('')
     setSearchInput('')
   }
 
@@ -72,13 +70,13 @@ const StatePoliciesView = () => {
       <div className="content-body">
         <SearchBar inputRef={inputRef} handleSearchChange={handleSearchChange}/>
         <div className='key-container'>
-          <img src={fight} height='200' alt='fight for your right megaphone'></img>
+          <img className='policy-images' src={fight} height='200' alt='fight for your right megaphone'></img>
           <LegalKey filterByLegality={filterByLegality} clearSearch={clearSearch}/>
-          <img src={female} height='200' alt='future is female with fists'></img>
+          <img className='policy-images' src={female} height='200' alt='future is female with fists'></img>
         </div>
-          {searchInput && legalLevel ? generatePolicyCards(filteredResults.filter(res => legalLevel.includes(res))) :
+          {searchInput && legalResults ? generatePolicyCards(filteredResults.filter(res => legalResults.includes(res))) :
             searchInput ? generatePolicyCards(filteredResults) : 
-            legalLevel ? generatePolicyCards(legalLevel) :
+            legalResults ? generatePolicyCards(legalResults) :
             data ? generatePolicyCards(data.states) : <h3>Loading...</h3>}
       </div>
     </section>
