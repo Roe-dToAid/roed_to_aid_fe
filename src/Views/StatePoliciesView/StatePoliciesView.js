@@ -5,6 +5,7 @@ import LegalKey from "./LegalKey/LegalKey";
 import fight from "./../../assets/fight.png";
 import female from "./../../assets/female.png";
 import NoResults from "./NoResults/NoResults";
+import SearchBar from './SearchBar/SearchBar'
 import './StatePolicies.scss'
 
 
@@ -69,12 +70,7 @@ const StatePoliciesView = () => {
     <section className='policy-body'>
       <h1 className='policy-header'>Check state abortion status</h1>
       <div className="content-body">
-        <input ref={inputRef}
-          className="search"
-          type='search'
-          placeholder='Search for state...'
-          onChange={(e) => handleSearchChange(e.target.value)}
-        />
+        <SearchBar inputRef={inputRef} handleSearchChange={handleSearchChange}/>
         <div className='key-container'>
           <img src={fight} height='200' ></img>
           <LegalKey filterByLegality={filterByLegality} clearSearch={clearSearch}/>
