@@ -1,6 +1,7 @@
 import React from "react";
-import { useQuery, gql } from '@apollo/client'
-
+import myBodyImage from "./../../assets/feminist lettering compositions and stickers 2 png-03.png";
+import { useQuery, gql } from "@apollo/client";
+import "./ClinicsView.scss";
 
 const GET_CLINICS = gql`
   query {
@@ -42,14 +43,24 @@ const GET_CLINICS = gql`
   }
 `;
 
-
 const ClinicsView = () => {
-  let { data, loading, error } = useQuery(GET_CLINICS)
-  if (loading) console.log('Loading...');
-  if (error) console.log("error!", error.message)
-  if (data) console.log(data)
-  
-  return <h1>clinics</h1>;
+  let { data, loading, error } = useQuery(GET_CLINICS);
+  if (loading) console.log("Loading...");
+  if (error) console.log("error!", error.message);
+  if (data) console.log(data);
+
+  return (
+    <>
+      <h2>Find a safe clinic</h2>
+      <div className="heading-container">
+        <img
+          src={myBodyImage}
+          alt="illustration of woman"
+          className="my-body-image"
+        ></img>
+      </div>
+    </>
+  );
 };
 
 export default ClinicsView;
