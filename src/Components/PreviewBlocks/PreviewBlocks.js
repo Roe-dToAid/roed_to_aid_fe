@@ -10,7 +10,11 @@ const PreviewBlocks = () => {
   return (
     <>
       <div className="preview">
-        <img src={clinic_img} alt="image-of-uterus" className="icon"></img>
+        <img
+          src={clinic_img}
+          alt="illustration of uterus"
+          className="icon"
+        ></img>
         <p>
           Find a safe place to receive an abortion and avoid misinformation
           centers. Learn what resources are available in states with total bans.
@@ -20,7 +24,7 @@ const PreviewBlocks = () => {
         </Link>
       </div>
       <div className="preview">
-        <img src={gavel_img} alt="image-of-gavel" className="icon"></img>
+        <img src={gavel_img} alt="illustration of gavel" className="icon"></img>
 
         <p>
           After Roe v. Wade was overturned on June 24, 2022, abortion policy is
@@ -31,7 +35,11 @@ const PreviewBlocks = () => {
         </Link>
       </div>
       <div className="preview">
-        <img src={speaker_img} alt="image-of-speaker" className="icon"></img>
+        <img
+          src={speaker_img}
+          alt="illustration of megaphone"
+          className="icon"
+        ></img>
         <p>
           We are driven by the cause. We believe in inclusivity, access, and
           education to keep birthers safe.

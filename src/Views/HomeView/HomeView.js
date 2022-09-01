@@ -11,7 +11,7 @@ const HomeView = () => {
       <div className="welcome-container">
         <img
           src={groupImage}
-          alt="image-of-diverse-people"
+          alt="illustration of diverse people"
           className="group-image"
         ></img>
         <h2>A safe space to find a safe place.</h2>
