@@ -30,16 +30,29 @@ const StatePoliciesView = () => {
   const [filteredResults, setFilteredResults] = useState([])
   const inputRef = useRef(null)
   
-  const handleSearchChange = event => {
-    setSearchInput(event.target.value);
+  const handleSearchChange = (value) => {
+    setSearchInput(value);
   };
-
+  
   useEffect(() => {
-      if (searchInput !== '') {
+    if (searchInput !== '') {
       const filteredData = data.states.filter((item) => item.name.toLowerCase().includes(searchInput.toLowerCase()))
       setFilteredResults(filteredData)
     }
   }, [searchInput]);
+  
+  const generatePolicyCards = (states) => {
+    return states.length ? states.map(state => {
+      return (
+        <PolicyCard 
+          key={state.id}
+          name={state.name}
+          legal={state.legal}
+          legalDescription={state.legalDescription}
+        />
+      )
+    }) : <NoResults />
+  }
 
   const filterByLegality = (legalSearch) => {
     const filteredByStatus = data.states.filter((state) => state.legal === legalSearch)
@@ -52,19 +65,6 @@ const StatePoliciesView = () => {
     setSearchInput('')
   }
 
-  const generatePolicyCards = (states) => {
-    return data.states.length && states.map(state => {
-      return (
-        <PolicyCard 
-          key={state.id}
-          name={state.name}
-          legal={state.legal}
-          legalDescription={state.legalDescription}
-        />
-      )
-    }) 
-  }
-
   return (
     <section className='policy-body'>
       <h1 className='policy-header'>Check state abortion status</h1>
@@ -73,7 +73,7 @@ const StatePoliciesView = () => {
           className="search"
           type='search'
           placeholder='Search for state...'
-          onChange={(e) => handleSearchChange(e)}
+          onChange={(e) => handleSearchChange(e.target.value)}
         />
         <div className='key-container'>
           <img src={fight} height='200' ></img>

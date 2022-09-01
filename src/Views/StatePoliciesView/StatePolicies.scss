@@ -1,3 +1,13 @@
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
+  width: 20rem;
+  color: white;
+  margin: .3rem;
+}
+
 .policy-header {
   font-weight: bold;
   font-size: 2rem;
@@ -14,15 +24,6 @@
   align-items: center;
 }
 
-h2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 3.5rem;
-  width: 20rem;
-  color: white;
-  margin: .3rem;
-}
 
 .key-container {
   display: flex;
