@@ -8,7 +8,7 @@ import irmakPhoto from "./../../assets/IrmakE.jpeg";
 import lidiaPhoto from "./../../assets/LidiaK.jpeg";
 import brycePhoto from "./../../assets/BryceW.jpeg";
 import rachelPhoto from "./../../assets/RachelA.jpeg";
-import "./AboutView.scss";
+import "./Aboutview.scss";
 
 const AboutView = () => {
   return (
