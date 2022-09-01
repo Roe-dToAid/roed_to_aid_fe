@@ -2,10 +2,11 @@ import React from "react";
 import { useQuery, gql } from "@apollo/client";
 import "./ClinicsView.scss";
 import ClinicKeyBlock from "../../Components/ClinicKeyBlock/ClinicKeyBlock";
+import ToggleClinicsButton from "../../Components/ToggleClinicsButton/ToggleClinicsButton";
 
 const GET_CLINICS = gql`
   query {
-    state(abbreviation: "TX") {
+    state(abbreviation: "") {
       name
       id
       abbreviation
@@ -53,6 +54,9 @@ const ClinicsView = () => {
     <>
       <h2>Find a safe clinic</h2>
       <div className="heading-container">
+        <div>
+          <ToggleClinicsButton />
+        </div>
         <ClinicKeyBlock />
       </div>
     </>
