@@ -36,3 +36,13 @@
   width: 100%;
   gap: 1.5rem;
 }
+@media (min-width: 768px) {
+  .welcome-container {
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 45%;
+      margin: auto;
+    }
+  }
+}
