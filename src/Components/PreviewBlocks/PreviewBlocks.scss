@@ -1,25 +1,31 @@
 button {
-    background-color: #EAB93D ;
-    padding: .5rem;
-    font-family: 'Rubik', sans-serif;
-    width: 10rem;
-    border: 0.125rem solid #768ca0;
-    margin: auto;
+  background-color: #eab93d;
+  padding: 0.5rem;
+  font-family: "Rubik", sans-serif;
+  width: 10rem;
+  border: 0.125rem solid #768ca0;
+  margin: auto;
+  cursor: pointer;
 }
 
 button:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.icon {
+  width: 4rem;
+  margin: auto;
 }
 
 .preview {
-display: flex;
-flex-direction: column;
-flex-wrap: nowrap;
-align-items: center;
-justify-content: flex-end;
-background-color: #ffffff;
-padding: 1.5rem;
-width: 18rem;
-text-align: center;
-height: 15rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  width: 18rem;
+  text-align: center;
+  height: 15rem;
 }
