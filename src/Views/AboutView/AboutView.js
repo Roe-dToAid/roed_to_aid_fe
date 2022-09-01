@@ -23,14 +23,14 @@ const AboutView = () => {
       <img className='illustration' src={yesImage} alt="person holding up fist"></img>
 
       <div className='inclusivity-container'>
-        <h3>Inclusivity Counts</h3>
+        <h2>Inclusivity Counts</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
       
       <img className='illustration' src={flowerSymbolImage} alt="female symbol with flowers"></img>
       
       <div className='team-container'>
-        <h4>Meet the Team</h4>
+        <h2>Meet the Team</h2>
         <img src={rachelPhoto} alt="headshot of Rachel"></img>
         <img src={catlynPhoto} alt="headshot of Catlyn"></img>
         <img src={irmakPhoto} alt="headshot of Irmak"></img>

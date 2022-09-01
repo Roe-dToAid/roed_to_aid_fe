@@ -53,7 +53,7 @@ const ClinicsView = () => {
 
   return (
     <>
-      <h2>Find a safe clinic</h2>
+      <h1>Find a safe clinic</h1>
       <div className="heading-container">
         <div>
           <StateSelector />

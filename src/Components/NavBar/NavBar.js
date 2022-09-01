@@ -10,14 +10,14 @@ const NavBar = () => {
         <img src={logo} alt="logo" className="logo-img"></img>
       </Link>
       <div className="nav-tabs-container">
-        <Link to="/about" className="nav-tabs">
-          <p>ABOUT</p>
-        </Link>
         <Link to="/clinics" className="nav-tabs">
           <p>FIND A CLINIC</p>
         </Link>
         <Link to="/states-policies" className="nav-tabs">
           <p>STATE STATUS</p>
+        </Link>
+        <Link to="/about" className="nav-tabs">
+          <p>ABOUT</p>
         </Link>
       </div>
     </nav>
