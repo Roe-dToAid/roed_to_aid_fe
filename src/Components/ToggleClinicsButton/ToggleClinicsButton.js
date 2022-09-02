@@ -15,6 +15,7 @@ const ToggleClinicsButton = () => {
   };
   return (
     <div className="filter-container">
+      <p>Filter:</p>
       <ToggleButtonGroup
         value={filter}
         exclusive
@@ -30,7 +31,7 @@ const ToggleClinicsButton = () => {
           All Clinics
         </ToggleButton>
         <ToggleButton
-          value="authorized-only"
+          value="authorized"
           aria-label="authorized only"
           className="toggle-button"
         >

@@ -7,7 +7,7 @@ import StateSelector from "../../Components/StateSelector/StateSelector";
 
 const GET_CLINICS = gql`
   query {
-    state(abbreviation: "TX") {
+    states {
       name
       id
       abbreviation
