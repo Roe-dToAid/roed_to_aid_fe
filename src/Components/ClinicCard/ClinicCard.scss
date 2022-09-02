@@ -1,7 +1,16 @@
 .clinic-card {
+  text-align: left;
   box-sizing: border-box;
-  width: 15rem;
+  width: 20rem;
+  height: 20rem;
   padding: 10px;
-  background-color: #df6349;
-  margin: 2rem;
+  margin: 1rem;
+  h3,
+  p {
+    color: #ffffff;
+  }
+  a {
+    text-decoration: none;
+    color: #ffffff;
+  }
 }

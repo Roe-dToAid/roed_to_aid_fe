@@ -6,3 +6,23 @@
   overflow: auto;
   padding: 3rem;
 }
+
+.authorized-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  .clinic-card {
+    background-color: #768ca0;
+  }
+}
+
+.misinformation-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  .clinic-card {
+    background-color: #df6349;
+  }
+}
