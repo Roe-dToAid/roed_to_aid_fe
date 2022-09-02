@@ -35,7 +35,7 @@ describe("About", () => {
     cy.dataCy("flower-illustration").should("be.visible");
   })
 
-  it("Should display the team members", () => {
+  it("Should display the team members' photos", () => {
     cy.dataCy("meet").contains("Meet the Team");
     cy.dataCy("rachel").should("be.visible");
     cy.dataCy("catlyn").should("be.visible");
@@ -46,8 +46,8 @@ describe("About", () => {
     cy.dataCy("bryce").should("be.visible");
   })
 
-  // it("Should be able to go back to the Home page when clicking logo", () => {
-  //   cy.dataCy("logo-img").click();
-	// 	cy.url().should("eq", "http://localhost:3000/");
-	// })
+  it("Should be able to go back to the Home page when clicking logo", () => {
+    cy.get('.logo-link > .logo-img').click();
+		cy.url().should("eq", "http://localhost:3000/");
+	})
  })
