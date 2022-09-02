@@ -19,10 +19,14 @@ const GET_POLICIES = gql`
 `;
     
 const StatePoliciesView = () => {
+  let sortedData;
   let { data, loading, error } = useQuery(GET_POLICIES)
   if (loading) console.log('Loading...');
   if (error) console.log("error!", error.message)
-  if (data) console.log(data)
+  if (data) sortedData = [...data.states].sort((a, b) => {
+    return a.name.localeCompare(b.name)
+  })
+  console.log(sortedData)
 
   const [searchInput, setSearchInput] = useState('')
   const [legalResults, setLegalResults] = useState('')
@@ -35,13 +39,14 @@ const StatePoliciesView = () => {
   
   useEffect(() => {
     if (searchInput) {
-      const filteredData = data.states.filter((item) => item.name.toLowerCase().includes(searchInput.toLowerCase()))
+      const filteredData = sortedData.filter((item) => item.name.toLowerCase().includes(searchInput.toLowerCase()))
       setFilteredResults(filteredData)
     }
   }, [searchInput, data]);
   
   const generatePolicyCards = (states) => {
-    return states.length ? states.map(state => {
+    return states.length ? 
+    states.map(state => {
       return (
         <PolicyCard 
           key={state.id}
@@ -54,7 +59,7 @@ const StatePoliciesView = () => {
   }
 
   const filterByLegality = (legalSearch) => {
-    const filteredByStatus = data.states.filter((state) => state.legal === legalSearch)
+    const filteredByStatus = sortedData.filter((state) => state.legal === legalSearch)
     setLegalResults(filteredByStatus)
   }
 
@@ -72,12 +77,12 @@ const StatePoliciesView = () => {
         <div className='key-container'>
           <img className='policy-images' src={fight} height='200' alt='fight for your right megaphone'></img>
           <LegalKey filterByLegality={filterByLegality} clearSearch={clearSearch}/>
-          <img className='policy-images' src={fists} height='200' alt='future is female with fists'></img>
+          <img className='policy-images' src={fists} height='200' alt='empowered fists'></img>
         </div>
           {searchInput && legalResults ? generatePolicyCards(filteredResults.filter(res => legalResults.includes(res))) :
             searchInput ? generatePolicyCards(filteredResults) : 
             legalResults ? generatePolicyCards(legalResults) :
-            data ? generatePolicyCards(data.states) : <h3>Loading...</h3>}
+            data ? generatePolicyCards(sortedData) : <h3>Loading...</h3>}
       </div>
     </section>
     );
