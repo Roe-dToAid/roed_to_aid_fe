@@ -39,8 +39,7 @@ const StatePoliciesView = () => {
       setFilteredResults(filteredData)
     }
   }, [searchInput, data]);
-  
-  const generatePolicyCards = (states) => {
+   const generatePolicyCards = (states) => {
     return states.length ? states.map(state => {
       return (
         <PolicyCard 
@@ -52,6 +51,7 @@ const StatePoliciesView = () => {
       )
     }) : <NoResults />
   }
+ 
 
   const filterByLegality = (legalSearch) => {
     const filteredByStatus = data.states.filter((state) => state.legal === legalSearch)

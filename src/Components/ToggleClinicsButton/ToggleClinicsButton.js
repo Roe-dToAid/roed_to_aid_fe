@@ -24,18 +24,18 @@ const ToggleClinicsButton = () => {
         className="toggle-button-group"
       >
         <ToggleButton
-          value="all-clinics"
-          aria-label="all clinics"
-          className="toggle-button"
-        >
-          All Clinics
-        </ToggleButton>
-        <ToggleButton
           value="authorized"
           aria-label="authorized only"
           className="toggle-button"
         >
           Authorized
+        </ToggleButton>
+        <ToggleButton
+          value="misinformation"
+          aria-label="misinformation only"
+          className="toggle-button"
+        >
+          Misinformation
         </ToggleButton>
       </ToggleButtonGroup>
     </div>
