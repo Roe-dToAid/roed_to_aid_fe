@@ -3,6 +3,17 @@ describe("About", () => {
     cy.visit("http://localhost:3000/about");
   })
 
+  it("Should display the Nav Bar's logo and 3 tabs", () => {
+    cy.dataCy("logo-img").should("be.visible");
+    cy.dataCy("about-tab").should("be.visible");
+    cy.dataCy("find-clinic-tab").should("be.visible");
+    cy.dataCy("state-tab").should("be.visible");
+  })
+
+  it("Should display the Footer", () => {
+    cy.dataCy("yes-illustration").should("be.visible");
+  })
+
   it("Should display the About page and the mission", () => {
     cy.dataCy("about-roed").contains("About Roe'd to Aid");
     cy.dataCy("mission-title").contains("Our Mission");
