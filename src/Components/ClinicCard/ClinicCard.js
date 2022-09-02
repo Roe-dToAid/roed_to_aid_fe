@@ -1,35 +1,14 @@
 import React from "react";
-import { useQuery, gql } from "@apollo/client";
 import "./ClinicCard.scss";
 
-const GET_CLINICS = gql`
-  query {
-    states {
-      name
-      misinformationCenters {
-        name
-        address
-        source
-        city
-        zip
-      }
-    }
-  }
-`;
-
-const ClinicCard = ({states}) => {
-  let { data, loading, error } = useQuery(GET_CLINICS);
-  if (loading) console.log("Loading...");
-  if (error) console.log("error!", error.message);
-  if (data) console.log(data);
-
+const ClinicCard = ({ name, address }) => {
   return (
     <div className="clinic-card" data-cy="clinic-card">
       <h2 data-cy="misinformation-clinic-name">
-        {states.name.misinformationCenters.name}
+        {name}
       </h2>
       <h2 data-cy="misinformation-clinic-address">
-        {states.name.misinformationCenters.address}
+        {address}
       </h2>
     </div>
   );
