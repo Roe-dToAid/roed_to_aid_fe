@@ -8,7 +8,7 @@ const QuoteBlock = () => {
         <p>
           "Abortion is health care. Abortion is freedom. Abortion is bodily
           autonomy. A country without this human right is not a free country."
-          --H.R. Bellicosa
+          -H.R. Bellicosa
         </p>
       </div>
     </>
