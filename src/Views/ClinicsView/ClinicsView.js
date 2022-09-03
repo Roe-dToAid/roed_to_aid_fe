@@ -73,14 +73,10 @@ const ClinicsView = () => {
         item.name.toLowerCase().includes(searchInput.toLowerCase())
       );
       setFilteredResults(filteredData);
+    } else {
+      setFilteredResults([])
     }
   }, [searchInput, states]);
-
-  // const clearSearch = () => {
-  //   inputRef.current.value = "";
-  //   // setLegalResults("");
-  //   setSearchInput("");
-  // };
 
   return (
     <>
@@ -95,7 +91,7 @@ const ClinicsView = () => {
           <ToggleClinicsButton setToggleSelected={setToggleSelected}/>
         </div>
       </div>
-      {!loading && <ClinicCardContainer states={states} toggleSelected={toggleSelected} />}
+      {!loading && <ClinicCardContainer states={states} toggleSelected={toggleSelected} filteredResults={filteredResults}/>}
     </>
   );
 };

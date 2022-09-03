@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ClinicCard from "../ClinicCard/ClinicCard";
 import "./ClinicCardContainer.scss";
 
-const ClinicCardContainer = ({ states, toggleSelected }) => {
-  const misinformationCenters = states.map((state) => {
+const ClinicCardContainer = ({ states, toggleSelected, filteredResults }) => {
+  console.log(states);
+  console.log(filteredResults);
+  const [searchResults, setSearchResults] = useState([]);
+
+  useEffect(() => {
+    if (filteredResults.length > 0) {
+      setSearchResults(filteredResults);
+    } else {
+      setSearchResults(states);
+    }
+  }, [states, filteredResults, setSearchResults]);
+
+  const misinformationCenters = searchResults.map((state) => {
     return state.misinformationCenters.map((clinic) => {
       return (
         <ClinicCard
@@ -17,7 +29,7 @@ const ClinicCardContainer = ({ states, toggleSelected }) => {
     });
   });
 
-  const authorizedClinics = states.map((state) => {
+  const authorizedClinics = searchResults.map((state) => {
     return state.authorizedClinics.map((clinic) => {
       return (
         <ClinicCard
@@ -35,7 +47,7 @@ const ClinicCardContainer = ({ states, toggleSelected }) => {
     });
   });
 
-  const stateResources = states.map((state) => {
+  const stateResources = searchResults.map((state) => {
     return state.resources.map((resource) => {
       return (
         <ClinicCard
