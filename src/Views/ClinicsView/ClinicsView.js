@@ -3,7 +3,7 @@ import { useQuery, gql } from "@apollo/client";
 import "./ClinicsView.scss";
 import ClinicKeyBlock from "../../Components/ClinicKeyBlock/ClinicKeyBlock";
 import ToggleClinicsButton from "../../Components/ToggleClinicsButton/ToggleClinicsButton";
-import SearchBar from "../StatePoliciesView/SearchBar/SearchBar";
+import SearchBar from "../../Components/SearchBar/SearchBar";
 import ClinicCardContainer from "../../Components/ClinicCardContainer/ClinicCardContainer";
 
 const GET_CLINICS = gql`
@@ -58,19 +58,19 @@ const ClinicsView = () => {
     if (!loading) {
       setStates(data.states);
     }
-  }, [data]);
+  }, [loading, data]);
 
   return (
     <>
       <h1>Find a safe clinic</h1>
       <div className="heading-container">
+        <ClinicKeyBlock />
         <div>
           <SearchBar />
           <ToggleClinicsButton />
         </div>
-        <ClinicKeyBlock />
       </div>
-      <ClinicCardContainer states={states} />
+      {!loading && <ClinicCardContainer states={states} />}
     </>
   );
 };

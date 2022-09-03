@@ -1,11 +1,11 @@
 import React, {useEffect, useState, useRef } from "react";
 import { useQuery, gql } from '@apollo/client'
-import PolicyCard from "./PolicyCard/PolicyCard";
-import LegalKey from "./LegalKey/LegalKey";
+import PolicyCard from "../../Components/PolicyCard/PolicyCard";
+import LegalKey from "../../Components/LegalKey/LegalKey";
 import fight from "./../../assets/fight.png";
 import female from "./../../assets/female.png";
-import NoResults from "./NoResults/NoResults";
-import SearchBar from './SearchBar/SearchBar'
+import NoResults from "../../Components/NoResults/NoResults";
+import SearchBar from '../../Components/SearchBar/SearchBar'
 import './StatePolicies.scss'
 
 const GET_POLICIES = gql`
@@ -39,6 +39,7 @@ const StatePoliciesView = () => {
       setFilteredResults(filteredData)
     }
   }, [searchInput, data]);
+
    const generatePolicyCards = (states) => {
     return states.length ? states.map(state => {
       return (

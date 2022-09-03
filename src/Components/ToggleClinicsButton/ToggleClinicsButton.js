@@ -6,7 +6,7 @@ import "./ToggleClinicsButton.scss";
 const ToggleClinicsButton = () => {
   const [clinics, setClinics] = useState([]);
   const [error, setError] = useState();
-  const [filter, setFilter] = useState("all-clinics");
+  const [filter, setFilter] = useState("all");
 
   const handleFilter = (event, filterQuery) => {
     if (filterQuery !== null) {
@@ -23,19 +23,29 @@ const ToggleClinicsButton = () => {
         aria-label="text alignment"
         className="toggle-button-group"
       >
+        <ToggleButton value="all" aria-label="all" className="toggle-button">
+          All
+        </ToggleButton>
         <ToggleButton
           value="authorized"
-          aria-label="authorized only"
+          aria-label="authorized"
           className="toggle-button"
         >
           Authorized
         </ToggleButton>
         <ToggleButton
-          value="misinformation"
-          aria-label="misinformation only"
+          value="misinformationCenters"
+          aria-label="misinformation"
           className="toggle-button"
         >
           Misinformation
+        </ToggleButton>
+        <ToggleButton
+          value="resources"
+          aria-label="resources"
+          className="toggle-button"
+        >
+          Resources
         </ToggleButton>
       </ToggleButtonGroup>
     </div>
