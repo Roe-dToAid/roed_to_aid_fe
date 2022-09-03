@@ -1,10 +1,14 @@
-import React from "react";
-import { useQuery, gql } from '@apollo/client'
-
+import React, { useEffect, useState, useRef } from "react";
+import { useQuery, gql } from "@apollo/client";
+import "./ClinicsView.scss";
+import ClinicKeyBlock from "../../Components/ClinicKeyBlock/ClinicKeyBlock";
+import ToggleClinicsButton from "../../Components/ToggleClinicsButton/ToggleClinicsButton";
+import SearchBar from "../../Components/SearchBar/SearchBar";
+import ClinicCardContainer from "../../Components/ClinicCardContainer/ClinicCardContainer";
 
 const GET_CLINICS = gql`
   query {
-    state(abbreviation: "TX") {
+    states {
       name
       id
       abbreviation
@@ -42,14 +46,54 @@ const GET_CLINICS = gql`
   }
 `;
 
-
 const ClinicsView = () => {
-  let { data, loading, error } = useQuery(GET_CLINICS)
-  if (loading) console.log('Loading...');
-  if (error) console.log("error!", error.message)
-  if (data) console.log(data)
-  
-  return <h1>clinics</h1>;
+  let { data, loading, error } = useQuery(GET_CLINICS);
+  if (loading) console.log("Loading...");
+  if (error) console.log("error!", error.message);
+
+  const [states, setStates] = useState([]);
+  const [toggleSelected, setToggleSelected] = useState("all");
+  const [searchInput, setSearchInput] = useState("");
+  const [filteredResults, setFilteredResults] = useState([]);
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    if (!loading) {
+      setStates(data.states);
+    }
+  }, [loading, data]);
+
+  const handleSearchChange = (value) => {
+    setSearchInput(value);
+  };
+
+  useEffect(() => {
+    if (searchInput) {
+      const filteredData = states.filter((item) =>
+        item.name.toLowerCase().includes(searchInput.toLowerCase())
+      );
+      setFilteredResults(filteredData);
+    } else {
+      setFilteredResults([])
+    }
+  }, [searchInput, states]);
+
+  return (
+    <>
+      <h1>Find a safe clinic</h1>
+      <div className="heading-container">
+        <ClinicKeyBlock />
+        <div>
+          <SearchBar
+            inputRef={inputRef}
+            handleSearchChange={handleSearchChange}
+          />
+          <ToggleClinicsButton setToggleSelected={setToggleSelected}/>
+        </div>
+      </div>
+      {!loading && <ClinicCardContainer states={states} toggleSelected={toggleSelected} filteredResults={filteredResults}/>}
+    </>
+  );
 };
 
 export default ClinicsView;

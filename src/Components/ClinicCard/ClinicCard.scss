@@ -1,0 +1,31 @@
+.clinic-card {
+  text-align: left;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 20rem;
+  height: 20rem;
+  padding: .75rem;
+  
+  h3,
+  p {
+    color: #ffffff;
+  }
+
+  a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  span {
+    font-size: 1rem;
+  }
+
+  .clinic-address {
+    margin-bottom: .25rem;
+  }
+
+  .clinic-city-state-zip {
+    margin-left: 1.25rem;
+    margin-top: 0;
+  }
+}
