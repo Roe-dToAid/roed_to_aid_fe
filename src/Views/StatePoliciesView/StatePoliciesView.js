@@ -74,7 +74,7 @@ const StatePoliciesView = () => {
 
   return (
     <section className="policy-body">
-      <h1 className="policy-header">Check state abortion status</h1>
+      <h1 className="policy-header" data-cy="policy-header">Check state abortion status</h1>
       <div className="content-body">
         <SearchBar
           inputRef={inputRef}
@@ -86,6 +86,7 @@ const StatePoliciesView = () => {
             src={fight}
             height="200"
             alt="fight for your right megaphone"
+            data-cy="fight-img"
           ></img>
           <LegalKey
             filterByLegality={filterByLegality}
@@ -95,7 +96,8 @@ const StatePoliciesView = () => {
             className="policy-images"
             src={fists}
             height="200"
-            alt="future is female with fists"
+            alt="empowered fists"
+            data-cy="fists-img"
           ></img>
         </div>
         {searchInput && legalResults ? (
