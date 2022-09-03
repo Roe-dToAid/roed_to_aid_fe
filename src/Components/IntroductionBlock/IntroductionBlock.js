@@ -4,7 +4,7 @@ import "./IntroductionBlock.scss";
 const IntroductionBlock = () => {
   return (
     <>
-      <div className="introduction-container">
+      <div className="introduction-container" data-cy="introduction-text">
         <h1>Welcome to Roe'dToAid</h1>
         <h2>A safe space to find a safe place.</h2>
 

@@ -10,6 +10,11 @@ describe("About", () => {
     cy.dataCy("state-tab").should("be.visible");
   });
 
+  it("Should display an image of a diverse group of people and a written introduction to the application", () => {
+    cy.dataCy("group-image").should("be.visible");
+    cy.dataCy("introduction-text").should("be.visible");
+  });
+
   it("Should display the Footer's logo and team member names", () => {
     cy.dataCy("fe-team").should("be.visible").contains("FrontEnd Team");
     cy.dataCy("be-team").should("be.visible").contains("BackEnd Team");
