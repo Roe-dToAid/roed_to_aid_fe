@@ -15,7 +15,7 @@ const ToggleClinicsButton = () => {
   };
   return (
     <div className="filter-container">
-      <p>Filter:</p>
+      <span className="material-symbols-outlined">filter_list</span>
       <ToggleButtonGroup
         value={filter}
         exclusive

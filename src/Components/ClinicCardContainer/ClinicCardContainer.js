@@ -5,6 +5,7 @@ import "./ClinicCardContainer.scss";
 const ClinicCardContainer = ({ states }) => {
   console.log(states);
   const misinformationCenters = states.map((state) => {
+    console.log(state.resources);
     return state.misinformationCenters.map((clinic) => {
       return (
         <ClinicCard
@@ -17,6 +18,7 @@ const ClinicCardContainer = ({ states }) => {
       );
     });
   });
+
   const authorizedClinics = states.map((state) => {
     return state.authorizedClinics.map((clinic) => {
       return (
@@ -34,6 +36,19 @@ const ClinicCardContainer = ({ states }) => {
       );
     });
   });
+
+  const stateResources = states.map((state) => {
+    return state.resources.map((resource) => {
+      return (
+        <ClinicCard
+          key={resource.id}
+          name={resource.name}
+          services={resource.service}
+          url={resource.website}
+        />
+      );
+    });
+  });
   return (
     <section className="all-clinics-card-container">
       <h2>Authorized Clinics</h2>
@@ -43,6 +58,10 @@ const ClinicCardContainer = ({ states }) => {
       <h2>Misinformation Centers</h2>
       <div className="card-container misinformation-card-container">
         {misinformationCenters}
+      </div>
+      <h2>State Resources</h2>
+      <div className="card-container resource-card-container">
+        {stateResources}
       </div>
     </section>
   );

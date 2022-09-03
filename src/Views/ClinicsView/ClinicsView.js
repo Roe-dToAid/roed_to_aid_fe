@@ -53,7 +53,6 @@ const ClinicsView = () => {
   if (data) console.log(data);
 
   const [states, setStates] = useState([]);
-
   useEffect(() => {
     if (!loading) {
       setStates(data.states);
