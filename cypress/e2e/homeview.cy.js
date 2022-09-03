@@ -15,6 +15,11 @@ describe("About", () => {
     cy.dataCy("introduction-text").should("be.visible");
   });
 
+  it("Should display an explanation of 'authorized clinics' and 'misinformation centers'", () => {
+    cy.dataCy("authorized-clinic-explanation").should("be.visible");
+    cy.dataCy("misinformation-center-explanation").should("be.visible");
+  });
+
   it("Should display the Footer's logo and team member names", () => {
     cy.dataCy("fe-team").should("be.visible").contains("FrontEnd Team");
     cy.dataCy("be-team").should("be.visible").contains("BackEnd Team");
