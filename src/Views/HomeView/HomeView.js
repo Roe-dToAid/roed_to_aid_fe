@@ -23,7 +23,10 @@ const HomeView = () => {
       <div className="information-block-container">
         <InformationBlock />
       </div>
-      <div className="preview-block-container">
+      <div
+        className="preview-block-container"
+        data-cy="preview-block-container"
+      >
         <PreviewBlocks />
       </div>
       <div className="quote-block-container">

@@ -10,13 +10,25 @@ describe("About", () => {
     cy.dataCy("state-tab").should("be.visible");
   });
 
-  it("Should display an image of a diverse group of people and a written introduction to the application", () => {
+  it("Should display Roe'dToAid logo with image of a diverse group of people and a written introduction to the application", () => {
     cy.dataCy("group-image").should("be.visible");
-    cy.dataCy("introduction-text").should("be.visible");
+    cy.dataCy("app-title").contains("Welcome to Roe'dToAid");
+    cy.dataCy("app-phrase").contains("A safe space to find a safe place.");
+    cy.dataCy("first-paragraph").contains(
+      "After the U.S. Supreme Court officially reversed Roe v Wade in June of 2022, millions lost a fundamental constitutional protection, the right to abortion."
+    );
+    cy.dataCy("second-paragraph").contains(
+      "  Roe’dToAid was created to bring awareness and expand access to safe,authorized clinics that provide necessary healthcare to all birthers.This application compiles current clinic information by state and clearly defines authorized clinics and distinguishes them from misinformation centers. Users can learn about current state policies as well as available resources in their state."
+    );
   });
 
   it("Should display an explanation of 'authorized clinics' and 'misinformation centers'", () => {
     cy.dataCy("authorized-clinic-explanation").should("be.visible");
+    cy.dataCy("misinformation-center-explanation").should("be.visible");
+  });
+
+  it("Should display 3 preview boxes containing explanation of each view's contents", () => {
+    cy.dataCy("preview-block-container").should("be.visible");
     cy.dataCy("misinformation-center-explanation").should("be.visible");
   });
 
