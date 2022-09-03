@@ -4,8 +4,8 @@ import './PolicyCard.scss'
 
 const PolicyCard = ({name, legal, legalDescription}) => {
   const setColor = () => {
-    return legal === '1' ? '#D27736' : 
-    legal === '2' ? '#DF6349' : '#768CA0' 
+    return legal === 'at risk' ? '#D27736' : 
+    legal === 'illegal' ? '#DF6349' : '#768CA0' 
   }
 
   return (

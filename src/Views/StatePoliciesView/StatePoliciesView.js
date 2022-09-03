@@ -19,14 +19,10 @@ const GET_POLICIES = gql`
 `;
     
 const StatePoliciesView = () => {
-  let sortedData;
   let { data, loading, error } = useQuery(GET_POLICIES)
   if (loading) console.log('Loading...');
   if (error) console.log("error!", error.message)
-  if (data) sortedData = [...data.states].sort((a, b) => {
-    return a.name.localeCompare(b.name)
-  })
-  console.log(sortedData)
+  if (data) console.log(data.states)
 
   const [searchInput, setSearchInput] = useState('')
   const [legalResults, setLegalResults] = useState('')
@@ -39,10 +35,10 @@ const StatePoliciesView = () => {
   
   useEffect(() => {
     if (searchInput) {
-      const filteredData = sortedData.filter((item) => item.name.toLowerCase().includes(searchInput.toLowerCase()))
+      const filteredData = data.states.filter((item) => item.name.toLowerCase().includes(searchInput.toLowerCase()))
       setFilteredResults(filteredData)
     }
-  }, [searchInput, sortedData]);
+  }, [searchInput, data.states]);
   
   const generatePolicyCards = (states) => {
     return states.length ? 
@@ -59,7 +55,7 @@ const StatePoliciesView = () => {
   }
 
   const filterByLegality = (legalSearch) => {
-    const filteredByStatus = sortedData.filter((state) => state.legal === legalSearch)
+    const filteredByStatus = data.states.filter((state) => state.legal === legalSearch)
     setLegalResults(filteredByStatus)
   }
 
@@ -82,7 +78,7 @@ const StatePoliciesView = () => {
           {searchInput && legalResults ? generatePolicyCards(filteredResults.filter(res => legalResults.includes(res))) :
             searchInput ? generatePolicyCards(filteredResults) : 
             legalResults ? generatePolicyCards(legalResults) :
-            data ? generatePolicyCards(sortedData) : <h3>Loading...</h3>}
+            data ? generatePolicyCards(data.states) : <h3>Loading...</h3>}
       </div>
     </section>
     );
