@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import "./ToggleClinicsButton.scss";
 
-const ToggleClinicsButton = () => {
-  const [clinics, setClinics] = useState([]);
-  const [error, setError] = useState();
+const ToggleClinicsButton = ({ setToggleSelected }) => {
   const [filter, setFilter] = useState("all");
 
   const handleFilter = (event, filterQuery) => {
@@ -13,6 +11,11 @@ const ToggleClinicsButton = () => {
       setFilter(filterQuery);
     }
   };
+
+  useEffect(() => {
+    setToggleSelected(filter);
+  }, [filter, setToggleSelected]);
+
   return (
     <div className="filter-container">
       <span className="material-symbols-outlined">filter_list</span>

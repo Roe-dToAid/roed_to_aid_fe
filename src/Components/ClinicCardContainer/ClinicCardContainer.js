@@ -2,10 +2,8 @@ import React from "react";
 import ClinicCard from "../ClinicCard/ClinicCard";
 import "./ClinicCardContainer.scss";
 
-const ClinicCardContainer = ({ states }) => {
-  console.log(states);
+const ClinicCardContainer = ({ states, toggleSelected }) => {
   const misinformationCenters = states.map((state) => {
-    console.log(state.resources);
     return state.misinformationCenters.map((clinic) => {
       return (
         <ClinicCard
@@ -51,18 +49,31 @@ const ClinicCardContainer = ({ states }) => {
   });
   return (
     <section className="all-clinics-card-container">
-      <h2>Authorized Clinics</h2>
-      <div className="card-container authorized-card-container">
-        {authorizedClinics}
-      </div>
-      <h2>Misinformation Centers</h2>
-      <div className="card-container misinformation-card-container">
-        {misinformationCenters}
-      </div>
-      <h2>State Resources</h2>
-      <div className="card-container resource-card-container">
-        {stateResources}
-      </div>
+      {(toggleSelected === "authorized" || toggleSelected === "all") && (
+        <>
+          <h2>Authorized Clinics</h2>
+          <div className="card-container authorized-card-container">
+            {authorizedClinics}
+          </div>
+        </>
+      )}
+      {(toggleSelected === "misinformationCenters" ||
+        toggleSelected === "all") && (
+        <>
+          <h2>Misinformation Centers</h2>
+          <div className="card-container misinformation-card-container">
+            {misinformationCenters}
+          </div>
+        </>
+      )}
+      {(toggleSelected === "resources" || toggleSelected === "all") && (
+        <>
+          <h2>State Resources</h2>
+          <div className="card-container resource-card-container">
+            {stateResources}
+          </div>
+        </>
+      )}
     </section>
   );
 };

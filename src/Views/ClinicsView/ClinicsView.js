@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useQuery, gql } from "@apollo/client";
 import "./ClinicsView.scss";
 import ClinicKeyBlock from "../../Components/ClinicKeyBlock/ClinicKeyBlock";
@@ -50,14 +50,37 @@ const ClinicsView = () => {
   let { data, loading, error } = useQuery(GET_CLINICS);
   if (loading) console.log("Loading...");
   if (error) console.log("error!", error.message);
-  if (data) console.log(data);
 
   const [states, setStates] = useState([]);
+  const [toggleSelected, setToggleSelected] = useState("all");
+  const [searchInput, setSearchInput] = useState("");
+  const [filteredResults, setFilteredResults] = useState([]);
+  const inputRef = useRef(null);
+
   useEffect(() => {
     if (!loading) {
       setStates(data.states);
     }
   }, [loading, data]);
+
+  const handleSearchChange = (value) => {
+    setSearchInput(value);
+  };
+
+  useEffect(() => {
+    if (searchInput) {
+      const filteredData = states.filter((item) =>
+        item.name.toLowerCase().includes(searchInput.toLowerCase())
+      );
+      setFilteredResults(filteredData);
+    }
+  }, [searchInput, states]);
+
+  // const clearSearch = () => {
+  //   inputRef.current.value = "";
+  //   // setLegalResults("");
+  //   setSearchInput("");
+  // };
 
   return (
     <>
@@ -65,11 +88,14 @@ const ClinicsView = () => {
       <div className="heading-container">
         <ClinicKeyBlock />
         <div>
-          <SearchBar />
-          <ToggleClinicsButton />
+          <SearchBar
+            inputRef={inputRef}
+            handleSearchChange={handleSearchChange}
+          />
+          <ToggleClinicsButton setToggleSelected={setToggleSelected}/>
         </div>
       </div>
-      {!loading && <ClinicCardContainer states={states} />}
+      {!loading && <ClinicCardContainer states={states} toggleSelected={toggleSelected} />}
     </>
   );
 };
