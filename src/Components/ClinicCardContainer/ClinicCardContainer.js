@@ -12,6 +12,7 @@ const ClinicCardContainer = ({ states }) => {
           name={clinic.name}
           address={clinic.address}
           city={clinic.city}
+          state={state.name}
         />
       );
     });
@@ -24,6 +25,7 @@ const ClinicCardContainer = ({ states }) => {
           name={clinic.name}
           address={clinic.address}
           city={clinic.city}
+          state={state.name}
           zip={clinic.zip}
           phone={clinic.phone}
           services={clinic.services}
@@ -34,8 +36,12 @@ const ClinicCardContainer = ({ states }) => {
   });
   return (
     <section className="all-clinics-card-container">
-      <div className="authorized-card-container">{authorizedClinics}</div>
-      <div className="misinformation-card-container">
+      <h2>Authorized Clinics</h2>
+      <div className="card-container authorized-card-container">
+        {authorizedClinics}
+      </div>
+      <h2>Misinformation Centers</h2>
+      <div className="card-container misinformation-card-container">
         {misinformationCenters}
       </div>
     </section>

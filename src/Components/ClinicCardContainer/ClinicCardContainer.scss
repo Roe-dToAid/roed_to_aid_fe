@@ -1,27 +1,28 @@
-.reservations-container {
+.all-clinics-card-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: row wrap;
-  overflow: auto;
-  padding: 3rem;
+  flex-flow: column wrap;
+  padding: 1.5rem;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  gap: 1.5rem;
+  padding-bottom: 3rem;
 }
 
 .authorized-card-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-content: center;
   .clinic-card {
     background-color: #768ca0;
   }
 }
 
 .misinformation-card-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-content: center;
   .clinic-card {
     background-color: #df6349;
   }
