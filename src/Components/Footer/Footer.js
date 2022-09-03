@@ -5,10 +5,10 @@ import logo from "./../../assets/roed-to-aid-logo.svg";
 const Footer = () => {
   return (
     <footer className="footer">
-      <img src={logo} alt="logo" className="logo-img"></img>
+      <img src={logo} alt="logo" className="logo-img" data-cy="logo-img"></img>
       <div className="team-container">
         <div className="fe-container">
-          <p>FrontEnd Team:</p>
+          <p data-cy="fe-team">FrontEnd Team:</p>
           <a
             href="https://github.com/Rallen13/"
             target="blank"
@@ -43,7 +43,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="be-container">
-          <p>BackEnd Team:</p>
+          <p data-cy="be-team">BackEnd Team:</p>
           <a
             href="https://github.com/casefaz"
             target="blank"
