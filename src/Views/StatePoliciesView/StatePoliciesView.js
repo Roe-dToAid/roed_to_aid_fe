@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import React, {useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useQuery, gql } from '@apollo/client'
 import PolicyCard from "../../Components/PolicyCard/PolicyCard";
 import LegalKey from "../../Components/LegalKey/LegalKey";
@@ -8,17 +7,6 @@ import fists from "./../../assets/Asset 1.png";
 import NoResults from "../../Components/NoResults/NoResults";
 import SearchBar from '../../Components/SearchBar/SearchBar'
 import './StatePolicies.scss'
-=======
-import React, { useEffect, useState, useRef } from "react";
-import { useQuery, gql } from "@apollo/client";
-import PolicyCard from "../../Components/PolicyCard/PolicyCard";
-import LegalKey from "../../Components/LegalKey/LegalKey";
-import fight from "./../../assets/fight.png";
-import female from "./../../assets/female.png";
-import NoResults from "../../Components/NoResults/NoResults";
-import SearchBar from "../../Components/SearchBar/SearchBar";
-import "./StatePolicies.scss";
->>>>>>> 982395d0fd46f4afa30deaf94fc6bdd6de94a2ce
 
 const GET_POLICIES = gql`
   query {
@@ -31,12 +19,6 @@ const GET_POLICIES = gql`
 `;
 
 const StatePoliciesView = () => {
-<<<<<<< HEAD
-  let { data, loading, error } = useQuery(GET_POLICIES)
-  if (loading) console.log('Loading...');
-  if (error) console.log("error!", error.message)
-  if (data) console.log(data.states)
-=======
   let { data, loading, error } = useQuery(GET_POLICIES);
   if (loading) console.log("Loading...");
   if (error) console.log("error!", error.message);
@@ -46,7 +28,6 @@ const StatePoliciesView = () => {
   const [legalResults, setLegalResults] = useState("");
   const [filteredResults, setFilteredResults] = useState([]);
   const inputRef = useRef(null);
->>>>>>> 982395d0fd46f4afa30deaf94fc6bdd6de94a2ce
 
   const handleSearchChange = (value) => {
     setSearchInput(value);
@@ -62,20 +43,6 @@ const StatePoliciesView = () => {
   }, [searchInput, data]);
 
   const generatePolicyCards = (states) => {
-<<<<<<< HEAD
-    return states.length ? 
-    states.map(state => {
-      return (
-        <PolicyCard 
-          key={state.id}
-          name={state.name}
-          legal={state.legal}
-          legalDescription={state.legalDescription}
-        />
-      )
-    }) : <NoResults />
-  }
-=======
     return states.length ? (
       states.map((state) => {
         return (
@@ -91,7 +58,6 @@ const StatePoliciesView = () => {
       <NoResults />
     );
   };
->>>>>>> 982395d0fd46f4afa30deaf94fc6bdd6de94a2ce
 
   const filterByLegality = (legalSearch) => {
     const filteredByStatus = data.states.filter(
@@ -110,13 +76,6 @@ const StatePoliciesView = () => {
     <section className="policy-body">
       <h1 className="policy-header">Check state abortion status</h1>
       <div className="content-body">
-<<<<<<< HEAD
-        <SearchBar inputRef={inputRef} handleSearchChange={handleSearchChange}/>
-        <div className='key-container'>
-          <img className='policy-images' src={fight} height='200' alt='fight for your right megaphone'></img>
-          <LegalKey filterByLegality={filterByLegality} clearSearch={clearSearch}/>
-          <img className='policy-images' src={fists} height='200' alt='empowered fists'></img>
-=======
         <SearchBar
           inputRef={inputRef}
           handleSearchChange={handleSearchChange}
@@ -134,11 +93,10 @@ const StatePoliciesView = () => {
           />
           <img
             className="policy-images"
-            src={female}
+            src={fists}
             height="200"
             alt="future is female with fists"
           ></img>
->>>>>>> 982395d0fd46f4afa30deaf94fc6bdd6de94a2ce
         </div>
         {searchInput && legalResults ? (
           generatePolicyCards(
