@@ -1,15 +1,23 @@
 .toggle-button {
-  // font-size: 2.75vw !important;
+  font-size: 2.75vw !important;
   color: #000000 !important;
-  background-color: #F0D0A3 !important;
+  background-color: #f0d0a3 !important;
   cursor: pointer;
 }
 
 .toggle-button:hover {
-  background-color: #DCA518 !important;
+  background-color: #dca518 !important;
   transform: none;
 }
 
 .Mui-selected {
-  background-color: #EAB93D !important;
+  background-color: #eab93d !important;
+}
+
+@media (min-width: 768px) {
+  .toggle-button {
+    font-size: 1rem !important;
+    padding: 1rem !important;
+    
+  }
 }

@@ -1,17 +1,3 @@
-button {
-  background-color: #eab93d;
-  padding: 0.5rem;
-  font-family: "Rubik", sans-serif;
-  width: 10rem;
-  border: 0.125rem solid #768ca0;
-  margin: auto;
-  cursor: pointer;
-}
-
-button:hover {
-  transform: scale(1.1);
-}
-
 .icon {
   width: 4rem;
   margin: auto;
@@ -28,4 +14,17 @@ button:hover {
   width: 18rem;
   text-align: center;
   height: 15rem;
+  button {
+    background-color: #eab93d;
+    padding: 0.5rem;
+    font-family: "Rubik", sans-serif;
+    width: 10rem;
+    border: 0.125rem solid #768ca0;
+    margin: auto;
+    cursor: pointer;
+  }
+
+  button:hover {
+    transform: scale(1.1);
+  }
 }
