@@ -3,8 +3,6 @@ import ClinicCard from "../ClinicCard/ClinicCard";
 import "./ClinicCardContainer.scss";
 
 const ClinicCardContainer = ({ states, toggleSelected, filteredResults }) => {
-  console.log(states);
-  console.log(filteredResults);
   const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
