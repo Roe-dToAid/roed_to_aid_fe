@@ -5,8 +5,10 @@ import logo from "./../../assets/roed-to-aid-logo.svg";
 const Footer = () => {
   return (
     <footer className="footer">
+
       <img src={logo} alt="logo" className="logo-img" data-cy="logo-img"></img>
-      <div className="team-container">
+      <div className="footer-team-container">
+
         <div className="fe-container">
           <p data-cy="fe-team">FrontEnd Team:</p>
           <a
