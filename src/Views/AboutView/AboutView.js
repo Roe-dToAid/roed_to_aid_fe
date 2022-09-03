@@ -22,14 +22,14 @@ const AboutView = () => {
       
       <img className="illustration" data-cy="yes-illustration" src={yesImage} alt="person holding up fist"></img>
       <div className="inclusivity-container">
-        <h2 data-cy="inclusivity-title">Inclusivity Counts</h3>
+        <h2 data-cy="inclusivity-title">Inclusivity Counts</h2>
         <p data-cy="inclusivity-statement">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
       
       <img className="illustration" data-cy="flower-illustration" src={flowerSymbolImage} alt="female symbol with flowers"></img>
       
       <div className="team-container">
-        <h2 data-cy="meet">Meet the Team</h4>
+        <h2 data-cy="meet">Meet the Team</h2>
         <img data-cy="rachel" src={rachelPhoto} alt="headshot of Rachel"></img>
         <img data-cy="catlyn" src={catlynPhoto} alt="headshot of Catlyn"></img>
         <img data-cy="irmak" src={irmakPhoto} alt="headshot of Irmak"></img>

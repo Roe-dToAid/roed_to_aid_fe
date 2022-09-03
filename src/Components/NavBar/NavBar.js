@@ -10,7 +10,7 @@ const NavBar = () => {
         <img src={logo} alt="logo" className="logo-img"></img>
       </Link>
       <div className="nav-tabs-container">
-        <Link to="/clinics" className="nav-tabs" data-cy="find-clinic-tab>
+        <Link to="/clinics" className="nav-tabs" data-cy="find-clinic-tab">
           <p>FIND A CLINIC</p>
         </Link>
         <Link to="/states-policies" className="nav-tabs" data-cy="state-tab">
