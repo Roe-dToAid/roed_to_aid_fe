@@ -1,0 +1,34 @@
+.filter-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  span {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+  }
+}
+
+.toggle-button {
+  font-size: 2.5vw !important;
+  color: #000000 !important;
+  background-color: #f0d0a3 !important;
+  cursor: pointer;
+}
+
+.toggle-button:hover {
+  background-color: #dca518 !important;
+  transform: none;
+}
+
+.Mui-selected {
+  background-color: #eab93d !important;
+}
+
+@media (min-width: 768px) {
+  .toggle-button {
+    font-size: 1rem !important;
+    padding: 1rem !important;
+  }
+}
