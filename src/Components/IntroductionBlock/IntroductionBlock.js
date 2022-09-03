@@ -5,7 +5,9 @@ const IntroductionBlock = () => {
   return (
     <>
       <div className="introduction-container">
-        <h2>Welcome to Roe'dToAid</h2>
+        <h1>Welcome to Roe'dToAid</h1>
+        <h2>A safe space to find a safe place.</h2>
+
         <p>
           After the U.S. Supreme Court officially reversed Roe v Wade in June of
           2022, millions lost a fundamental constitutional protection, the right
