@@ -20,7 +20,7 @@ const PreviewBlocks = () => {
           centers. Learn what resources are available in states with total bans.
         </p>
         <Link to="/clinics">
-          <button>Find A Clinic</button>
+          <button data-cy="find-clinic-button">Find A Clinic</button>
         </Link>
       </div>
       <div className="preview">
@@ -31,7 +31,7 @@ const PreviewBlocks = () => {
           in the hands of the states. Find your state to learn more.
         </p>
         <Link to="/states-policies">
-          <button>Check State Status</button>
+          <button data-cy="check-status-button">Check State Status</button>
         </Link>
       </div>
       <div className="preview">
@@ -45,7 +45,7 @@ const PreviewBlocks = () => {
           education to keep birthers safe.
         </p>
         <Link to="/about">
-          <button>Learn More</button>
+          <button data-cy="learn-more-button">Learn More</button>
         </Link>
       </div>
     </>
