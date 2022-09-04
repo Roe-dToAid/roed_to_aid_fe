@@ -33,7 +33,7 @@ const StatePoliciesView = () => {
     if (!error && !loading) {
       setStates(data.states)
     }
-  }, [data])
+  }, [data, error, loading])
 
   const handleSearchChange = (value) => {
     setSearchInput(value);
@@ -46,7 +46,7 @@ const StatePoliciesView = () => {
       );
       setFilteredResults(filteredData);
     }
-  }, [searchInput, data]);
+  }, [searchInput, states]);
 
   const generatePolicyCards = (states) => {
     return states.length ? (
