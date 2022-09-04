@@ -4,7 +4,10 @@ import "./InformationBlock.scss";
 const InformationBlock = () => {
   return (
     <>
-      <div className="authorized-clinics-block">
+      <div
+        className="authorized-clinics-block"
+        data-cy="authorized-clinic-explanation"
+      >
         <div className="authorized-header">
           <h2>Authorized Clinics</h2>
         </div>
@@ -16,7 +19,10 @@ const InformationBlock = () => {
           provided.
         </p>
       </div>
-      <div className="misinformation-centers-block">
+      <div
+        className="misinformation-centers-block"
+        data-cy="misinformation-center-explanation"
+      >
         <div className="misinformation-header">
           <h2>Misinformation Centers</h2>
         </div>

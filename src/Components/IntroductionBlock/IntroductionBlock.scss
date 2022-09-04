@@ -1,0 +1,14 @@
+.introduction-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 1.5rem;
+  margin-top: 0;
+  text-align: center;
+  p {
+    font-weight: 400;
+    font-size: 1.3rem;
+    max-width: 60rem;
+  }
+}
