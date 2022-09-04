@@ -20,21 +20,23 @@ const GET_POLICIES = gql`
 `;
 
 const StatePoliciesView = () => {
-  let { data, loading, error } = useQuery(GET_POLICIES);
-  // if (loading) console.log("Loading...");
-  // if (error) console.log("error!", error.message);
-  // if (data) console.log(data);
-
   const [states, setStates] = useState([])
   const [searchInput, setSearchInput] = useState("");
   const [legalResults, setLegalResults] = useState("");
   const [filteredResults, setFilteredResults] = useState([]);
   const inputRef = useRef(null);
 
+  let { data, loading, error } = useQuery(GET_POLICIES);
+  if (loading) console.log("Loading...");
+  // if (error) setErr(error.message)
+  if (error) console.log("error!", error.message);
+  // if (data) console.log(data);
+
+
   useEffect(() => {
-    if (!loading) {
+    if (!error && !loading) {
       setStates(data.states)
-    }
+    } 
   }, [data])
 
   const handleSearchChange = (value) => {
@@ -110,19 +112,20 @@ const StatePoliciesView = () => {
             tabIndex='0'
           ></img>
         </div>
-        {searchInput && legalResults ? (
-          generatePolicyCards(
-            filteredResults.filter((res) => legalResults.includes(res))
-          )
-        ) : searchInput ? (
-          generatePolicyCards(filteredResults)
-        ) : legalResults ? (
-          generatePolicyCards(legalResults)
-        ) : states ? (
-          generatePolicyCards(states)
-        ) : (
-          <h3>Loading...</h3>
-        )}
+        {error ? <p>error</p> :
+          searchInput && legalResults ? (
+            generatePolicyCards(
+              filteredResults.filter((res) => legalResults.includes(res))
+            )
+          ) : searchInput ? (
+            generatePolicyCards(filteredResults)
+          ) : legalResults ? (
+            generatePolicyCards(legalResults)
+          ) : states ? (
+            generatePolicyCards(states)
+          ) : (
+            <h3>Loading...</h3>
+          )}
       </div>
     </section>
   );
