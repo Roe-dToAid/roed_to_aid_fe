@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import ClinicCard from "../ClinicCard/ClinicCard";
-import "./ClinicCardContainer.scss";
+import React, { useState, useEffect } from 'react';
+import ClinicCard from '../ClinicCard/ClinicCard';
+import './ClinicCardContainer.scss';
 
 const ClinicCardContainer = ({ states, toggleSelected, filteredResults }) => {
   const [searchResults, setSearchResults] = useState([]);
@@ -22,6 +22,7 @@ const ClinicCardContainer = ({ states, toggleSelected, filteredResults }) => {
           address={clinic.address}
           city={clinic.city}
           state={state.name}
+          zip={clinic.zip}
         />
       );
     });
@@ -59,7 +60,7 @@ const ClinicCardContainer = ({ states, toggleSelected, filteredResults }) => {
   });
   return (
     <section className="all-clinics-card-container">
-      {(toggleSelected === "authorized" || toggleSelected === "all") && (
+      {(toggleSelected === 'authorized' || toggleSelected === 'all') && (
         <>
           <h2>Authorized Clinics</h2>
           <div className="card-container authorized-card-container">
@@ -67,8 +68,8 @@ const ClinicCardContainer = ({ states, toggleSelected, filteredResults }) => {
           </div>
         </>
       )}
-      {(toggleSelected === "misinformationCenters" ||
-        toggleSelected === "all") && (
+      {(toggleSelected === 'misinformationCenters' ||
+        toggleSelected === 'all') && (
         <>
           <h2>Misinformation Centers</h2>
           <div className="card-container misinformation-card-container">
@@ -76,7 +77,7 @@ const ClinicCardContainer = ({ states, toggleSelected, filteredResults }) => {
           </div>
         </>
       )}
-      {(toggleSelected === "resources" || toggleSelected === "all") && (
+      {(toggleSelected === 'resources' || toggleSelected === 'all') && (
         <>
           <h2>State Resources</h2>
           <div className="card-container resource-card-container">
