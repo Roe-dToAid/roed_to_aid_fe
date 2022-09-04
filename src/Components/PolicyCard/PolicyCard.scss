@@ -1,9 +1,9 @@
 .info-strip {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   border: .1rem solid #768CA0;
   margin: .3rem;
-  width: 60%; 
+  width: 100%; 
   .name-container, 
   .legal-description {
     padding: 1.5rem;
@@ -13,10 +13,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30%;
+    width: auto;
   }
-  .legal-description {
-    width: 70%;
-  }
+  // .legal-description {
+  //   width: 70%;
+  // }
 }
 

@@ -24,10 +24,17 @@ const StatePoliciesView = () => {
   if (error) console.log("error!", error.message);
   if (data) console.log(data);
 
+  const [states, setStates] = useState([])
   const [searchInput, setSearchInput] = useState("");
   const [legalResults, setLegalResults] = useState("");
   const [filteredResults, setFilteredResults] = useState([]);
   const inputRef = useRef(null);
+
+  useEffect(() => {
+    if (!loading) {
+      setStates(data.states)
+    }
+  }, [data])
 
   const handleSearchChange = (value) => {
     setSearchInput(value);
@@ -35,7 +42,7 @@ const StatePoliciesView = () => {
 
   useEffect(() => {
     if (searchInput) {
-      const filteredData = data.states.filter((item) =>
+      const filteredData = states.filter((item) =>
         item.name.toLowerCase().includes(searchInput.toLowerCase())
       );
       setFilteredResults(filteredData);
@@ -60,7 +67,7 @@ const StatePoliciesView = () => {
   };
 
   const filterByLegality = (legalSearch) => {
-    const filteredByStatus = data.states.filter(
+    const filteredByStatus = states.filter(
       (state) => state.legal === legalSearch
     );
     setLegalResults(filteredByStatus);
@@ -76,24 +83,26 @@ const StatePoliciesView = () => {
     <section className="policy-body">
       <h1 className="policy-header" data-cy="policy-header">Check state abortion status</h1>
       <div className="content-body">
-        <SearchBar
-          inputRef={inputRef}
-          handleSearchChange={handleSearchChange}
-        />
         <div className="key-container">
           <img
-            className="policy-images"
+            className="policy-img"
             src={fight}
             height="200"
             alt="fight for your right megaphone"
             data-cy="fight-img"
           ></img>
-          <LegalKey
-            filterByLegality={filterByLegality}
-            clearSearch={clearSearch}
-          />
+          <div>
+            <LegalKey
+              filterByLegality={filterByLegality}
+              clearSearch={clearSearch}
+            />
+            <SearchBar
+              inputRef={inputRef}
+              handleSearchChange={handleSearchChange}
+            />
+          </div>
           <img
-            className="policy-images"
+            className="policy-img"
             src={fists}
             height="200"
             alt="empowered fists"
@@ -108,8 +117,8 @@ const StatePoliciesView = () => {
           generatePolicyCards(filteredResults)
         ) : legalResults ? (
           generatePolicyCards(legalResults)
-        ) : data ? (
-          generatePolicyCards(data.states)
+        ) : states ? (
+          generatePolicyCards(states)
         ) : (
           <h3>Loading...</h3>
         )}

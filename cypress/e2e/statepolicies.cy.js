@@ -1,7 +1,6 @@
 describe('State Policies View', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000/states-policies')
-    // cy.intercept('POST', 'https://roed-to-aide-be.herokuapp.com/graphql?api_key=ca912ed1df0d1c0f014ec94e3c731881')
   });
 
   it('Should have a page title', () => {
@@ -40,9 +39,9 @@ describe('State Policies View', () => {
   })
 
   //NOT WORKING
-  // it('Should should allow the user to sort by legal status', () => {
-  //  cy.contains('LEGAL').click().first().dataCy('info-strip').contains('Alaska')
-  // })
+  it('Should should allow the user to sort by legal status', () => {
+    cy.dataCy('legal').click({timeout: 2000}).get('info-strip').should('have.length', 28)
+  })
 
   // it('Should should allow the user to sort by legal status', () => {
   //   cy.contains('ILLEGAL').click().first().dataCy('info-strip').contains('Alabama')
@@ -52,8 +51,8 @@ describe('State Policies View', () => {
   //   cy.contains('AT RISK').click().first().dataCy('info-strip').contains('Arizona')
   //  })
 
-   it('Should should allow the user to search with the search bar', () => {
-    cy.get('.search').type('Alaska')
-    // cy.dataCy('info-strip').should('have.length', 1)
-   })
+  //  it('Should should allow the user to search with the search bar', () => {
+  //   cy.get('.search').type('Alaska')
+  //   // cy.dataCy('info-strip').should('have.length', 1)
+  //  })
 })
