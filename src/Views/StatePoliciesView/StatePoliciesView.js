@@ -14,15 +14,16 @@ const GET_POLICIES = gql`
       name
       legal
       legalDescription
+      abbreviation
     }
   }
 `;
 
 const StatePoliciesView = () => {
   let { data, loading, error } = useQuery(GET_POLICIES);
-  if (loading) console.log("Loading...");
-  if (error) console.log("error!", error.message);
-  if (data) console.log(data);
+  // if (loading) console.log("Loading...");
+  // if (error) console.log("error!", error.message);
+  // if (data) console.log(data);
 
   const [states, setStates] = useState([])
   const [searchInput, setSearchInput] = useState("");
@@ -54,7 +55,7 @@ const StatePoliciesView = () => {
       states.map((state) => {
         return (
           <PolicyCard
-            key={state.id}
+            key={state.abbreviation}
             name={state.name}
             legal={state.legal}
             legalDescription={state.legalDescription}
@@ -81,7 +82,7 @@ const StatePoliciesView = () => {
 
   return (
     <section className="policy-body">
-      <h1 className="policy-header" data-cy="policy-header">Check state abortion status</h1>
+      <h1 className="policy-header" data-cy="policy-header" tabIndex='0'>Check state abortion status</h1>
       <div className="content-body">
         <div className="key-container">
           <img
@@ -89,6 +90,7 @@ const StatePoliciesView = () => {
             src={fight}
             alt="fight for your right megaphone"
             data-cy="fight-img"
+            tabIndex='0'
           ></img>
           <div>
             <LegalKey
@@ -105,6 +107,7 @@ const StatePoliciesView = () => {
             src={fists}
             alt="empowered fists"
             data-cy="fists-img"
+            tabIndex='0'
           ></img>
         </div>
         {searchInput && legalResults ? (
