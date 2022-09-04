@@ -80,7 +80,7 @@ const ClinicsView = () => {
 
   return (
     <>
-      <h1>Find a safe clinic</h1>
+      <h1 data-cy="clinics-view-heading">Find a safe clinic</h1>
       <div className="heading-container">
         <ClinicKeyBlock />
         <div>

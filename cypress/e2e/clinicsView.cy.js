@@ -15,16 +15,18 @@ describe('Clinics View', () => {
   });
 
   it('should contain a heading', () => {
-    cy.dataCy('explore-view-heading').contains('Explore The Deck');
+    cy.dataCy('clinics-view-heading').contains('Find a safe clinic');
   });
 
-  it('should contain an instruction block', () => {
-    cy.dataCy('instruction-block')
-      .contains('MAJOR & MINOR ARCANA TAROT CARD MEANINGS')
-      .dataCy('instruction-block')
-      .contains(
-        "Learn what each card of the tarot deck means—the major arcana, the minor arcana, they're all here."
+  it('should contain an authorized key block', () => {
+    cy.dataCy('clinic-key-block-authorized').within(() => {
+      cy.dataCy('authorized-header').within(() => {
+        cy.dataCy('authorized-h3').contains('Authorized');
+      });
+      cy.dataCy('authorized-p').contains(
+        'Blue clinics are verified safe and provide access to abortion care.'
       );
+    });
   });
 
   it('should contain a filter button that filters major arcana', () => {
