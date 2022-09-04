@@ -27,16 +27,12 @@ const StatePoliciesView = () => {
   const inputRef = useRef(null);
 
   let { data, loading, error } = useQuery(GET_POLICIES);
-  if (loading) console.log("Loading...");
-  // if (error) setErr(error.message)
   if (error) console.log("error!", error.message);
-  // if (data) console.log(data);
-
 
   useEffect(() => {
     if (!error && !loading) {
       setStates(data.states)
-    } 
+    }
   }, [data])
 
   const handleSearchChange = (value) => {
