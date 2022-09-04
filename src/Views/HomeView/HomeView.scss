@@ -4,12 +4,22 @@
   align-items: center;
   justify-content: center;
 }
+
+.introduction-block-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1.5rem;
+
+}
 .welcome-container {
   img {
     width: 100%;
   }
   h2 {
-    padding: 1.5rem;
+    padding: .5rem;
     text-align: center;
   }
 }
