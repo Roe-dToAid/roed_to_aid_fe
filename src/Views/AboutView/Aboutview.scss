@@ -1,30 +1,64 @@
-.about-container, .team-container {
+.about-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: black;
   padding: 2rem;
+  gap: 1.5rem;
 }
 
 .team-container {
-  img {
-    width: 60%;
-  }
-  padding: 2rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 2rem 0;
   gap: 1.5rem;
+  img {
+    width: 10rem;
+  }
 }
 
 .illustration {
   height: 60%;
   width: 60%;
+  max-width: 45%;
+  min-width: 20rem;
 }
 
 .mission-container, .inclusivity-container {
   text-align: center;
   padding: 2rem 0;
+  max-width: 45%;
+  min-width: 20rem;
 }
 
 .photo-container {
   text-align: center;
+}
+
+.copy-image-block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 1.5rem;
+}
+
+.inclusivity-only {
+  flex-direction: column-reverse;
+}
+
+@media(min-width: 768px) {
+  .inclusivity-only {
+    flex-direction: row;
+  }
+  .illustration {
+    max-height: 20rem;
+    width: auto;
+  }
 }
