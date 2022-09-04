@@ -14,9 +14,19 @@
     align-items: center;
     justify-content: center;
     width: auto;
+    text-align: center;
   }
-  // .legal-description {
-  //   width: 70%;
-  // }
 }
 
+@media (min-width: 768px) {
+  .info-strip {
+    flex-direction: row;
+    width: 60%;
+  }
+  .name-container {
+    min-width: 10rem;
+  }
+  .legal-description {
+    flex-grow: 2;
+  }
+}

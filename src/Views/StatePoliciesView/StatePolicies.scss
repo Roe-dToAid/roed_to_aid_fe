@@ -68,3 +68,10 @@
   color: black;
   padding: 1rem;
 }
+
+@media (min-width: 768px) {
+  .policy-img {
+    display: initial;
+    max-width: 10rem;
+  }
+}

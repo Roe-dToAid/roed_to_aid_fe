@@ -87,7 +87,6 @@ const StatePoliciesView = () => {
           <img
             className="policy-img"
             src={fight}
-            height="200"
             alt="fight for your right megaphone"
             data-cy="fight-img"
           ></img>
@@ -104,7 +103,6 @@ const StatePoliciesView = () => {
           <img
             className="policy-img"
             src={fists}
-            height="200"
             alt="empowered fists"
             data-cy="fists-img"
           ></img>
