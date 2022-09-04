@@ -11,6 +11,8 @@
   img {
     width: 60%;
   }
+  padding: 2rem 0;
+  gap: 1.5rem;
 }
 
 .illustration {
@@ -20,6 +22,9 @@
 
 .mission-container, .inclusivity-container {
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
+.photo-container {
+  text-align: center;
+}

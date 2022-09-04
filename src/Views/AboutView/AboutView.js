@@ -30,15 +30,35 @@ const AboutView = () => {
       
       <div className="team-container">
         <h2 data-cy="meet">Meet the Team</h2>
-        <img data-cy="rachel" src={rachelPhoto} alt="headshot of Rachel"></img>
-        <img data-cy="catlyn" src={catlynPhoto} alt="headshot of Catlyn"></img>
-        <img data-cy="irmak" src={irmakPhoto} alt="headshot of Irmak"></img>
-        <img data-cy="lidia" src={lidiaPhoto} alt="headshot of Lidia"></img>
-        <img data-cy="casey" src={caseyPhoto} alt="headshot of Casey"></img>
-        <img data-cy="wes" src={wesPhoto} alt="headshot of Wes"></img>
-        <img data-cy="bryce" src={brycePhoto} alt="headshot of Bryce"></img>
+        <div className="photo-container">
+          <img data-cy="rachel" src={rachelPhoto} alt="headshot of Rachel"></img>
+          <h3>Rachel A.</h3>
+        </div>
+        <div className="photo-container">
+          <img data-cy="catlyn" src={catlynPhoto} alt="headshot of Catlyn"></img>
+          <h3>Catlyn B.</h3>
+        </div>
+        <div className="photo-container">
+          <img data-cy="irmak" src={irmakPhoto} alt="headshot of Irmak"></img>
+          <h3>Irmak E.</h3>
+        </div>
+        <div className="photo-container">
+          <img data-cy="lidia" src={lidiaPhoto} alt="headshot of Lidia"></img>
+          <h3>Lidia K.</h3>
+        </div>
+        <div className="photo-container">
+          <img data-cy="casey" src={caseyPhoto} alt="headshot of Casey"></img>
+          <h3>Casey F.</h3>
+        </div>
+        <div className="photo-container">
+          <img data-cy="wes" src={wesPhoto} alt="headshot of Wes"></img>
+          <h3>Wes G.</h3>
+        </div>
+        <div className="photo-container">
+          <img data-cy="bryce" src={brycePhoto} alt="headshot of Bryce"></img>
+          <h3>Bryce W.</h3>
+        </div>
       </div>
-
     </div>
   )
 };
