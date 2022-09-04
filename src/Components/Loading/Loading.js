@@ -3,7 +3,9 @@ import './Loading.scss';
 
 const Loading = () => {
 	return (
-    <h1>⏳ LOADING... ⏳</h1>
+    <div className="loading-messaging">
+      <h2>LOADING...</h2>
+    </div> 
 	);
 };
 
