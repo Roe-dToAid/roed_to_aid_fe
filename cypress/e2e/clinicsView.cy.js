@@ -29,11 +29,18 @@ describe('Clinics View', () => {
     });
   });
 
-  it('should contain a filter button that filters major arcana', () => {
-    cy.dataCy('major').should('have.class', 'Mui-selected');
+  it('should contain a my body my rules image', () => {
+    cy.dataCy('my-body-image').should('be.visible');
+  });
 
-    cy.dataCy('explore-container').within(() => {
-      cy.dataCy('card-link').should('have.attr', 'href', '/explore/ar06');
+  it('should contain an authorized key block', () => {
+    cy.dataCy('clinic-key-block-authorized').within(() => {
+      cy.dataCy('authorized-header').within(() => {
+        cy.dataCy('authorized-h3').contains('Authorized');
+      });
+      cy.dataCy('authorized-p').contains(
+        'Blue clinics are verified safe and provide access to abortion care.'
+      );
     });
   });
 

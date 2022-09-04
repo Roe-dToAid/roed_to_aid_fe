@@ -15,8 +15,9 @@ const ClinicKeyBlock = () => {
       </div>
       <img
         src={myBodyImage}
-        alt="illustration of woman"
+        alt="my-body-my-rules"
         className="my-body-image"
+        data-cy="my-body-image"
       ></img>
       <div className="key-block misinformation">
         <div className="header">
