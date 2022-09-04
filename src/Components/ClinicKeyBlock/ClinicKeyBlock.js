@@ -5,7 +5,10 @@ import './ClinicKeyBlock.scss';
 const ClinicKeyBlock = () => {
   return (
     <div className="clinic-key-block-container">
-      <div className="key-block authorized" data-cy="clinic-key-block-authorized">
+      <div
+        className="key-block authorized"
+        data-cy="clinic-key-block-authorized"
+      >
         <div className="header" data-cy="authorized-header">
           <h3 data-cy="authorized-h3">Authorized</h3>
         </div>
@@ -19,11 +22,14 @@ const ClinicKeyBlock = () => {
         className="my-body-image"
         data-cy="my-body-image"
       ></img>
-      <div className="key-block misinformation">
-        <div className="header">
-          <h3>Misinformation</h3>
+      <div
+        className="key-block misinformation"
+        data-cy="clinic-key-block-misinformation"
+      >
+        <div className="header" data-cy="misinformation-header">
+          <h3 data-cy="misinformation-h3">Misinformation</h3>
         </div>
-        <p>
+        <p data-cy="misinformation-p">
           Red clinics are "crisis centers" and are considered unsafe/harmful.
         </p>
       </div>

@@ -33,13 +33,13 @@ describe('Clinics View', () => {
     cy.dataCy('my-body-image').should('be.visible');
   });
 
-  it('should contain an authorized key block', () => {
-    cy.dataCy('clinic-key-block-authorized').within(() => {
-      cy.dataCy('authorized-header').within(() => {
-        cy.dataCy('authorized-h3').contains('Authorized');
+  it('should contain a misinformation key block', () => {
+    cy.dataCy('clinic-key-block-misinformation').within(() => {
+      cy.dataCy('misinformation-header').within(() => {
+        cy.dataCy('misinformation-h3').contains('Misinformation');
       });
-      cy.dataCy('authorized-p').contains(
-        'Blue clinics are verified safe and provide access to abortion care.'
+      cy.dataCy('misinformation-p').contains(
+        'Red clinics are "crisis centers" and are considered unsafe/harmful.'
       );
     });
   });
