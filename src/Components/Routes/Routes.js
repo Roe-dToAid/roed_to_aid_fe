@@ -5,6 +5,7 @@ import HomeView from "../../Views/HomeView/HomeView";
 import AboutView from "../../Views/AboutView/AboutView";
 import ClinicsView from "../../Views/ClinicsView/ClinicsView";
 import StatePoliciesView from "../../Views/StatePoliciesView/StatePoliciesView";
+import Error from "../Error/Error";
 
 const Routes = () => {
   return (
@@ -20,6 +21,10 @@ const Routes = () => {
       </Route>
       <Route exact path="/">
         <HomeView />
+      </Route>
+      <Route path="*">
+        <Error />
+        {/* <Error error={new Error("this path does not exist")} /> */}
       </Route>
     </Route>
   );
