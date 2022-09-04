@@ -4,7 +4,7 @@ describe('Clinics View', () => {
       'POST',
       `https://roed-to-aide-be.herokuapp.com/graphql?api_key=${process.env.REACT_APP_API_KEY}`,
       {
-        fixture: 'clinicsView',
+        fixture: 'clinics',
       }
     );
     cy.visit('http://localhost:3000/clinics');
