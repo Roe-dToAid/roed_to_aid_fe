@@ -5,12 +5,14 @@ import LegalKey from "../../Components/LegalKey/LegalKey";
 import fight from "./../../assets/fight.png";
 import fists from "./../../assets/Asset 1.png";
 import NoResults from "../../Components/NoResults/NoResults";
-import SearchBar from '../../Components/SearchBar/SearchBar'
+import SearchBar from '../../Components/SearchBar/SearchBar';
+import Error from '../../Components/Error/Error'
+import Loading from '../../Components/Loading/Loading'
 import './StatePolicies.scss'
 
 const GET_POLICIES = gql`
   query {
-    states {
+    stes {
       name
       legal
       legalDescription
@@ -60,7 +62,7 @@ const StatePoliciesView = () => {
           />
         );
       })
-    ) : (
+    ) : !error && (
       <NoResults />
     );
   };
@@ -82,46 +84,47 @@ const StatePoliciesView = () => {
     <section className="policy-body">
       <h1 className="policy-header" data-cy="policy-header" tabIndex='0'>Check state abortion status</h1>
       <div className="content-body">
-        <div className="key-container">
-          <img
-            className="policy-img"
-            src={fight}
-            alt="fight for your right megaphone"
-            data-cy="fight-img"
-            tabIndex='0'
-          ></img>
-          <div>
-            <LegalKey
-              filterByLegality={filterByLegality}
-              clearSearch={clearSearch}
-            />
-            <SearchBar
-              inputRef={inputRef}
-              handleSearchChange={handleSearchChange}
-            />
+        {error ? <Error /> :
+          <div className="key-container">
+            <img
+              className="policy-img"
+              src={fight}
+              alt="fight for your right megaphone"
+              data-cy="fight-img"
+              tabIndex='0'
+            ></img>
+            <div>
+              <LegalKey
+                filterByLegality={filterByLegality}
+                clearSearch={clearSearch}
+              />
+              <SearchBar
+                inputRef={inputRef}
+                handleSearchChange={handleSearchChange}
+              />
+            </div>
+            <img
+              className="policy-img"
+              src={fists}
+              alt="empowered fists"
+              data-cy="fists-img"
+              tabIndex='0'
+            ></img>
           </div>
-          <img
-            className="policy-img"
-            src={fists}
-            alt="empowered fists"
-            data-cy="fists-img"
-            tabIndex='0'
-          ></img>
-        </div>
-        {error ? <p>error</p> :
-          searchInput && legalResults ? (
-            generatePolicyCards(
-              filteredResults.filter((res) => legalResults.includes(res))
-            )
-          ) : searchInput ? (
-            generatePolicyCards(filteredResults)
-          ) : legalResults ? (
-            generatePolicyCards(legalResults)
-          ) : states ? (
-            generatePolicyCards(states)
-          ) : (
-            <h3>Loading...</h3>
-          )}
+        }
+        {
+          loading ? <Loading /> :
+            searchInput && legalResults ? (
+              generatePolicyCards(
+                filteredResults.filter((res) => legalResults.includes(res))
+              )
+            ) : searchInput ? (
+              generatePolicyCards(filteredResults)
+            ) : legalResults ? (
+              generatePolicyCards(legalResults)
+            ) : (
+              generatePolicyCards(states)
+            )}
       </div>
     </section>
   );
