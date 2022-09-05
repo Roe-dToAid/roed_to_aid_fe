@@ -26,13 +26,14 @@ const ToggleClinicsButton = ({ setToggleSelected }) => {
         aria-label="text alignment"
         className="toggle-button-group"
       >
-        <ToggleButton value="all" aria-label="all" className="toggle-button">
+        <ToggleButton value="all" aria-label="all" className="toggle-button" data-cy="all">
           All
         </ToggleButton>
         <ToggleButton
           value="authorized"
           aria-label="authorized"
           className="toggle-button"
+          data-cy="authorized"
         >
           Authorized
         </ToggleButton>
@@ -40,6 +41,7 @@ const ToggleClinicsButton = ({ setToggleSelected }) => {
           value="misinformationCenters"
           aria-label="misinformation"
           className="toggle-button"
+          data-cy="misinformation"
         >
           Misinformation
         </ToggleButton>
@@ -47,6 +49,7 @@ const ToggleClinicsButton = ({ setToggleSelected }) => {
           value="resources"
           aria-label="resources"
           className="toggle-button"
+          data-cy="resources"
         >
           Resources
         </ToggleButton>

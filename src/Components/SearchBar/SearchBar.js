@@ -3,8 +3,8 @@ import "./SearchBar.scss";
 
 const SearchBar = ({ inputRef, handleSearchChange }) => {
   return (
-    <div className="search-container">
-      <span className="material-symbols-outlined">search</span>
+    <div className="search-container" data-cy="search-container">
+      <span className="material-symbols-outlined" data-cy="search-mui">search</span>
       <input
         ref={inputRef}
         className="search"

@@ -7,7 +7,7 @@ import SearchBar from "../../Components/SearchBar/SearchBar";
 import ClinicCardContainer from "../../Components/ClinicCardContainer/ClinicCardContainer";
 
 const GET_CLINICS = gql`
-  query {
+  query GetClinics {
     states {
       name
       id

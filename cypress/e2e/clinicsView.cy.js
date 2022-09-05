@@ -1,12 +1,9 @@
+import { aliasQuery, hasOperationName } from '../utils/graphql-test-utils';
+
+import clinics from '../fixtures/clinics.js';
+
 describe('Clinics View', () => {
   beforeEach(() => {
-    cy.intercept(
-      'POST',
-      `https://roed-to-aide-be.herokuapp.com/graphql?api_key=${process.env.REACT_APP_API_KEY}`,
-      {
-        fixture: 'clinics',
-      }
-    );
     cy.visit('http://localhost:3000/clinics');
   });
 
@@ -44,19 +41,21 @@ describe('Clinics View', () => {
     });
   });
 
-  it('should contain a filter button that filters pentacles', () => {
-    cy.dataCy('pentacles').click().should('have.class', 'Mui-selected');
-
-    cy.dataCy('explore-container').within(() => {
-      cy.dataCy('card-link').should('have.attr', 'href', '/explore/peki');
+  it('should contain a search bar to search by state', () => {
+    cy.dataCy('search-container').within(() => {
+      cy.dataCy('search-mui').contains('search');
     });
   });
 
-  it('should contain a filter button that filters swords', () => {
-    cy.dataCy('swords').click().should('have.class', 'Mui-selected');
+  it('should contain a filter button that filters all clinics', () => {
+    cy.dataCy('all').click().should('have.class', 'Mui-selected');
 
-    cy.dataCy('explore-container').within(() => {
-      cy.dataCy('card-link').should('have.attr', 'href', '/explore/swkn');
+    cy.dataCy('all-clinics-card-container').within(() => {
+      cy.dataCy('authorized-card-container').within(() => {
+        cy.dataCy('clinic-card').within(() => {
+          cy.dataCy('clinic-name').contains();
+        });
+      });
     });
   });
 
@@ -68,6 +67,13 @@ describe('Clinics View', () => {
     });
   });
 
+  it('should contain a filter button that filters wands', () => {
+    cy.dataCy('wands').click().should('have.class', 'Mui-selected');
+
+    cy.dataCy('explore-container').within(() => {
+      cy.dataCy('card-link').should('have.attr', 'href', '/explore/wapa');
+    });
+  });
   it('should contain a filter button that filters wands', () => {
     cy.dataCy('wands').click().should('have.class', 'Mui-selected');
 

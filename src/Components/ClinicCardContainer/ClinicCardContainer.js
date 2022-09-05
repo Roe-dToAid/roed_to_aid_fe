@@ -59,11 +59,11 @@ const ClinicCardContainer = ({ states, toggleSelected, filteredResults }) => {
     });
   });
   return (
-    <section className="all-clinics-card-container">
+    <section className="all-clinics-card-container" data-cy="all-clinics-card-container">
       {(toggleSelected === 'authorized' || toggleSelected === 'all') && (
         <>
           <h2>Authorized Clinics</h2>
-          <div className="card-container authorized-card-container">
+          <div className="card-container authorized-card-container" data-cy="authorized-card-container">
             {authorizedClinics}
           </div>
         </>
