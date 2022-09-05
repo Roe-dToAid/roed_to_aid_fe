@@ -1,9 +1,13 @@
-import { aliasQuery, hasOperationName } from '../utils/graphql-test-utils';
-
-import clinics from '../fixtures/clinics.js';
+import clinics from '../fixtures/clinics.json';
 
 describe('Clinics View', () => {
   beforeEach(() => {
+    cy.interceptGQL(
+      'https://roed-to-aide-be.herokuapp.com/graphql?api_key=ca912ed1df0d1c0f014ec94e3c731881',
+      'GetClinics',
+      clinics
+    ).as('GetClinics');
+    // cy.wait("@GetClinics")
     cy.visit('http://localhost:3000/clinics');
   });
 
@@ -11,8 +15,8 @@ describe('Clinics View', () => {
     cy.visit('http://localhost:3000/clinics');
   });
 
-  it('should contain a heading', () => {
-    cy.dataCy('clinics-view-heading').contains('Find a safe clinic');
+  it.only('should contain a heading', () => {
+    cy.dataCy('clinics-view-heading').wait(3000).contains('Find a safe clinic');
   });
 
   it('should contain an authorized key block', () => {

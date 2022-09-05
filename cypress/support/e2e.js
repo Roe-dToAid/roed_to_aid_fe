@@ -24,3 +24,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   // failing the test
   return false
 })
+
+beforeEach(() => {
+  Cypress.config("interceptions", {});
+});
