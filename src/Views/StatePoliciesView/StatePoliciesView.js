@@ -12,7 +12,7 @@ import './StatePolicies.scss'
 
 const GET_POLICIES = gql`
   query {
-    stes {
+    states {
       name
       legal
       legalDescription
@@ -112,19 +112,18 @@ const StatePoliciesView = () => {
             ></img>
           </div>
         }
-        {
-          loading ? <Loading /> :
-            searchInput && legalResults ? (
-              generatePolicyCards(
-                filteredResults.filter((res) => legalResults.includes(res))
-              )
-            ) : searchInput ? (
-              generatePolicyCards(filteredResults)
-            ) : legalResults ? (
-              generatePolicyCards(legalResults)
-            ) : (
-              generatePolicyCards(states)
-            )}
+        {loading ? <Loading /> :
+          searchInput && legalResults ? (
+            generatePolicyCards(
+              filteredResults.filter((res) => legalResults.includes(res))
+            )
+          ) : searchInput ? (
+            generatePolicyCards(filteredResults)
+          ) : legalResults ? (
+            generatePolicyCards(legalResults)
+          ) : (
+            generatePolicyCards(states)
+          )}
       </div>
     </section>
   );
