@@ -80,7 +80,7 @@ const ClinicsView = () => {
   }, [searchInput, states]);
 
   return (
-    <>
+    <main className="clinics-view-container">
       <h1 data-cy="clinics-view-heading">Find a safe clinic</h1>
       <div className="heading-container">
         <ClinicKeyBlock />
@@ -92,8 +92,8 @@ const ClinicsView = () => {
           <ToggleClinicsButton setToggleSelected={setToggleSelected}/>
         </div>
       </div>
-      {!loading && <ClinicCardContainer states={states} toggleSelected={toggleSelected} filteredResults={filteredResults}/>}
-    </>
+      {!loading ? <ClinicCardContainer states={states} toggleSelected={toggleSelected} filteredResults={filteredResults}/> : <Loading /> }
+    </main>
   );
 };
 
