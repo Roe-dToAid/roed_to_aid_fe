@@ -7,6 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const client = new ApolloClient({
