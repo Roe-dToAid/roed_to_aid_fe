@@ -1,11 +1,12 @@
-import React, { useEffect, useState, useRef } from "react";
-import { useQuery, gql } from "@apollo/client";
-import "./ClinicsView.scss";
-import ClinicKeyBlock from "../../Components/ClinicKeyBlock/ClinicKeyBlock";
-import ToggleClinicsButton from "../../Components/ToggleClinicsButton/ToggleClinicsButton";
-import SearchBar from "../../Components/SearchBar/SearchBar";
-import ClinicCardContainer from "../../Components/ClinicCardContainer/ClinicCardContainer";
-import Loading from "../../Components/Loading/Loading";
+import React, { useEffect, useState, useRef } from 'react';
+import { useQuery, gql } from '@apollo/client';
+import './ClinicsView.scss';
+import ClinicKeyBlock from '../../Components/ClinicKeyBlock/ClinicKeyBlock';
+import ToggleClinicsButton from '../../Components/ToggleClinicsButton/ToggleClinicsButton';
+import SearchBar from '../../Components/SearchBar/SearchBar';
+import ClinicCardContainer from '../../Components/ClinicCardContainer/ClinicCardContainer';
+import Loading from '../../Components/Loading/Loading';
+import Error from '../../Components/Error/Error';
 
 const GET_CLINICS = gql`
   query GetClinics {
@@ -49,12 +50,12 @@ const GET_CLINICS = gql`
 
 const ClinicsView = () => {
   let { data, loading, error } = useQuery(GET_CLINICS);
-  if (loading) console.log("Loading...") && <Loading/>;
-  if (error) console.log("error!", error.message);
+  if (loading) console.log('Loading...') && <Loading />;
+  if (error) console.log('error!', error.message);
 
   const [states, setStates] = useState([]);
-  const [toggleSelected, setToggleSelected] = useState("all");
-  const [searchInput, setSearchInput] = useState("");
+  const [toggleSelected, setToggleSelected] = useState('all');
+  const [searchInput, setSearchInput] = useState('');
   const [filteredResults, setFilteredResults] = useState([]);
   const inputRef = useRef(null);
 
@@ -75,7 +76,7 @@ const ClinicsView = () => {
       );
       setFilteredResults(filteredData);
     } else {
-      setFilteredResults([])
+      setFilteredResults([]);
     }
   }, [searchInput, states]);
 
@@ -89,10 +90,22 @@ const ClinicsView = () => {
             inputRef={inputRef}
             handleSearchChange={handleSearchChange}
           />
-          <ToggleClinicsButton setToggleSelected={setToggleSelected}/>
+          <ToggleClinicsButton setToggleSelected={setToggleSelected} />
         </div>
       </div>
-      {!loading ? <ClinicCardContainer states={states} toggleSelected={toggleSelected} filteredResults={filteredResults}/> : <Loading /> }
+      {!error ? (
+        !loading ? (
+          <ClinicCardContainer
+            states={states}
+            toggleSelected={toggleSelected}
+            filteredResults={filteredResults}
+          />
+        ) : (
+          <Loading />
+        )
+      ) : (
+        <Error />
+      )}
     </main>
   );
 };
