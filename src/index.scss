@@ -1,4 +1,6 @@
 body {
+  display: flex;
+  flex-direction: column;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   margin: 0;
@@ -6,4 +8,5 @@ body {
 
 h1 {
   text-align: center;
+  margin: 0;
 }

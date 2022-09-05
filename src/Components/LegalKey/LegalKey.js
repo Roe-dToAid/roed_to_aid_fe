@@ -2,11 +2,11 @@ import React from 'react'
 
 const LegalKey = ({filterByLegality, clearSearch}) => {
   return (
-    <div className='legal-key'>
-      <h2 className='clear' style={{backgroundColor: 'black'}} onClick={() => clearSearch()}>Clear Search</h2>
-      <h2 className='legal' onClick={() => filterByLegality('0')}>LEGAL</h2>
-      <h2 className='at-risk' onClick={() => filterByLegality('1')}>AT RISK</h2>
-      <h2 className='illegal' onClick={() => filterByLegality('2')}>ILLEGAL</h2>
+    <div className='legal-key' data-cy='legal-key'>
+      <h2 className='clear' role='button' tabIndex='0' onClick={() => clearSearch()}>ALL STATES</h2>
+      <h2 className='legal' data-cy='legal' role='button' tabIndex='0' onClick={() => filterByLegality('legal')}>LEGAL</h2>
+      <h2 className='at-risk' role='button' tabIndex='0' onClick={() => filterByLegality('at risk')}>AT RISK</h2>
+      <h2 className='illegal' role='button' tabIndex='0' onClick={() => filterByLegality('illegal')}>ILLEGAL</h2>
     </div>
   )
 }

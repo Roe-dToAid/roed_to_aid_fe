@@ -1,0 +1,9 @@
+.error-messaging {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h2, h3 {
+    text-align: center;
+    margin: 1.5rem;
+  }
+}

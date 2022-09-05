@@ -1,14 +1,14 @@
 import React from "react";
-import { Route } from "react-router-dom";
-//put Switch back
+import { Route, Switch } from "react-router-dom";
 import HomeView from "../../Views/HomeView/HomeView";
 import AboutView from "../../Views/AboutView/AboutView";
 import ClinicsView from "../../Views/ClinicsView/ClinicsView";
 import StatePoliciesView from "../../Views/StatePoliciesView/StatePoliciesView";
+import Error from "../Error/Error";
 
 const Routes = () => {
   return (
-    <Route>
+    <Switch>
       <Route exact path="/about">
         <AboutView />
       </Route>
@@ -21,7 +21,10 @@ const Routes = () => {
       <Route exact path="/">
         <HomeView />
       </Route>
-    </Route>
+      <Route path="/*">
+        <Error />
+      </Route>
+    </Switch>
   );
 };
 

@@ -5,6 +5,7 @@ import ClinicKeyBlock from "../../Components/ClinicKeyBlock/ClinicKeyBlock";
 import ToggleClinicsButton from "../../Components/ToggleClinicsButton/ToggleClinicsButton";
 import SearchBar from "../../Components/SearchBar/SearchBar";
 import ClinicCardContainer from "../../Components/ClinicCardContainer/ClinicCardContainer";
+import Loading from "../../Components/Loading/Loading";
 
 const GET_CLINICS = gql`
   query GetClinics {
@@ -48,7 +49,7 @@ const GET_CLINICS = gql`
 
 const ClinicsView = () => {
   let { data, loading, error } = useQuery(GET_CLINICS);
-  if (loading) console.log("Loading...");
+  if (loading) console.log("Loading...") && <Loading/>;
   if (error) console.log("error!", error.message);
 
   const [states, setStates] = useState([]);

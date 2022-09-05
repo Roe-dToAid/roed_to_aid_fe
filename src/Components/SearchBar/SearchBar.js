@@ -1,5 +1,5 @@
-import React from "react";
-import "./SearchBar.scss";
+import React from 'react'
+import './SearchBar.scss'
 
 const SearchBar = ({ inputRef, handleSearchChange }) => {
   return (
@@ -11,9 +11,10 @@ const SearchBar = ({ inputRef, handleSearchChange }) => {
         type="search"
         placeholder="Search for state..."
         onChange={(e) => handleSearchChange(e.target.value)}
+        data-cy='search'
       />
     </div>
-  );
-};
+  )
+}
 
-export default SearchBar;
+export default SearchBar

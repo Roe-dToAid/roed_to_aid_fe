@@ -1,9 +1,9 @@
 .info-strip {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   border: .1rem solid #768CA0;
   margin: .3rem;
-  width: 60%; 
+  width: 100%; 
   .name-container, 
   .legal-description {
     padding: 1.5rem;
@@ -13,10 +13,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30%;
-  }
-  .legal-description {
-    width: 70%;
+    width: auto;
+    text-align: center;
   }
 }
 
+@media (min-width: 768px) {
+  .info-strip {
+    flex-direction: row;
+    width: 60%;
+  }
+  .name-container {
+    min-width: 10rem;
+  }
+  .legal-description {
+    flex-grow: 2;
+  }
+}
