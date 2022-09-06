@@ -61,7 +61,7 @@ const StatePoliciesView = () => {
         );
       })
     ) : (
-      <NoResults />
+      <NoResults message="No results match the selected criteria. Clear your search and try again!" />
     );
   };
 

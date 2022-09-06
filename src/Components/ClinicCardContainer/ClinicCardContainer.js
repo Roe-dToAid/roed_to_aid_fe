@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ClinicCard from '../ClinicCard/ClinicCard';
+import NoResults from '../NoResults/NoResults';
 import './ClinicCardContainer.scss';
 
 const ClinicCardContainer = ({
@@ -85,8 +86,6 @@ const ClinicCardContainer = ({
     });
   });
 
-  // console.log(noAuthorized);
-  // console.log(authorizedClinics);
   return (
     <section
       className="all-clinics-card-container"
@@ -103,7 +102,7 @@ const ClinicCardContainer = ({
               {authorizedClinics}
             </div>
           ) : (
-            <h3>No Authorized Clinics match your search</h3>
+            <NoResults message="No authorized clinics match your search" />
           )}
         </>
       )}
@@ -112,7 +111,7 @@ const ClinicCardContainer = ({
           <h2>State Resources</h2>
           {resources.length ?(<div className="card-container resource-card-container">
             {stateResources}
-          </div>) : <h3>No resources match your search</h3>}
+          </div>) : <NoResults message="No resources match your search" />}
         </>
       )}
       {(toggleSelected === 'misinformationCenters' ||
@@ -124,7 +123,7 @@ const ClinicCardContainer = ({
               {misinformationCenters}
             </div>
           ) : (
-            <h3>No MisInformation Centers match your search</h3>
+            <NoResults message="No misinformation centers match your search" />
           )}
         </>
       )}

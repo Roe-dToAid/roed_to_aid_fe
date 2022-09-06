@@ -1,10 +1,12 @@
-import React from 'react'
-import './NoResults.scss'
+import React from 'react';
+import './NoResults.scss';
 
-const NoResults = () => { 
+const NoResults = ({ message }) => {
   return (
-    <h2 className='empty'>No results match the selected criteria. Clear your search and try again!</h2>
-  )
-}
+    <div className="no-results-card">
+      <h2 className="empty">{message}</h2>
+    </div>
+  );
+};
 
-export default NoResults
+export default NoResults;
