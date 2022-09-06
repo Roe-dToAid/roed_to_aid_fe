@@ -59,7 +59,7 @@ const AboutView = () => {
           <h3>Bryce W.</h3>
         </div>
       </div>
-      <div className="data-statement">
+      <div data-cy="data-statement" className="data-statement">
         <p>The data on this website was last updated on September 6, 2022.</p>
         <p>For most up to date information, please go <a href="https://www.abortionfinder.org">here</a>.</p>
       </div>
