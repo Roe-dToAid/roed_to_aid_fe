@@ -5,9 +5,13 @@ const IntroductionBlock = () => {
   return (
     <>
       <div className="introduction-container">
-        <h1 data-cy="app-title">Welcome to Roe'dToAid</h1>
-        <h2 data-cy="app-phrase">A safe space to find a safe place.</h2>
-        <div data-cy="app-explanation">
+        <h1 data-cy="app-title" tabIndex={0}>
+          Welcome to Roe'dToAid
+        </h1>
+        <h2 data-cy="app-phrase" tabIndex={0}>
+          A safe space to find a safe place.
+        </h2>
+        <div data-cy="app-explanation" tabIndex={0}>
           <p>
             After the U.S. Supreme Court officially reversed Roe v Wade in June
             of 2022, millions lost a fundamental constitutional protection, the
