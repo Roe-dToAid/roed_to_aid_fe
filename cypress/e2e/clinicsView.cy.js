@@ -15,7 +15,7 @@ describe('Clinics View', () => {
     cy.visit('http://localhost:3000/clinics');
   });
 
-  it.only('should contain a heading', () => {
+  it('should contain a heading', () => {
     cy.dataCy('clinics-view-heading').wait(3000).contains('Find a safe clinic');
   });
 
@@ -45,44 +45,109 @@ describe('Clinics View', () => {
     });
   });
 
-  it('should contain a search bar to search by state', () => {
+  it('should contain a disclaimer', () => {
+    cy.dataCy('clinics-view-disclaimer').contains("As this is an MVP project, we currently only have results for Indiana, New Mexico, and Texas. Please use one those states when using the search bar.")
+  });
+
+  it('should contain a search bar', () => {
     cy.dataCy('search-container').within(() => {
       cy.dataCy('search-mui').contains('search');
+      cy.dataCy('search-input').type("New Mexico").should("have.value", "New Mexico");;
     });
   });
+
+  it('should be able to search for state that contains results', () => {
+    cy.dataCy('search-container').within(() => {
+      cy.dataCy('search-input').type("New Mexico").should("have.value", "New Mexico");;
+    });
+
+    cy.dataCy('all-clinics-card-container').within(() => {
+      cy.dataCy('clinic-card').should("have.length", 13);
+    });
+
+  });
+
+  it('should be able to search for state that contains results and toggles authorized', () => {
+    cy.dataCy('search-container').within(() => {
+      cy.dataCy('search-input').type("New Mexico").should("have.value", "New Mexico");;
+    });
+
+    cy.dataCy('authorized').click().should('have.class', 'Mui-selected');
+
+
+    cy.dataCy('all-clinics-card-container').within(() => {
+      cy.dataCy('clinic-card').should("have.length", 8);
+    });
+
+  });
+
+  it('should be able to search for state that contains results and toggles resources', () => {
+    cy.dataCy('search-container').within(() => {
+      cy.dataCy('search-input').type("New Mexico").should("have.value", "New Mexico");;
+    });
+
+    cy.dataCy('resources').click().should('have.class', 'Mui-selected');
+
+
+    cy.dataCy('all-clinics-card-container').within(() => {
+      cy.dataCy('clinic-card').should("have.length", 3);
+    });
+
+  });
+
+  it('should be able to search for state that contains results and toggles misinformation', () => {
+    cy.dataCy('search-container').within(() => {
+      cy.dataCy('search-input').type("New Mexico").should("have.value", "New Mexico");;
+    });
+
+    cy.dataCy('misinformation').click().should('have.class', 'Mui-selected');
+
+
+    cy.dataCy('all-clinics-card-container').within(() => {
+      cy.dataCy('clinic-card').should("have.length", 2);
+    });
+
+  });
+  
 
   it('should contain a filter button that filters all clinics', () => {
     cy.dataCy('all').click().should('have.class', 'Mui-selected');
 
     cy.dataCy('all-clinics-card-container').within(() => {
-      cy.dataCy('authorized-card-container').within(() => {
-        cy.dataCy('clinic-card').within(() => {
-          cy.dataCy('clinic-name').contains();
-        });
-      });
+      cy.dataCy('clinic-card').should("have.length", 13);
     });
   });
 
-  it('should contain a filter button that filters cups', () => {
-    cy.dataCy('cups').click().should('have.class', 'Mui-selected');
+  it('should contain a filter button that filters authorized clinics', () => {
+    cy.dataCy('authorized').click().should('have.class', 'Mui-selected');
 
-    cy.dataCy('explore-container').within(() => {
-      cy.dataCy('card-link').should('have.attr', 'href', '/explore/cuqu');
+    cy.dataCy('all-clinics-card-container').within(() => {
+      cy.dataCy('clinic-card').should("have.length", 8);
     });
   });
 
-  it('should contain a filter button that filters wands', () => {
-    cy.dataCy('wands').click().should('have.class', 'Mui-selected');
+  it('should contain a filter button that filters resources', () => {
+    cy.dataCy('resources').click().should('have.class', 'Mui-selected');
 
-    cy.dataCy('explore-container').within(() => {
-      cy.dataCy('card-link').should('have.attr', 'href', '/explore/wapa');
+    cy.dataCy('all-clinics-card-container').within(() => {
+      cy.dataCy('clinic-card').should("have.length", 3);
     });
   });
-  it('should contain a filter button that filters wands', () => {
-    cy.dataCy('wands').click().should('have.class', 'Mui-selected');
+  it('should contain a filter button that filters misinformation centers', () => {
+    cy.dataCy('misinformation').click().should('have.class', 'Mui-selected');
 
-    cy.dataCy('explore-container').within(() => {
-      cy.dataCy('card-link').should('have.attr', 'href', '/explore/wapa');
+    cy.dataCy('all-clinics-card-container').within(() => {
+      cy.dataCy('clinic-card').should("have.length", 2);
     });
   });
+  
+  it('should contain a filter button that filters misinformation centers', () => {
+    cy.dataCy('misinformation').click().should('have.class', 'Mui-selected');
+
+    cy.dataCy('all-clinics-card-container').within(() => {
+      cy.dataCy('clinic-card').should("have.length", 2);
+    });
+  });
+
+  
 });

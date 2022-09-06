@@ -11,7 +11,7 @@ const SearchBar = ({ inputRef, handleSearchChange }) => {
         type="search"
         placeholder="Search for state..."
         onChange={(e) => handleSearchChange(e.target.value)}
-        data-cy='search'
+        data-cy='search-input'
       />
     </div>
   )

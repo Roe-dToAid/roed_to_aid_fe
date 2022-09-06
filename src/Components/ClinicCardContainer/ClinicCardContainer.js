@@ -33,9 +33,7 @@ const ClinicCardContainer = ({
       setAuthorized(
         states.filter((state) => state.authorizedClinics.length > 0)
       );
-      setResources(
-        states.filter((state) => state.resources.length > 0)
-      );
+      setResources(states.filter((state) => state.resources.length > 0));
     }
   }, [states, filteredResults, setMisinformation, setAuthorized, setResources]);
 
@@ -102,16 +100,29 @@ const ClinicCardContainer = ({
               {authorizedClinics}
             </div>
           ) : (
-            <NoResults message="No authorized clinics match your search" />
+            <NoResults
+              message="No authorized clinics match your search"
+              data-cy="no-result"
+            />
           )}
         </>
       )}
       {(toggleSelected === 'resources' || toggleSelected === 'all') && (
         <>
           <h2>State Resources</h2>
-          {resources.length ?(<div className="card-container resource-card-container">
-            {stateResources}
-          </div>) : <NoResults message="No resources match your search" />}
+          {resources.length ? (
+            <div
+              className="card-container resource-card-container"
+              data-cy="resources-card-container"
+            >
+              {stateResources}
+            </div>
+          ) : (
+            <NoResults
+              message="No resources match your search"
+              data-cy="no-result"
+            />
+          )}
         </>
       )}
       {(toggleSelected === 'misinformationCenters' ||
@@ -119,11 +130,17 @@ const ClinicCardContainer = ({
         <>
           <h2>Misinformation Centers</h2>
           {misinformation.length ? (
-            <div className="card-container misinformation-card-container">
+            <div
+              className="card-container misinformation-card-container"
+              data-cy="resources-card-container"
+            >
               {misinformationCenters}
             </div>
           ) : (
-            <NoResults message="No misinformation centers match your search" />
+            <NoResults
+              message="No misinformation centers match your search"
+              data-cy="no-result"
+            />
           )}
         </>
       )}
