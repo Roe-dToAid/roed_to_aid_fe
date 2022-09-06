@@ -23,7 +23,7 @@ const ToggleClinicsButton = ({ setToggleSelected }) => {
         value={filter}
         exclusive
         onChange={handleFilter}
-        aria-label="text alignment"
+        aria-label="Filter results by type"
         className="toggle-button-group"
       >
         <ToggleButton value="all" aria-label="all" className="toggle-button" data-cy="all">
