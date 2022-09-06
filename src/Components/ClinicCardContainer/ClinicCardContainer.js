@@ -132,7 +132,7 @@ const ClinicCardContainer = ({
           {misinformation.length ? (
             <div
               className="card-container misinformation-card-container"
-              data-cy="resources-card-container"
+              data-cy="misinformation-card-container"
             >
               {misinformationCenters}
             </div>
