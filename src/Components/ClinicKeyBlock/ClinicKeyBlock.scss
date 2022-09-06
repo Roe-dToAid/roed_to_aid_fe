@@ -18,8 +18,10 @@
     padding-top: 0.05rem;
     text-align: center;
     padding: 0.75rem;
-    h3 {
+    .authorized-h3 {
       margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
     }
   }
 }
@@ -46,6 +48,13 @@
       display: initial;
       width: auto;
       max-height: 10rem;
+    }
+  }
+  .key-block {
+    .header {
+      .authorized-h3 {
+        font-size: 1.25rem;
+      }
     }
   }
 }
