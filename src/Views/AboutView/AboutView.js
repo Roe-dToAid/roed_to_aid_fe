@@ -13,7 +13,7 @@ import "./Aboutview.scss";
 const AboutView = () => {
   return (
     <div className="about-container">
-      <h1 tabindex="0" data-cy="about-roed">About Roe'd to Aid</h1>
+      <h1 tabindex="0" data-cy="about-roed">About Roe'dtoAid</h1>
       <div className="copy-image-block">
         <div className="mission-container">
           <h2 tabindex="0" data-cy="mission-title">Our Mission</h2>
@@ -58,6 +58,10 @@ const AboutView = () => {
           <img tabindex="0" data-cy="bryce" src={brycePhoto} alt="headshot of Bryce"></img>
           <h3 tabindex="0">Bryce W.</h3>
         </div>
+      </div>
+      <div className="data-statement">
+        <p tabindex="0">The data on this website was last updated on September 6, 2022.</p>
+        <p tabindex="0">For most up to date information, please go <a href="https://www.abortionfinder.org">here</a>.</p>
       </div>
     </div>
   )

@@ -53,6 +53,10 @@
   flex-direction: column-reverse;
 }
 
+.data-statement {
+  text-align: center;
+}
+
 @media(min-width: 768px) {
   .inclusivity-only {
     flex-direction: row;
