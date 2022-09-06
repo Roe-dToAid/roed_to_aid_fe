@@ -15,6 +15,7 @@ const HomeView = () => {
           alt="illustration of diverse people"
           className="group-image"
           data-cy="group-image"
+          tabIndex={0}
         ></img>
       </div>
       <div className="introduction-block-container">

@@ -80,7 +80,7 @@ describe("About", () => {
     cy.dataCy("git-hub-link-bryce").should("be.visible").contains("Bryce Wein");
   });
 
-  it("Should have links to each team member's respective GitHub account", () => {
+  it("Should have links to each team members' respective GitHub account", () => {
     cy.dataCy("git-hub-link-rachel")
       .contains("Rachel Allen")
       .should("have.attr", "href", "https://github.com/Rallen13/");
