@@ -23,15 +23,15 @@ describe("About", () => {
   })
 
   it("Should display the About page and the mission", () => {
-    cy.dataCy("about-roed").contains("About Roe'd to Aid");
+    cy.dataCy("about-roed").contains("Roe'dtoAid");
     cy.dataCy("mission-title").contains("Our Mission");
-    cy.dataCy("mission-statement").contains("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
+    cy.dataCy("mission-statement").contains("Our mission is to make abortion clinics information accessible to everyone in the US.");
     cy.dataCy("yes-illustration").should("be.visible");
   })
 
   it("Should display the inclusivity message", () => {
     cy.dataCy("inclusivity-title").contains("Inclusivity Counts");
-    cy.dataCy("inclusivity-statement").contains("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
+    cy.dataCy("inclusivity-statement").contains("Abortion affects everyone. Regardless of your income, gender, sexual orientation, race, and other characteristics, we all must stay informed about current laws. Abortion is essential.");
     cy.dataCy("flower-illustration").should("be.visible");
   })
 
@@ -44,6 +44,11 @@ describe("About", () => {
     cy.dataCy("casey").should("be.visible");
     cy.dataCy("wes").should("be.visible");
     cy.dataCy("bryce").should("be.visible");
+  })
+
+  it("Should display a note about the latest data updates", () => {
+    cy.dataCy("data-statement").should("be.visible").contains("The data on this website was last updated on September 6, 2022.");
+    cy.dataCy("data-statement").should("be.visible").contains("For most up to date information, please go here.");
   })
 
   it("Should be able to go back to the Home page when clicking logo", () => {
