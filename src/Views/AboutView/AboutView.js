@@ -13,11 +13,11 @@ import "./Aboutview.scss";
 const AboutView = () => {
   return (
     <div className="about-container">
-      <h1 data-cy="about-roed">About Roe'd to Aid</h1>
+      <h1 data-cy="about-roed">About Roe'dtoAid</h1>
       <div className="copy-image-block">
         <div className="mission-container">
           <h2 data-cy="mission-title">Our Mission</h2>
-          <p data-cy="mission-statement">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p data-cy="mission-statement">Our mission is to make abortion clinics information accessible to everyone in the US.</p>
         </div>
         <img className="illustration" data-cy="yes-illustration" src={yesImage} alt="person holding up fist"></img>
       </div>
@@ -25,7 +25,7 @@ const AboutView = () => {
         <img className="illustration" data-cy="flower-illustration" src={flowerSymbolImage} alt="female symbol with flowers"></img>
         <div className="inclusivity-container">
           <h2 data-cy="inclusivity-title">Inclusivity Counts</h2>
-          <p data-cy="inclusivity-statement">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p data-cy="inclusivity-statement">Abortion affects everyone. Regardless of your income, gender, sexual orientation, race, and other characteristics, we all must stay informed about current laws. Abortion is essential.</p>
         </div>
       </div>
       <h2 data-cy="meet">Meet the Team</h2>
@@ -58,6 +58,10 @@ const AboutView = () => {
           <img data-cy="bryce" src={brycePhoto} alt="headshot of Bryce"></img>
           <h3>Bryce W.</h3>
         </div>
+      </div>
+      <div data-cy="data-statement" className="data-statement">
+        <p>The data on this website was last updated on September 6, 2022.</p>
+        <p>For most up to date information, please go <a href="https://www.abortionfinder.org">here</a>.</p>
       </div>
     </div>
   )
