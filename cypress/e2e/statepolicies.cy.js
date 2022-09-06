@@ -38,8 +38,8 @@ describe('State Policies View', () => {
   })
 
   it('Should have icons', () => {
-    cy.dataCy('fight-img').should('exist')
-    cy.dataCy('fists-img').should('exist')
+    cy.dataCy('fight-img').should('be.visible')
+    cy.dataCy('fists-img').should('be.visible')
   })
 
   it('Should upload all policy cards on page load', () => {
@@ -50,12 +50,11 @@ describe('State Policies View', () => {
     cy.dataCy('info-strip').children().first().contains('Alabama')
     cy.dataCy('info-strip').children().next().contains('Abortion is completely banned in Alabama')
 
-    cy.dataCy('info-strip').children().next().contains('Alaska')
-    cy.dataCy('info-strip').children().next().contains('Yes. Abortion is legal in Alaska. There is no limit on abortion in Alaska based on how far along in pregnancy you are. To figure out how far along you are in pregnancy, count from the first day of your last period.')
+    cy.dataCy('info-strip').children().last().contains('Arizona')
+    cy.dataCy('info-strip').children().next().contains('Yes. Abortion is legal in Arizona.')
   })
 
-  // NOT WORKING
-  it.only('Should should allow the user to sort by legal status', () => {
+  it('Should should allow the user to sort by legal state status', () => {
     cy.dataCy('legal').click({ timeout: 10000 })
     cy.visit('http://localhost:3000/states-policies');
     cy.interceptGQL(
@@ -68,7 +67,7 @@ describe('State Policies View', () => {
     cy.dataCy('info-strip').should('have.length', 1).should('contain.text', 'Alaska')
   })
 
-  it.only('Should should allow the user to sort by legal status', () => {
+  it('Should should allow the user to sort by illegal state status', () => {
     cy.dataCy('illegal').click({ timeout: 10000 })
     cy.visit('http://localhost:3000/states-policies');
     cy.interceptGQL(
@@ -81,7 +80,7 @@ describe('State Policies View', () => {
     cy.dataCy('info-strip').should('have.length', 1).should('contain.text', 'Alabama')
   })
 
-  it.only('Should should allow the user to sort by legal status', () => {
+  it('Should should allow the user to sort by at risk state status', () => {
     cy.dataCy('legal').click({ timeout: 10000 })
     cy.visit('http://localhost:3000/states-policies');
     cy.interceptGQL(
@@ -99,4 +98,28 @@ describe('State Policies View', () => {
     cy.dataCy('info-strip').should('have.length', 1)
     cy.get('.search').clear()
    })
+
+   it.only('Should display an error message if a network request fails.', () => {
+    cy.intercept('POST', 'https://roed-to-aide-be.herokuapp.com/graphql?api_key=ca912ed1df0d1c0f014ec94e3c731881', {
+      statusCode: 500,
+      body: {
+        error: "Cypress forced 500"
+      }
+    })
+    cy.visit('http://localhost:3000/states-policies')
+    cy.dataCy('error').should('have.text', 'Something went wrong.Click the Roe\'dToAid logo above to return home.')
+    cy.dataCy('error-image').should('be.visible')
+  })
+
+  it.only('Should display an error message if a network request fails.', () => {
+    cy.intercept('POST', 'https://roed-to-aide-be.herokuapp.com/graphql?api_key=ca912ed1df0d1c0f014ec94e3c731881', {
+      statusCode: 400,
+      body: {
+        error: "Cypress forced 400"
+      }
+    })
+    cy.visit('http://localhost:3000/states-policies')
+    cy.dataCy('error').should('have.text', 'Something went wrong.Click the Roe\'dToAid logo above to return home.')
+    cy.dataCy('error-image').should('be.visible')
+  })
 })

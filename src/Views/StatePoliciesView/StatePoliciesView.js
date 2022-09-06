@@ -92,7 +92,7 @@ const StatePoliciesView = () => {
               alt="fight for your right megaphone"
               data-cy="fight-img"
               tabIndex='0'
-            ></img>
+            />
             <div>
               <LegalKey
                 filterByLegality={filterByLegality}
@@ -109,7 +109,7 @@ const StatePoliciesView = () => {
               alt="empowered fists"
               data-cy="fists-img"
               tabIndex='0'
-            ></img>
+            />
           </div>
         }
         {loading ? <Loading /> :
