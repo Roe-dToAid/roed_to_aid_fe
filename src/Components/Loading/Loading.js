@@ -3,7 +3,7 @@ import './Loading.scss';
 
 const Loading = () => {
 	return (
-    <div className="loading-messaging">
+    <div className="loading-messaging" data-cy='loading'>
       <h2>LOADING...</h2>
     </div> 
 	);
