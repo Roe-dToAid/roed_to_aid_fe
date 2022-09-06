@@ -11,7 +11,7 @@ import Loading from '../../Components/Loading/Loading'
 import './StatePolicies.scss'
 
 const GET_POLICIES = gql`
-  query {
+  query GetPolicies {
     states {
       name
       legal

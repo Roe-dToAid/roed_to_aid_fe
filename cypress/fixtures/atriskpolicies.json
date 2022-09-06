@@ -2,18 +2,6 @@
   "data": {
     "states": [
       {
-        "name": "Alabama",
-        "legal": "illegal",
-        "legalDescription": "Abortion is completely banned in Alabama with very limited exceptions because of a new Alabama law that went into effect June 24, 2022.",
-        "abbreviation": "AL"
-      },
-      {
-        "name": "Alaska",
-        "legal": "legal",
-        "legalDescription": "Yes. Abortion is legal in Alaska. There is no limit on abortion in Alaska based on how far along in pregnancy you are. To figure out how far along you are in pregnancy, count from the first day of your last period.",
-        "abbreviation": "AK"
-      },
-      {
         "name": "Arizona",
         "legal": "at risk",
         "legalDescription": "Yes. Abortion is legal in Arizona. However, abortion is restricted in Arizona and other states. Right now, abortion is legal in Arizona until 'viability,' which is the stage of pregnancy when a fetus has developed enough that it is able to survive outside the uterus with medical help. It usually happens around 24 to 26 weeks of pregnancy. To figure out how far along you are in pregnancy, count from the first day of your last period. Abortion will still be legal in Arizona after September 24, 2022, but there may be new restrictions on it because of a new Arizona law that may go into effect on that day. If the law goes into effect, it will mean that abortion is banned after 15 weeks, 0 days of pregnancy in Arizona.",

@@ -1,9 +1,7 @@
-// describe('State Policies View', () => {
-//   beforeEach(() => {
-//     cy.visit('http://localhost:3000/states-policies')
-//   });
-
 import policies from '../fixtures/policies.json';
+import legalpolicies from '../fixtures/legalpolicies.json';
+import illegalpolicies from '../fixtures/illegalpolicies.json';
+import atriskpolicies from '../fixtures/atriskpolicies.json';
 
 describe('State Policies View', () => {
   beforeEach(() => {
@@ -14,6 +12,11 @@ describe('State Policies View', () => {
       policies
     ).as('GetPolicies');
     cy.wait("@GetPolicies")
+    cy.visit('http://localhost:3000/states-policies');
+  });
+
+  afterEach(() => {
+    cy.visit('http://localhost:3000/states-policies');
   });
 
   it('Should have a page title', () => {
@@ -39,13 +42,7 @@ describe('State Policies View', () => {
     cy.dataCy('fists-img').should('exist')
   })
 
-  it.skip('Should upload all policy cards on page load', () => {
-    cy.interceptGQL(
-      'https://roed-to-aide-be.herokuapp.com/graphql?api_key=ca912ed1df0d1c0f014ec94e3c731881',
-      'GetPolicies',
-      policies
-    ).as('GetPolicies');
-    
+  it('Should upload all policy cards on page load', () => {
     cy.dataCy('info-strip').should('have.length', 3)
   })
 
@@ -58,23 +55,44 @@ describe('State Policies View', () => {
   })
 
   // NOT WORKING
-  it('Should should allow the user to sort by legal status', () => {
+  it.only('Should should allow the user to sort by legal status', () => {
     cy.dataCy('legal').click({ timeout: 10000 })
-    cy.wait(2000)
-    cy.dataCy('info-strip').should('have.length', 28)
+    cy.visit('http://localhost:3000/states-policies');
+    cy.interceptGQL(
+      'https://roed-to-aide-be.herokuapp.com/graphql?api_key=ca912ed1df0d1c0f014ec94e3c731881',
+      'GetPolicies',
+      legalpolicies
+    ).as('GetPolicies');
+    cy.wait("@GetPolicies")
+    cy.visit('http://localhost:3000/states-policies');
+    cy.dataCy('info-strip').should('have.length', 1).should('contain.text', 'Alaska')
   })
 
-  it('Should should allow the user to sort by legal status', () => {
+  it.only('Should should allow the user to sort by legal status', () => {
     cy.dataCy('illegal').click({ timeout: 10000 })
-    cy.wait(2000)
-    cy.dataCy('info-strip').should('have.length', 14)
-   })
+    cy.visit('http://localhost:3000/states-policies');
+    cy.interceptGQL(
+      'https://roed-to-aide-be.herokuapp.com/graphql?api_key=ca912ed1df0d1c0f014ec94e3c731881',
+      'GetPolicies',
+      illegalpolicies
+    ).as('GetPolicies');
+    cy.wait("@GetPolicies")
+    cy.visit('http://localhost:3000/states-policies');
+    cy.dataCy('info-strip').should('have.length', 1).should('contain.text', 'Alabama')
+  })
 
-   it('Should should allow the user to sort by legal status', () => {
-    cy.dataCy('at-risk').click({ timeout: 10000 })
-    cy.wait(2000)
-    cy.dataCy('info-strip').should('have.length', 10)
-   })
+  it.only('Should should allow the user to sort by legal status', () => {
+    cy.dataCy('legal').click({ timeout: 10000 })
+    cy.visit('http://localhost:3000/states-policies');
+    cy.interceptGQL(
+      'https://roed-to-aide-be.herokuapp.com/graphql?api_key=ca912ed1df0d1c0f014ec94e3c731881',
+      'GetPolicies',
+      atriskpolicies
+    ).as('GetPolicies');
+    cy.wait("@GetPolicies")
+    cy.visit('http://localhost:3000/states-policies');
+    cy.dataCy('info-strip').should('have.length', 1).should('contain.text', 'Arizona')
+  })
 
    it('Should should allow the user to search with the search bar', () => {
     cy.get('.search').type('Alaska')
