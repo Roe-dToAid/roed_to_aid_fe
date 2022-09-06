@@ -15,7 +15,7 @@ describe("About", () => {
     cy.dataCy("app-title").contains("Welcome to Roe'dToAid");
     cy.dataCy("app-phrase").contains("A safe space to find a safe place.");
     cy.dataCy("app-explanation").contains(
-      "After the U.S. Supreme Court officially reversed Roe v Wade in June of 2022, millions lost a fundamental constitutional protection, the right to abortion.Roe'dToAid was created to bring awareness and expand access to safe, authorized clinics that provide necessary healthcare to all birthers. This application compiles current clinic information by state and clearly defines authorized clinics and distinguishes them from misinformation centers. Users can learn about current state policies as well as available resources in their state."
+      "After the U.S. Supreme Court officially reversed Roe v. Wade in June of 2022, millions lost a fundamental constitutional protection, the right to abortion.Roe'dToAid was created to bring awareness and expand access to safe, authorized clinics that provide necessary healthcare to all birthers. This application compiles current clinic information by state and clearly defines authorized clinics and distinguishes them from misinformation centers. Users can learn about current state policies as well as available resources in their state."
     );
   });
 

@@ -13,7 +13,7 @@ const IntroductionBlock = () => {
         </h2>
         <div data-cy="app-explanation" tabIndex={0}>
           <p>
-            After the U.S. Supreme Court officially reversed Roe v Wade in June
+            After the U.S. Supreme Court officially reversed Roe v. Wade in June
             of 2022, millions lost a fundamental constitutional protection, the
             right to abortion.
           </p>
