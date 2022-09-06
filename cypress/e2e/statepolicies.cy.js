@@ -93,13 +93,13 @@ describe('State Policies View', () => {
     cy.dataCy('info-strip').should('have.length', 1).should('contain.text', 'Arizona')
   })
 
-   it('Should should allow the user to search with the search bar', () => {
+  it('Should should allow the user to search with the search bar', () => {
     cy.get('.search').type('Alaska')
     cy.dataCy('info-strip').should('have.length', 1)
     cy.get('.search').clear()
-   })
+  })
 
-   it.only('Should display an error message if a network request fails.', () => {
+  it('Should display an error message if a network request fails at a status code 500.', () => {
     cy.intercept('POST', 'https://roed-to-aide-be.herokuapp.com/graphql?api_key=ca912ed1df0d1c0f014ec94e3c731881', {
       statusCode: 500,
       body: {
@@ -111,7 +111,7 @@ describe('State Policies View', () => {
     cy.dataCy('error-image').should('be.visible')
   })
 
-  it.only('Should display an error message if a network request fails.', () => {
+  it('Should display an error message if a network request fails with a status code of 400.', () => {
     cy.intercept('POST', 'https://roed-to-aide-be.herokuapp.com/graphql?api_key=ca912ed1df0d1c0f014ec94e3c731881', {
       statusCode: 400,
       body: {
