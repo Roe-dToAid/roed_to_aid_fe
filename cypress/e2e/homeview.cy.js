@@ -79,4 +79,28 @@ describe("About", () => {
       .contains("Wesley Garcia");
     cy.dataCy("git-hub-link-bryce").should("be.visible").contains("Bryce Wein");
   });
+
+  it("Should have links to each team member's respective GitHub account", () => {
+    cy.dataCy("git-hub-link-rachel")
+      .contains("Rachel Allen")
+      .should("have.attr", "href", "https://github.com/Rallen13/");
+    cy.dataCy("git-hub-link-catlyn")
+      .contains("Catlyn Bowles")
+      .should("have.attr", "href", "https://github.com/catlynbowles");
+    cy.dataCy("git-hub-link-irmak")
+      .contains("Irmak Erdem")
+      .should("have.attr", "href", "https://github.com/irmakerdem");
+    cy.dataCy("git-hub-link-lidia")
+      .contains("Lidia Karpinski")
+      .should("have.attr", "href", "https://github.com/lkarpins");
+    cy.dataCy("git-hub-link-casey")
+      .contains("Casey Fazio")
+      .should("have.attr", "href", "https://github.com/casefaz");
+    cy.dataCy("git-hub-link-wesley")
+      .contains("Wesley Garcia")
+      .should("have.attr", "href", "https://github.com/wesatt");
+    cy.dataCy("git-hub-link-bryce")
+      .contains("Bryce Wein")
+      .should("have.attr", "href", "https://github.com/bwbolt");
+  });
 });
