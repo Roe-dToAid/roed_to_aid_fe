@@ -7,7 +7,7 @@ describe('Clinics View', () => {
       'GetClinics',
       clinics
     ).as('GetClinics');
-    // cy.wait("@GetClinics")
+  
     cy.visit('http://localhost:3000/clinics');
   });
 

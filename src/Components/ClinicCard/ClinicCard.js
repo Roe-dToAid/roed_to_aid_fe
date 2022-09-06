@@ -25,6 +25,11 @@ const ClinicCard = ({
           {city}, {state} {zip}
         </p>
       )}
+      {!city && state && !zip && (
+        <p data-cy="clinic-state" className="clinic-address">
+          <span className="material-symbols-outlined">location_on</span> {state}
+        </p>
+      )}
       {phone && (
         <p data-cy="clinic-phone">
           <span className="material-symbols-outlined">phone</span> {phone}

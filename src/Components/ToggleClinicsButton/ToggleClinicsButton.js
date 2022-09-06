@@ -38,20 +38,20 @@ const ToggleClinicsButton = ({ setToggleSelected }) => {
           Authorized
         </ToggleButton>
         <ToggleButton
-          value="misinformationCenters"
-          aria-label="misinformation"
-          className="toggle-button"
-          data-cy="misinformation"
-        >
-          Misinformation
-        </ToggleButton>
-        <ToggleButton
           value="resources"
           aria-label="resources"
           className="toggle-button"
           data-cy="resources"
         >
           Resources
+        </ToggleButton>
+        <ToggleButton
+          value="misinformationCenters"
+          aria-label="misinformation"
+          className="toggle-button"
+          data-cy="misinformation"
+        >
+          Misinformation
         </ToggleButton>
       </ToggleButtonGroup>
     </div>

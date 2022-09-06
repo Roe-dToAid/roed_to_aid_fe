@@ -80,6 +80,7 @@ const ClinicsView = () => {
     }
   }, [searchInput, states]);
 
+
   return (
     <main className="clinics-view-container">
       <h1 data-cy="clinics-view-heading">Find a safe clinic</h1>
@@ -99,6 +100,7 @@ const ClinicsView = () => {
             states={states}
             toggleSelected={toggleSelected}
             filteredResults={filteredResults}
+            searchInput={searchInput}
           />
         ) : (
           <Loading />
