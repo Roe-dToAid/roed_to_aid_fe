@@ -46,7 +46,7 @@ describe("About", () => {
   it("Should display the inclusivity message", () => {
     cy.dataCy("inclusivity-title").contains("Inclusivity Counts");
     cy.dataCy("inclusivity-statement").contains(
-      "We recognize that restricting access to abortion increases the burden already placed on people with low incomes, young people, folks in rural areas, queer folks, and people of color. We believe that this issue effects everyone, everywhere and intersects the issues of racial, economic, and reproductive justice. Increasing equitable and unrestricted access to information and resources is the core of this ever evolving project."
+      "We recognize that restricting access to abortion increases the burden already placed on people with low incomes, young people, folks in rural areas, queer folks, and people of color. We believe that this issue affects everyone, everywhere and intersects the issues of racial, economic, and reproductive justice. Increasing equitable and unrestricted access to information and resources is the core of this ever evolving project."
     );
     cy.dataCy("flower-illustration").should("be.visible");
   });
