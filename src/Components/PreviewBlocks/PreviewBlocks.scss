@@ -1,3 +1,5 @@
+@import '../../Styles/variables.scss';
+
 .icon {
   width: 4rem;
   margin: auto;
@@ -10,12 +12,12 @@
   align-items: center;
   justify-content: flex-end;
   background-color: #ffffff;
-  padding: 1.5rem;
+  padding: $space-24;
   width: 18rem;
   text-align: center;
   height: 15rem;
   button {
-    background-color: #eab93d;
+    background-color: $yellow;
     padding: 0.5rem 2rem;
     height: 3.25rem;
     font-family: 'Rubik', sans-serif;
@@ -24,7 +26,7 @@
     cursor: pointer;
     font-weight: 700;
     font-size: 1rem;
-    box-shadow: 0px 2px 3px #768ca0;
+    box-shadow: 0px 2px 3px $blue;
   }
 
   button:hover {

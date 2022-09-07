@@ -1,9 +1,11 @@
+@import '../../Styles/variables.scss';
+
 .search-container {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: $space-24;
 
   span {
     font-size: 2rem;

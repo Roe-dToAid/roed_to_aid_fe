@@ -1,9 +1,11 @@
+@import '../../Styles/variables.scss';
+
 .introduction-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0.5rem;
-  margin: 1.5rem;
+  margin: $space-24;
   margin-top: 0;
   text-align: center;
   p {
