@@ -18,18 +18,30 @@ const ClinicCard = ({
 
       <h3 data-cy="clinic-name">{name}</h3>
       {address && (
-        <p data-cy="clinic-address" className="clinic-address" aria-label={`Location: ${address}.`}>
+        <p
+          data-cy="clinic-address"
+          className="clinic-address"
+          aria-label={`Location: ${address}.`}
+        >
           <span className="material-symbols-outlined">location_on</span>{' '}
           {address}{' '}
         </p>
       )}
       {city && state && zip && (
-        <p data-cy="clinic-city-state-zip" className="clinic-city-state-zip" aria-label={`${city}, ${state} ${zip}.`}>
+        <p
+          data-cy="clinic-city-state-zip"
+          className="clinic-city-state-zip"
+          aria-label={`${city}, ${state} ${zip}.`}
+        >
           {city}, {state} {zip}
         </p>
       )}
       {!city && state && !zip && (
-        <p data-cy="clinic-state" className="clinic-address" aria-label={`State: ${state}.`}>
+        <p
+          data-cy="clinic-state"
+          className="clinic-address"
+          aria-label={`State: ${state}.`}
+        >
           <span className="material-symbols-outlined">location_on</span> {state}
         </p>
       )}
@@ -39,20 +51,23 @@ const ClinicCard = ({
         </p>
       )}
       {services && (
-        <p data-cy="clinic-services" aria-label={`Medical services: ${services}.`}>
+        <p
+          data-cy="clinic-services"
+          aria-label={`Medical services: ${services}.`}
+        >
           <span className="material-symbols-outlined">medical_services</span>{' '}
           {services}
         </p>
       )}
       {url && (
-        <a href={url} target="blank" data-cy="clinic-url" aria-label="Open their website in a new tab">
-          <span
-            className="material-symbols-outlined"
-            
-          >
-            open_in_new
-          </span>{' '}
-          Visit their website
+        <a
+          href={url}
+          target="blank"
+          data-cy="clinic-url"
+          aria-label="Open their website in a new tab"
+        >
+          <span className="material-symbols-outlined">open_in_new</span> Visit
+          their website
         </a>
       )}
     </div>

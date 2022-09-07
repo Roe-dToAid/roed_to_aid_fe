@@ -10,7 +10,13 @@ const ClinicKeyBlock = () => {
         data-cy="clinic-key-block-authorized"
       >
         <div className="header" data-cy="authorized-header">
-          <p className='authorized-h3' data-cy="authorized-h3" aria-label='Authorized Clinics Key Block'>Authorized</p>
+          <p
+            className="authorized-h3"
+            data-cy="authorized-h3"
+            aria-label="Authorized Clinics Key Block"
+          >
+            Authorized
+          </p>
         </div>
         <p data-cy="authorized-p">
           Blue clinics are verified safe and provide access to abortion care.
@@ -27,7 +33,13 @@ const ClinicKeyBlock = () => {
         data-cy="clinic-key-block-misinformation"
       >
         <div className="header" data-cy="misinformation-header">
-          <p className='authorized-h3' data-cy="misinformation-h3" aria-label='Misinformation Centers Key Block'>Misinformation</p>
+          <p
+            className="authorized-h3"
+            data-cy="misinformation-h3"
+            aria-label="Misinformation Centers Key Block"
+          >
+            Misinformation
+          </p>
         </div>
         <p data-cy="misinformation-p">
           Red clinics are "crisis centers" and are considered unsafe/harmful.
