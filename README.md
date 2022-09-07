@@ -2,6 +2,10 @@
  <h1 align="center"> Welcome to Roe'd To Aid </h1>
 <h2  align="center">A safe space to find a safe place. </h2>
 
+After the U.S. Supreme Court officially reversed Roe v. Wade in June of 2022, millions lost a fundamental constitutional protection, the right to abortion.
+
+Roe'd To Aid was created to bring awareness and expand access to safe, authorized clinics that provide necessary healthcare to all birthers. This application compiles current clinic information by state and clearly defines authorized clinics and distinguishes them from misinformation centers. Users can learn about current state policies as well as available resources in their state.
+
 ## Table of Contents
 
 - [Project Overview](#project-overview)
@@ -23,9 +27,7 @@ Visit our Front End Site!
 Our Back End is hosted here and requires an API key to access (we are not giving any API keys out at this time):
 - [Roe'd To Aid API](https://roed-to-aide-be.herokuapp.com/)
 
-After the U.S. Supreme Court officially reversed Roe v. Wade in June of 2022, millions lost a fundamental constitutional protection, the right to abortion.
 
-Roe'd To Aid was created to bring awareness and expand access to safe, authorized clinics that provide necessary healthcare to all birthers. This application compiles current clinic information by state and clearly defines authorized clinics and distinguishes them from misinformation centers. Users can learn about current state policies as well as available resources in their state.
 
 Throughout this project, I took full advantage of React’s modular nature by creating dynamically rendered components used on multiple views. This helped me keep the app small yet provided the user with a pleasant experience. Thoughtful architecture was implemented using assets, data, utilities, components, and views folders. I used Material UI components for the menu and filter buttons on the Explore The Deck View. Using shared classes and nested styling in SASS, I was able to reduce the amount of repeated CSS throughout the app. With a mobile-first development approach, I learned it requires much less CSS to modify the styling for larger viewports. To help with the design, I purchased an illustration assets pack from Dribbble so it would have a consistent look and feel. To provide context and instructions, I referenced https://www.astrology.com/tarot/daily.html for content. All words were taken from that site as placeholder text.
 
