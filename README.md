@@ -1,6 +1,7 @@
-<img width="162" alt="Screen Shot 2022-09-07 at 12 58 54 PM" src="https://user-images.githubusercontent.com/98505112/188956585-a0ee3aee-3dd1-410f-8832-bea009455933.png">
- <h1 align="center"> Welcome to Roe'd To Aid </h1>
-<h2  align="center">A safe space to find a safe place. </h2>
+<img align="center" width="162" alt="Screen Shot 2022-09-07 at 12 58 54 PM" src="https://user-images.githubusercontent.com/98505112/188956585-a0ee3aee-3dd1-410f-8832-bea009455933.png" />
+
+<h1 align="center"> Welcome to Roe'd To Aid </h1>
+<h2 align="center">A safe space to find a safe place. </h2>
 
 After the U.S. Supreme Court officially reversed Roe v. Wade in June of 2022, millions lost a fundamental constitutional protection, the right to abortion.
 
@@ -19,7 +20,7 @@ Roe'd To Aid was created to bring awareness and expand access to safe, authorize
 
 (Want to hire the devs that worked on this project? Click [this link](#contributors) to jump to our project contributors!)
 
-This repo is the Back End part of a project built by students at [Turing School of Software and Design](https://turing.edu/). The project itself is an original web app designed by combined Front End and Back End teams and its purpose is to help individuals seeking information on abortions in their state and help with identifying misinformation sites.
+This repo is the Front End part of a project built by students at [Turing School of Software and Design](https://turing.edu/). The project itself is an original web app designed by combined Front End and Back End teams and its purpose is to help individuals seeking information on abortions in their state and help with identifying misinformation sites.
 
 Visit our Front End Site!
 - [Roe'd To Aid](https://roed-to-aide-fe.herokuapp.com/)
@@ -27,7 +28,9 @@ Visit our Front End Site!
 Our Back End is hosted here and requires an API key to access (we are not giving any API keys out at this time):
 - [Roe'd To Aid API](https://roed-to-aide-be.herokuapp.com/)
 
-Throughout this project, we took full advantage of React’s modular nature by creating dynamically rendered components used on multiple views. This helped us keep the app small yet provided the user with a pleasant experience. Thoughtful architecture was implemented using assets, utils, components, and views folders. I used Material UI components for the menu and filter buttons on the Explore The Deck View. Using shared classes and nested styling in SASS, I was able to reduce the amount of repeated CSS throughout the app. With a mobile-first development approach, I learned it requires much less CSS to modify the styling for larger viewports. To help with the design, I purchased an illustration assets pack from Dribbble so it would have a consistent look and feel. To provide context and instructions, I referenced https://www.astrology.com/tarot/daily.html for content. All words were taken from that site as placeholder text.
+As this is an MVP project, we currently only have complete data for Indiana, New Mexico, and Texas. Please use these states when using the search bar on the Find a Clinic view. 
+
+Throughout this project, we took full advantage of React’s modular nature by creating dynamically rendered components used on multiple views. This helped us keep the app small yet provided the user with a pleasant experience. Thoughtful architecture was implemented using assets, utils (to store our GraphQL queries), styles, components, and views folders. We implemented Apollo Client as a state management library that simplified management of remote and local data with GraphQL. Apollo Client handles the request cycle from start to finish, including tracking loading and error states, which simplied constructing our loading and error components. We used the PropTypes library to validate the data type of props coming into a component; allowing for more specific, helpful error messages. We used Material UI components for the icons on the clinic cards and filter buttons on the Find a Clinic view. Using shared classes, SCSS variables, and nested styling in SASS, we were able to reduce the amount of repeated CSS throughout the app. With a mobile-first development approach, we learned it requires much less CSS to modify the styling for larger viewports. To help with the design, we purchased an illustration assets pack from Dribbble so it would have a consistent look and feel. It was also important to us as a team to utilize imagery that was diverse and inclusive. We implemented continuous integration (CI) through CircleCI in order to integrate changes made by all team members into a main, shared version frequently deployed (usually multiple times per day). Finally, we incorporated Agile scrum ceremonies for our project management which included morning standups, weekly retros and a shared organization project board used for refinement and planning.
 
 ## Learning Goals
 
