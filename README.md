@@ -1,5 +1,6 @@
 <img width="162" alt="Screen Shot 2022-09-07 at 12 58 54 PM" src="https://user-images.githubusercontent.com/98505112/188956585-a0ee3aee-3dd1-410f-8832-bea009455933.png">
-
+ <h1 align="center"> Welcome to Roe'd To Aid </h1>
+<h2  align="center">A safe space to find a safe place. </h2>
 
 ## Table of Contents
 
@@ -12,7 +13,9 @@
 
 ## Project Overview
 
-Starting each day with a Tarot reading is a terrific way to get psyched for all the possibilities—and avoid possible pitfalls that the day may bring. WitchCraft Tarot helps you get your daily reading in order to obtain insight for the day ahead! It also allows you to get your 3-Card Spread reading in order to obtain insight about past, present, and future, or, situation, action, and outcome. Or, if you're doing a relationship reading, you can even designate the first card as yourself, the second as your partner (or potential partner), and the third as the relationship between you both. Additonally, users have the opportunity to explore the entire deck on the Explore The Deck View and filter the deck by major arcana or the minor suits (pentacles, swords, wands, and cups).
+After the U.S. Supreme Court officially reversed Roe v. Wade in June of 2022, millions lost a fundamental constitutional protection, the right to abortion.
+
+Roe'd To Aid was created to bring awareness and expand access to safe, authorized clinics that provide necessary healthcare to all birthers. This application compiles current clinic information by state and clearly defines authorized clinics and distinguishes them from misinformation centers. Users can learn about current state policies as well as available resources in their state.
 
 Throughout this project, I took full advantage of React’s modular nature by creating dynamically rendered components used on multiple views. This helped me keep the app small yet provided the user with a pleasant experience. Thoughtful architecture was implemented using assets, data, utilities, components, and views folders. I used Material UI components for the menu and filter buttons on the Explore The Deck View. Using shared classes and nested styling in SASS, I was able to reduce the amount of repeated CSS throughout the app. With a mobile-first development approach, I learned it requires much less CSS to modify the styling for larger viewports. To help with the design, I purchased an illustration assets pack from Dribbble so it would have a consistent look and feel. To provide context and instructions, I referenced https://www.astrology.com/tarot/daily.html for content. All words were taken from that site as placeholder text.
 
