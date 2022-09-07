@@ -48,19 +48,17 @@ Our application includes the following core functionality:
 
 ## Planning Documents
 
-[MVP proposal](https://docs.google.com/document/d/1eDzOwcUQOxsWh6uXOyawd2NmG0x2y0A1H9xh6m3zs7s/edit)
+[MVP proposal](https://docs.google.com/document/d/1UHs-a3WY_-aNOkZpWfk-UKU8aV_Z4cBGfchR075For8/edit)
 
-[Design Inspo](https://docs.google.com/document/d/1iDrh_PzEPID617UXV8rjnBhG76k7Y7-3BH_rHk6suMc/edit)
+[Wireframes](https://www.figma.com/file/JgDbO5u7qdWi7SAQrDZpVI/Roe'dToAid?node-id=0%3A1)
 
-[Wireframes](https://drive.google.com/file/d/19KhIxJ7ZgmV0XLT8SNrTL9Igll_3zSd1/view?ths=true)
-
-[Project Spec](https://frontend.turing.edu/projects/module-3/showcase.html)
+[Project Spec](https://mod4.turing.edu/projects/capstone/)
 
 ## Illustrations
 
-[Deployed Link](https://witchcraft-tarot.herokuapp.com/)
+[Deployed Link](https://roed-to-aid.herokuapp.com/)
 
-[Functionality Video](https://vimeo.com/737363654/9e612fbefb)
+[Functionality Video]()
 
 ## Technologies and Tools
 
@@ -71,7 +69,9 @@ Our application includes the following core functionality:
 - CSS
 - SASS
 - Cypress
-- Fetch API
+- Apollo GraphQL
+- CircleCI/CD
+- Agile/SCRUM Methodology
 - NPM
 - Webpack
 - Heroku
