@@ -27,9 +27,7 @@ Visit our Front End Site!
 Our Back End is hosted here and requires an API key to access (we are not giving any API keys out at this time):
 - [Roe'd To Aid API](https://roed-to-aide-be.herokuapp.com/)
 
-
-
-Throughout this project, I took full advantage of React’s modular nature by creating dynamically rendered components used on multiple views. This helped me keep the app small yet provided the user with a pleasant experience. Thoughtful architecture was implemented using assets, data, utilities, components, and views folders. I used Material UI components for the menu and filter buttons on the Explore The Deck View. Using shared classes and nested styling in SASS, I was able to reduce the amount of repeated CSS throughout the app. With a mobile-first development approach, I learned it requires much less CSS to modify the styling for larger viewports. To help with the design, I purchased an illustration assets pack from Dribbble so it would have a consistent look and feel. To provide context and instructions, I referenced https://www.astrology.com/tarot/daily.html for content. All words were taken from that site as placeholder text.
+Throughout this project, we took full advantage of React’s modular nature by creating dynamically rendered components used on multiple views. This helped us keep the app small yet provided the user with a pleasant experience. Thoughtful architecture was implemented using assets, utils, components, and views folders. I used Material UI components for the menu and filter buttons on the Explore The Deck View. Using shared classes and nested styling in SASS, I was able to reduce the amount of repeated CSS throughout the app. With a mobile-first development approach, I learned it requires much less CSS to modify the styling for larger viewports. To help with the design, I purchased an illustration assets pack from Dribbble so it would have a consistent look and feel. To provide context and instructions, I referenced https://www.astrology.com/tarot/daily.html for content. All words were taken from that site as placeholder text.
 
 ## Learning Goals
 
