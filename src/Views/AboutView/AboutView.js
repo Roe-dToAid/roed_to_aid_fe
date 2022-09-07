@@ -1,19 +1,19 @@
-import React from 'react';
-import yesImage from './../../assets/feminist-lettering-compositions-and-stickers-2-png-01.png';
-import flowerSymbolImage from './../../assets/feminist-lettering-compositions-and-stickers-2-png-07.png';
-import caseyPhoto from './../../assets/CaseyF.jpeg';
-import catlynPhoto from './../../assets/CatlynB.jpeg';
-import wesPhoto from './../../assets/WesleyG.jpeg';
-import irmakPhoto from './../../assets/IrmakE.jpeg';
-import lidiaPhoto from './../../assets/LidiaK.jpeg';
-import brycePhoto from './../../assets/BryceW.jpeg';
-import rachelPhoto from './../../assets/RachelA.jpeg';
-import './Aboutview.scss';
+import React from "react";
+import yesImage from "./../../assets/feminist-lettering-compositions-and-stickers-2-png-01.png";
+import flowerSymbolImage from "./../../assets/feminist-lettering-compositions-and-stickers-2-png-07.png";
+import caseyPhoto from "./../../assets/CaseyF.jpeg";
+import catlynPhoto from "./../../assets/CatlynB.jpeg";
+import wesPhoto from "./../../assets/WesleyG.jpeg";
+import irmakPhoto from "./../../assets/IrmakE.jpeg";
+import lidiaPhoto from "./../../assets/LidiaK.jpeg";
+import brycePhoto from "./../../assets/BryceW.jpeg";
+import rachelPhoto from "./../../assets/RachelA.jpeg";
+import "./Aboutview.scss";
 
 const AboutView = () => {
   return (
     <div className="about-container">
-      <h1 data-cy="about-roed">About Roe'dtoAid</h1>
+      <h1 data-cy="about-roed">About Roe'd To Aid</h1>
       <div className="copy-image-block">
         <div className="mission-container">
           <h2 data-cy="mission-title">Our Mission</h2>
@@ -87,7 +87,7 @@ const AboutView = () => {
       <div data-cy="data-statement" className="data-statement">
         <p>The data on this website was last updated on September 6, 2022.</p>
         <p>
-          For most up to date information, please go{' '}
+          For most up to date information, please go{" "}
           <a href="https://www.abortionfinder.org">here</a>.
         </p>
       </div>
