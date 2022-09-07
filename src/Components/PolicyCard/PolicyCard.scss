@@ -3,12 +3,12 @@
 .info-strip {
   display: flex;
   flex-direction: column;
-  border: 0.1rem solid #768ca0;
+  border: $blue-border;
   margin: 0.3rem;
   width: 100%;
   .name-container,
   .legal-description {
-    padding: 1.5rem;
+    padding: $space-24;
   }
   .name-container {
     color: white;

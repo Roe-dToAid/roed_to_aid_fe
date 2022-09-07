@@ -1,9 +1,9 @@
-@import "../../Styles/variables.scss";
+@import '../../Styles/variables.scss';
 
 .nav-container {
-  background-color: #eab93d;
+  background-color: $yellow;
   gap: 0 5rem;
-  padding: 1.5rem;
+  padding: $space-24;
   padding-bottom: 0;
   text-decoration: none;
   display: flex;
@@ -43,6 +43,6 @@
 @media (min-width: 549px) {
   .nav-container {
     justify-content: space-between;
-    padding: 1rem 1.5rem;
+    padding: 1rem $space-24;
   }
 }

@@ -14,7 +14,7 @@ const PolicyCard = ({ name, legal, legalDescription }) => {
     <article
       data-cy="info-strip"
       className="info-strip"
-      style={{ border: '.1rem solid' + setColor() }}
+      style={{ border: '.25rem solid' + setColor() }}
     >
       <div
         tabIndex="0"
