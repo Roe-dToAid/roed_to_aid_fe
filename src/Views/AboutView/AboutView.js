@@ -48,9 +48,24 @@ const AboutView = () => {
           <div className="inclusivity-container">
             <h2 data-cy="inclusivity-title">Inclusivity Counts</h2>
             <p data-cy="inclusivity-statement">
-              Abortion affects everyone. Regardless of your income, gender,
-              sexual orientation, race, and other characteristics, we all must
-              stay informed about current laws. Abortion is essential.
+              We recognize that restricting access to abortion increases the
+              burden already placed on people with low incomes, young people,
+              folks in rural areas, queer folks, and people of color. We believe
+              that this issue effects everyone, everywhere and intersects the
+              issues of racial, economic, and reproductive justice. Increasing
+              equitable and unrestricted access to information and resources is
+              the core of this ever evolving project.
+              <br />
+              <br />
+              Roe'd To Aid prioritizes inclusivity in the way information is
+              shared and presented. This application was designed with a
+              mobile-first approach with an emphasis on a better user experience
+              on all devices and screen sizes. With accessibility as one of our
+              core values, this application is compatible with assistive
+              technology devices, such as screen readers. We also utilized the
+              Lighthouse evaluation tool to identify and fix common problems
+              that affect this site's performance, accessibility, and user
+              experience.
             </p>
           </div>
         </div>
