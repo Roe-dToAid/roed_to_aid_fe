@@ -1,14 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import ClinicCard from '../ClinicCard/ClinicCard';
-import NoResults from '../NoResults/NoResults';
-import './ClinicCardContainer.scss';
+import React, { useState, useEffect } from "react";
+import ClinicCard from "../ClinicCard/ClinicCard";
+import NoResults from "../NoResults/NoResults";
+import { PropTypes } from "prop-types";
+import "./ClinicCardContainer.scss";
 
-const ClinicCardContainer = ({
-  states,
-  toggleSelected,
-  filteredResults,
-  searchInput,
-}) => {
+const ClinicCardContainer = ({ states, toggleSelected, filteredResults }) => {
   const [authorized, setAuthorized] = useState([]);
   const [misinformation, setMisinformation] = useState([]);
   const [resources, setResources] = useState([]);
@@ -92,7 +88,7 @@ const ClinicCardContainer = ({
       className="all-clinics-card-container"
       data-cy="all-clinics-card-container"
     >
-      {(toggleSelected === 'authorized' || toggleSelected === 'all') && (
+      {(toggleSelected === "authorized" || toggleSelected === "all") && (
         <>
           <h2 tabIndex={0}>Authorized Clinics</h2>
           {authorized.length ? (
@@ -110,7 +106,7 @@ const ClinicCardContainer = ({
           )}
         </>
       )}
-      {(toggleSelected === 'resources' || toggleSelected === 'all') && (
+      {(toggleSelected === "resources" || toggleSelected === "all") && (
         <>
           <h2 tabIndex={0}>State Resources</h2>
           {resources.length ? (
@@ -128,8 +124,8 @@ const ClinicCardContainer = ({
           )}
         </>
       )}
-      {(toggleSelected === 'misinformationCenters' ||
-        toggleSelected === 'all') && (
+      {(toggleSelected === "misinformationCenters" ||
+        toggleSelected === "all") && (
         <>
           <h2 tabIndex={0}>Misinformation Centers</h2>
           {misinformation.length ? (
@@ -152,3 +148,9 @@ const ClinicCardContainer = ({
 };
 
 export default ClinicCardContainer;
+
+ClinicCardContainer.propTypes = {
+  states: PropTypes.array,
+  toggleSelected: PropTypes.string,
+  filteredResults: PropTypes.array,
+};
