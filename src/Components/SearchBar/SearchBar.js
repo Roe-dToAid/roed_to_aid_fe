@@ -1,6 +1,6 @@
-import React from "react";
-import { PropTypes } from "prop-types";
-import "./SearchBar.scss";
+import React from 'react';
+import { PropTypes } from 'prop-types';
+import './SearchBar.scss';
 
 const SearchBar = ({ inputRef, handleSearchChange }) => {
   return (

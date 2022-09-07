@@ -1,5 +1,5 @@
-import React from "react";
-import { PropTypes } from "prop-types";
+import React from 'react';
+import { PropTypes } from 'prop-types';
 
 const LegalKey = ({ filterByLegality, clearSearch }) => {
   return (
@@ -17,7 +17,7 @@ const LegalKey = ({ filterByLegality, clearSearch }) => {
         data-cy="legal"
         role="button"
         tabIndex="0"
-        onClick={() => filterByLegality("legal")}
+        onClick={() => filterByLegality('legal')}
       >
         LEGAL
       </h2>
@@ -26,7 +26,7 @@ const LegalKey = ({ filterByLegality, clearSearch }) => {
         data-cy="at-risk"
         role="button"
         tabIndex="0"
-        onClick={() => filterByLegality("at risk")}
+        onClick={() => filterByLegality('at risk')}
       >
         AT RISK
       </h2>
@@ -35,7 +35,7 @@ const LegalKey = ({ filterByLegality, clearSearch }) => {
         data-cy="illegal"
         role="button"
         tabIndex="0"
-        onClick={() => filterByLegality("illegal")}
+        onClick={() => filterByLegality('illegal')}
       >
         ILLEGAL
       </h2>

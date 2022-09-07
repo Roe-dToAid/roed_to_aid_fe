@@ -1,6 +1,6 @@
-import React from "react";
-import { PropTypes } from "prop-types";
-import "./ClinicCard.scss";
+import React from 'react';
+import { PropTypes } from 'prop-types';
+import './ClinicCard.scss';
 
 const ClinicCard = ({
   name,
@@ -24,8 +24,8 @@ const ClinicCard = ({
           className="clinic-address"
           aria-label={`Location: ${address}.`}
         >
-          <span className="material-symbols-outlined">location_on</span>{" "}
-          {address}{" "}
+          <span className="material-symbols-outlined">location_on</span>{' '}
+          {address}{' '}
         </p>
       )}
       {city && state && zip && (
@@ -56,7 +56,7 @@ const ClinicCard = ({
           data-cy="clinic-services"
           aria-label={`Medical services: ${services}.`}
         >
-          <span className="material-symbols-outlined">medical_services</span>{" "}
+          <span className="material-symbols-outlined">medical_services</span>{' '}
           {services}
         </p>
       )}

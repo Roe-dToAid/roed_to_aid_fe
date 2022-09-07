@@ -1,25 +1,29 @@
-import React, { useEffect, useState, useRef } from "react";
-import { useQuery } from "@apollo/client";
-import PolicyCard from "../../Components/PolicyCard/PolicyCard";
-import LegalKey from "../../Components/LegalKey/LegalKey";
-import fight from "./../../assets/fight.png";
-import fists from "./../../assets/Asset 1.png";
-import NoResults from "../../Components/NoResults/NoResults";
-import SearchBar from "../../Components/SearchBar/SearchBar";
-import Error from "../../Components/Error/Error";
-import Loading from "../../Components/Loading/Loading";
-import { GET_POLICIES } from "../../Utilities/queries";
-import "./StatePolicies.scss";
+import React, { useEffect, useState, useRef } from 'react';
+import { useQuery } from '@apollo/client';
+import PolicyCard from '../../Components/PolicyCard/PolicyCard';
+import LegalKey from '../../Components/LegalKey/LegalKey';
+import fight from './../../assets/fight.png';
+import fists from './../../assets/Asset 1.png';
+import NoResults from '../../Components/NoResults/NoResults';
+import SearchBar from '../../Components/SearchBar/SearchBar';
+import Error from '../../Components/Error/Error';
+import Loading from '../../Components/Loading/Loading';
+import { GET_POLICIES } from '../../Utilities/queries';
+import './StatePolicies.scss';
 
 const StatePoliciesView = () => {
   const [states, setStates] = useState([]);
-  const [searchInput, setSearchInput] = useState("");
-  const [legalResults, setLegalResults] = useState("");
+  const [searchInput, setSearchInput] = useState('');
+  const [legalResults, setLegalResults] = useState('');
   const [filteredResults, setFilteredResults] = useState([]);
   const inputRef = useRef(null);
 
   let { data, loading, error } = useQuery(GET_POLICIES);
-  if (error) console.log("error!", error.message);
+  if (error) console.log('error!', error.message);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     if (!error && !loading) {
@@ -65,65 +69,62 @@ const StatePoliciesView = () => {
   };
 
   const clearSearch = () => {
-    inputRef.current.value = "";
-    setLegalResults("");
-    setSearchInput("");
+    inputRef.current.value = '';
+    setLegalResults('');
+    setSearchInput('');
   };
 
   return (
-    <>
-      {window.scroll(0, 0)}
-      <section className="policy-body">
-        <h1 className="policy-header" data-cy="policy-header" tabIndex="0">
-          Check state abortion status
-        </h1>
-        <div className="content-body">
-          {error ? (
-            <Error />
-          ) : (
-            <div className="key-container">
-              <img
-                className="policy-img"
-                src={fight}
-                alt="fight for your right megaphone"
-                data-cy="fight-img"
-                tabIndex="0"
+    <section className="policy-body">
+      <h1 className="policy-header" data-cy="policy-header" tabIndex="0">
+        Check state abortion status
+      </h1>
+      <div className="content-body">
+        {error ? (
+          <Error />
+        ) : (
+          <div className="key-container">
+            <img
+              className="policy-img"
+              src={fight}
+              alt="fight for your right megaphone"
+              data-cy="fight-img"
+              tabIndex="0"
+            />
+            <div>
+              <LegalKey
+                filterByLegality={filterByLegality}
+                clearSearch={clearSearch}
               />
-              <div>
-                <LegalKey
-                  filterByLegality={filterByLegality}
-                  clearSearch={clearSearch}
-                />
-                <SearchBar
-                  inputRef={inputRef}
-                  handleSearchChange={handleSearchChange}
-                />
-              </div>
-              <img
-                className="policy-img"
-                src={fists}
-                alt="empowered fists"
-                data-cy="fists-img"
-                tabIndex="0"
+              <SearchBar
+                inputRef={inputRef}
+                handleSearchChange={handleSearchChange}
               />
             </div>
-          )}
-          {loading ? (
-            <Loading />
-          ) : searchInput && legalResults ? (
-            generatePolicyCards(
-              filteredResults.filter((res) => legalResults.includes(res))
-            )
-          ) : searchInput ? (
-            generatePolicyCards(filteredResults)
-          ) : legalResults ? (
-            generatePolicyCards(legalResults)
-          ) : (
-            generatePolicyCards(states)
-          )}
-        </div>
-      </section>
-    </>
+            <img
+              className="policy-img"
+              src={fists}
+              alt="empowered fists"
+              data-cy="fists-img"
+              tabIndex="0"
+            />
+          </div>
+        )}
+        {loading ? (
+          <Loading />
+        ) : searchInput && legalResults ? (
+          generatePolicyCards(
+            filteredResults.filter((res) => legalResults.includes(res))
+          )
+        ) : searchInput ? (
+          generatePolicyCards(filteredResults)
+        ) : legalResults ? (
+          generatePolicyCards(legalResults)
+        ) : (
+          generatePolicyCards(states)
+        )}
+      </div>
+    </section>
   );
 };
 

@@ -1,14 +1,14 @@
-import React from "react";
-import { PropTypes } from "prop-types";
-import "./PolicyCard.scss";
+import React from 'react';
+import { PropTypes } from 'prop-types';
+import './PolicyCard.scss';
 
 const PolicyCard = ({ name, legal, legalDescription }) => {
   const setColor = () => {
-    return legal === "at risk"
-      ? "#D27736"
-      : legal === "illegal"
-      ? "#DF6349"
-      : "#768CA0";
+    return legal === 'at risk'
+      ? '#D27736'
+      : legal === 'illegal'
+      ? '#DF6349'
+      : '#768CA0';
   };
 
   return (
