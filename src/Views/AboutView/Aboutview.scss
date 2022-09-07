@@ -55,7 +55,11 @@
 }
 
 .data-statement {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   text-align: center;
+  width: 40rem;
 }
 
 @media (min-width: 768px) {
