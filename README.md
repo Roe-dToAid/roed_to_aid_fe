@@ -80,7 +80,67 @@ Future features could include:
 
 ## Contributors
 
-**Rachel Allen**
+### Front End Team
+<table>
+  <tr>
+    <td><img src="https://avatars.githubusercontent.com/u/98493391?s=120&v=4"></td>
+    <td><img src="https://avatars.githubusercontent.com/u/90080658?s=120&v=4"></td>
+    <td><img src="https://avatars.githubusercontent.com/u/99596577?s=120&v=4"></td>
+    <td><img src="https://avatars.githubusercontent.com/u/98505112?s=120&v=4"></td>
+  </tr>
+  <tr>
+    <td>Catlyn Bowles</td>
+    <td>Irmak Erdem</td>
+    <td>Lidia Karpinski</td>
+    <td>Rachel Allen</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/catlynbowles">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/catlyn-bowles/">LinkedIn</a>
+    </td>
+    <td>
+      <a href="https://github.com/irmakerdem">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/irmakerdem/">LinkedIn</a>
+    </td>
+    <td>
+      <a href="https://github.com/lkarpins">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/lidia-karpinski/">LinkedIn</a>
+    </td>
+    <td>
+      <a href="https://github.com/Rallen13">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/rachel-lynn-allen/">LinkedIn</a>
+    </td>
+  </tr>
+</table>
 
-- [LinkedIn](https://www.linkedin.com/in/rachel-lynn-allen/)
-- [GitHub](https://github.com/Rallen13)
+### Back End Team
+<table>
+  <tr>
+    <td><img src="https://avatars.githubusercontent.com/u/85247765?s=120&v=4"></td>
+    <td><img src="https://avatars.githubusercontent.com/u/98674727?s=120&v=4"></td>
+    <td><img src="https://avatars.githubusercontent.com/u/98676136?s=120&v=4"></td>
+  </tr>
+  <tr>
+    <td>Bryce Wein</td>
+    <td>Casey Fazio</td>
+    <td>Wesley Garcia</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/bwbolt">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/bryce-wein/">LinkedIn</a>
+    </td>
+    <td>
+      <a href="https://github.com/casefaz">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/casey-fazio-7ba04149/">LinkedIn</a>
+    </td>
+    <td>
+      <a href="https://github.com/wesatt">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/wesley-garcia-attech/">LinkedIn</a>
+    </td>
+  </tr>
+</table>
+
+### Instructor/Project Manager
+Mike Dao
