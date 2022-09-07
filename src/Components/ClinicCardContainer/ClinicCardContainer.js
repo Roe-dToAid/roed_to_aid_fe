@@ -150,7 +150,7 @@ const ClinicCardContainer = ({ states, toggleSelected, filteredResults }) => {
 export default ClinicCardContainer;
 
 ClinicCardContainer.propTypes = {
-  states: PropTypes.array,
-  toggleSelected: PropTypes.string,
-  filteredResults: PropTypes.array,
+  states: PropTypes.array.isRequired,
+  toggleSelected: PropTypes.string.isRequired,
+  filteredResults: PropTypes.array.isRequired,
 };

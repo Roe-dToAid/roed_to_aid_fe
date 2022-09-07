@@ -79,12 +79,12 @@ export default ClinicCard;
 
 ClinicCard.propTypes = {
   name: PropTypes.string.isRequired,
+  state: PropTypes.string.isRequired,
+  ariaStatus: PropTypes.string.isRequired,
   address: PropTypes.string,
   city: PropTypes.string,
-  state: PropTypes.string.isRequired,
   zip: PropTypes.string,
   phone: PropTypes.string,
   services: PropTypes.string,
   url: PropTypes.string,
-  ariaStatus: PropTypes.string.isRequired,
 };
