@@ -38,7 +38,7 @@ describe("About", () => {
     cy.dataCy("about-roed").contains("Roe'd To Aid");
     cy.dataCy("mission-title").contains("Our Mission");
     cy.dataCy("mission-statement").contains(
-      "Our mission is to make abortion clinics information accessible to everyone in the US. The reversal of Roe V. Wade will not reduce abortions; it will limit access to safe abortions and endanger millions of birthers. Roe'd To Aid was created to empower folks by educating on current state policies, exposing misinformation centers, and promoting authorized abortion clinics. Users gain the power to make informed decisions about where they may go to receive necessary healthcare."
+      "Our mission is to make abortion clinics information accessible to everyone in the US. The reversal of Roe v. Wade will not reduce abortions; it will limit access to safe abortions and endanger millions of birthers. Roe'd To Aid was created to empower folks by educating on current state policies, exposing misinformation centers, and promoting authorized abortion clinics. Users gain the power to make informed decisions about where they may go to receive necessary healthcare."
     );
     cy.dataCy("yes-illustration").should("be.visible");
   });

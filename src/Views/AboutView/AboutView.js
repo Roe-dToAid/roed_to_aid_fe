@@ -22,7 +22,7 @@ const AboutView = () => {
             <h2 data-cy="mission-title">Our Mission</h2>
             <p data-cy="mission-statement">
               Our mission is to make abortion clinics information accessible to
-              everyone in the US. The reversal of Roe V. Wade will not reduce
+              everyone in the US. The reversal of Roe v. Wade will not reduce
               abortions; it will limit access to safe abortions and endanger
               millions of birthers. Roe'd To Aid was created to empower folks by
               educating on current state policies, exposing misinformation
