@@ -1,5 +1,5 @@
-import React from 'react';
-import './InformationBlock.scss';
+import React from "react";
+import "./InformationBlock.scss";
 
 const InformationBlock = () => {
   return (
@@ -27,7 +27,7 @@ const InformationBlock = () => {
           <h2>Misinformation Centers</h2>
         </div>
         <p tabIndex={0}>
-          Misinformation Centers or "Pregnancy Crisis Centers" are facilities
+          Misinformation Centers or "Crisis Pregnancy Centers" are facilities
           that often advertise as 'abortion clinics', however do not provide
           abortion services. Many of these centers provide false, harmful
           information and attempt to dissuade individuals from personal
