@@ -1,5 +1,6 @@
-import React from 'react';
-import './SearchBar.scss';
+import React from "react";
+import { PropTypes } from "prop-types";
+import "./SearchBar.scss";
 
 const SearchBar = ({ inputRef, handleSearchChange }) => {
   return (
@@ -20,3 +21,8 @@ const SearchBar = ({ inputRef, handleSearchChange }) => {
 };
 
 export default SearchBar;
+
+SearchBar.propTypes = {
+  inputRef: PropTypes.func.isRequired,
+  handleSearchChange: PropTypes.func.isRequired,
+};
