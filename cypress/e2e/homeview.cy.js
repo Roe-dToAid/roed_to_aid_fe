@@ -10,12 +10,12 @@ describe("About", () => {
     cy.dataCy("state-tab").should("be.visible");
   });
 
-  it("Should display Roe'dToAid logo with image of a diverse group of people and a written introduction to the application", () => {
+  it("Should display Roe'd To Aid logo with image of a diverse group of people and a written introduction to the application", () => {
     cy.dataCy("group-image").should("be.visible");
-    cy.dataCy("app-title").contains("Welcome to Roe'dToAid");
+    cy.dataCy("app-title").contains("Welcome to Roe'd To Aid");
     cy.dataCy("app-phrase").contains("A safe space to find a safe place.");
     cy.dataCy("app-explanation").contains(
-      "After the U.S. Supreme Court officially reversed Roe v Wade in June of 2022, millions lost a fundamental constitutional protection, the right to abortion.Roe'dToAid was created to bring awareness and expand access to safe, authorized clinics that provide necessary healthcare to all birthers. This application compiles current clinic information by state and clearly defines authorized clinics and distinguishes them from misinformation centers. Users can learn about current state policies as well as available resources in their state."
+      "After the U.S. Supreme Court officially reversed Roe v. Wade in June of 2022, millions lost a fundamental constitutional protection, the right to abortion.Roe'd To Aid was created to bring awareness and expand access to safe, authorized clinics that provide necessary healthcare to all birthers. This application compiles current clinic information by state and clearly defines authorized clinics and distinguishes them from misinformation centers. Users can learn about current state policies as well as available resources in their state."
     );
   });
 
@@ -78,5 +78,29 @@ describe("About", () => {
       .should("be.visible")
       .contains("Wesley Garcia");
     cy.dataCy("git-hub-link-bryce").should("be.visible").contains("Bryce Wein");
+  });
+
+  it("Should have links to each team members' respective GitHub account", () => {
+    cy.dataCy("git-hub-link-rachel")
+      .contains("Rachel Allen")
+      .should("have.attr", "href", "https://github.com/Rallen13/");
+    cy.dataCy("git-hub-link-catlyn")
+      .contains("Catlyn Bowles")
+      .should("have.attr", "href", "https://github.com/catlynbowles");
+    cy.dataCy("git-hub-link-irmak")
+      .contains("Irmak Erdem")
+      .should("have.attr", "href", "https://github.com/irmakerdem");
+    cy.dataCy("git-hub-link-lidia")
+      .contains("Lidia Karpinski")
+      .should("have.attr", "href", "https://github.com/lkarpins");
+    cy.dataCy("git-hub-link-casey")
+      .contains("Casey Fazio")
+      .should("have.attr", "href", "https://github.com/casefaz");
+    cy.dataCy("git-hub-link-wesley")
+      .contains("Wesley Garcia")
+      .should("have.attr", "href", "https://github.com/wesatt");
+    cy.dataCy("git-hub-link-bryce")
+      .contains("Bryce Wein")
+      .should("have.attr", "href", "https://github.com/bwbolt");
   });
 });

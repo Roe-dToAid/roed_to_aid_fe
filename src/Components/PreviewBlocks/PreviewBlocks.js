@@ -15,7 +15,7 @@ const PreviewBlocks = () => {
           alt="illustration of uterus"
           className="icon"
         ></img>
-        <p>
+        <p tabIndex={0}>
           Find a safe place to receive an abortion and avoid misinformation
           centers. Learn what resources are available in states with total bans.
         </p>
@@ -26,7 +26,7 @@ const PreviewBlocks = () => {
       <div className="preview">
         <img src={gavel_img} alt="illustration of gavel" className="icon"></img>
 
-        <p>
+        <p tabIndex={0}>
           After Roe v. Wade was overturned on June 24, 2022, abortion policy is
           in the hands of the states. Find your state to learn more.
         </p>
@@ -40,7 +40,7 @@ const PreviewBlocks = () => {
           alt="illustration of megaphone"
           className="icon"
         ></img>
-        <p>
+        <p tabIndex={0}>
           We are driven by the cause. We believe in inclusivity, access, and
           education to keep birthers safe.
         </p>

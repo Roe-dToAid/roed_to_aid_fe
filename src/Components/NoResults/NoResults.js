@@ -1,5 +1,6 @@
-import React from 'react';
-import './NoResults.scss';
+import React from "react";
+import { PropTypes } from "prop-types";
+import "./NoResults.scss";
 
 const NoResults = ({ message }) => {
   return (
@@ -10,3 +11,7 @@ const NoResults = ({ message }) => {
 };
 
 export default NoResults;
+
+NoResults.propTypes = {
+  message: PropTypes.string.isRequired,
+};

@@ -8,11 +8,17 @@
   height: 20rem;
   padding: 0.75rem;
 
+  h3 {
+    margin-top: 0;
+  }
   h3,
   p {
     color: #ffffff;
   }
-
+  p {
+    font-size: 1rem;
+    line-height: normal;
+  }
   a {
     text-decoration: none;
     color: #ffffff;

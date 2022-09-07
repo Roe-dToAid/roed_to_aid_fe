@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import ToggleButton from '@mui/material/ToggleButton';
-import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
-import './ToggleClinicsButton.scss';
+import React, { useEffect, useState } from "react";
+import ToggleButton from "@mui/material/ToggleButton";
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
+import { PropTypes } from "prop-types";
+import "./ToggleClinicsButton.scss";
 
 const ToggleClinicsButton = ({ setToggleSelected }) => {
-  const [filter, setFilter] = useState('all');
+  const [filter, setFilter] = useState("all");
 
   const handleFilter = (event, filterQuery) => {
     if (filterQuery !== null) {
@@ -64,3 +65,7 @@ const ToggleClinicsButton = ({ setToggleSelected }) => {
 };
 
 export default ToggleClinicsButton;
+
+ToggleClinicsButton.propTypes = {
+  setToggleSelected: PropTypes.string.isRequired,
+};

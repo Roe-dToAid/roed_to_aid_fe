@@ -34,7 +34,7 @@
 .inclusivity-container {
   text-align: center;
   padding: 2rem 0;
-  max-width: 45%;
+  max-width: 40rem;
   min-width: 20rem;
 }
 
@@ -57,7 +57,10 @@
 }
 
 .data-statement {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  justify-content: center;
 }
 
 @media (min-width: 768px) {
@@ -67,5 +70,12 @@
   .illustration {
     max-height: 20rem;
     width: auto;
+  }
+  .data-statement {
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    max-width: 40rem;
   }
 }
