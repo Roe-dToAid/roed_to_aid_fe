@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { useQuery, gql } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import "./ClinicsView.scss";
 import ClinicKeyBlock from "../../Components/ClinicKeyBlock/ClinicKeyBlock";
 import ToggleClinicsButton from "../../Components/ToggleClinicsButton/ToggleClinicsButton";

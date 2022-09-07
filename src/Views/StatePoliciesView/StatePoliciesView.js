@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { useQuery, gql } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import PolicyCard from "../../Components/PolicyCard/PolicyCard";
 import LegalKey from "../../Components/LegalKey/LegalKey";
 import fight from "./../../assets/fight.png";
