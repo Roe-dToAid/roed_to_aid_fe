@@ -42,14 +42,6 @@ Throughout this project, we took full advantage of React’s modular nature by c
 - Testing asynchronous GraphQL queries with Cypress and properly stubbing and intercepting the data
 - More in depth understaing of SASS and responsiveness 
 
-
-Our application includes the following core functionality:
-
-- Displays the data from the API in a way that applies directly to our audience
-- Ability for users to store/manipulate the data displayed in the application, such as filtering on the Explore The Deck view by major arcana and minor suits
-- Multiple views handled by Router
-- App deployment using Heroku
-
 ## Planning Documents
 
 [MVP proposal](https://docs.google.com/document/d/1UHs-a3WY_-aNOkZpWfk-UKU8aV_Z4cBGfchR075For8/edit)
