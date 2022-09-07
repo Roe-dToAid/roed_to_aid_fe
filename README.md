@@ -1,70 +1,161 @@
-# Getting Started with Create React App
+<img width="162" alt="Screen Shot 2022-09-07 at 12 58 54 PM" src="https://user-images.githubusercontent.com/98505112/188956585-a0ee3aee-3dd1-410f-8832-bea009455933.png">
+ <h1 align="center"> Welcome to Roe'd To Aid </h1>
+<h2  align="center">A safe space to find a safe place. </h2>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+After the U.S. Supreme Court officially reversed Roe v. Wade in June of 2022, millions lost a fundamental constitutional protection, the right to abortion.
 
-## Available Scripts
+Roe'd To Aid was created to bring awareness and expand access to safe, authorized clinics that provide necessary healthcare to all birthers. This application compiles current clinic information by state and clearly defines authorized clinics and distinguishes them from misinformation centers. Users can learn about current state policies as well as available resources in their state.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Project Overview](#project-overview)
+- [Learning Goals](#learning-goals)
+- [Technologies and Tools](#technologies-and-tools)
+- [Roadmap](#roadmap)
+- [Setup](#setup)
+- [Contributors](#contributors)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+(Want to hire the devs that worked on this project? Click [this link](#contributors) to jump to our project contributors!)
 
-### `npm test`
+This repo is the Back End part of a project built by students at [Turing School of Software and Design](https://turing.edu/). The project itself is an original web app designed by combined Front End and Back End teams and its purpose is to help individuals seeking information on abortions in their state and help with identifying misinformation sites.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Visit our Front End Site!
+- [Roe'd To Aid](https://roed-to-aide-fe.herokuapp.com/)
 
-### `npm run build`
+Our Back End is hosted here and requires an API key to access (we are not giving any API keys out at this time):
+- [Roe'd To Aid API](https://roed-to-aide-be.herokuapp.com/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Throughout this project, I took full advantage of React’s modular nature by creating dynamically rendered components used on multiple views. This helped me keep the app small yet provided the user with a pleasant experience. Thoughtful architecture was implemented using assets, data, utilities, components, and views folders. I used Material UI components for the menu and filter buttons on the Explore The Deck View. Using shared classes and nested styling in SASS, I was able to reduce the amount of repeated CSS throughout the app. With a mobile-first development approach, I learned it requires much less CSS to modify the styling for larger viewports. To help with the design, I purchased an illustration assets pack from Dribbble so it would have a consistent look and feel. To provide context and instructions, I referenced https://www.astrology.com/tarot/daily.html for content. All words were taken from that site as placeholder text.
 
-### `npm run eject`
+## Learning Goals
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Continue to gain competency with React Fundamentals
+- Create a multi-page UX using Router
+- Practice refactoring class based components to use react hooks
+- Continue to learn how to test React components & asynchronous JS
+- End to end testing with Cypress
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Our application includes the following core functionality:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Displays the data from the API in a way that applies directly to our audience
+- Ability for users to store/manipulate the data displayed in the application, such as filtering on the Explore The Deck view by major arcana and minor suits
+- Multiple views handled by Router
+- App deployment using Heroku
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Planning Documents
 
-## Learn More
+[MVP proposal](https://docs.google.com/document/d/1UHs-a3WY_-aNOkZpWfk-UKU8aV_Z4cBGfchR075For8/edit)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[Wireframes](https://www.figma.com/file/JgDbO5u7qdWi7SAQrDZpVI/Roe'dToAid?node-id=0%3A1)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[Project Spec](https://mod4.turing.edu/projects/capstone/)
 
-### Code Splitting
+## Illustrations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[Deployed Link](https://roed-to-aid.herokuapp.com/)
 
-### Analyzing the Bundle Size
+[Functionality Video]()
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Technologies and Tools
 
-### Making a Progressive Web App
+- JavaScript
+- React
+- React Router
+- HTML
+- CSS
+- SASS
+- Cypress
+- Apollo GraphQL
+- CircleCI/CD
+- Agile/SCRUM Methodology
+- NPM
+- Webpack
+- Heroku
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Roadmap
 
-### Advanced Configuration
+Future features could include:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Add functionality for all states
+- Add feature for user to rate their clinic experience
+- Add login functionality 
 
-### Deployment
+## Setup to Run Locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. Fork and clone this repository
+2. Cd into the root directory and run `npm i`
+3. To run this server, run `npm start` in the terminal and React will start the development server. To stop the local server, use command `Control + C`.
+4. Open a browser window and go to http://localhost:3000 to view the website
+5. To run the testing suite, run `npm run cypress` and Cypress will open up.
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contributors
+
+### Front End Team
+<table>
+  <tr>
+    <td><img src="https://avatars.githubusercontent.com/u/98493391?s=120&v=4"></td>
+    <td><img src="https://avatars.githubusercontent.com/u/90080658?s=120&v=4"></td>
+    <td><img src="https://avatars.githubusercontent.com/u/99596577?s=120&v=4"></td>
+    <td><img src="https://avatars.githubusercontent.com/u/98505112?s=120&v=4"></td>
+  </tr>
+  <tr>
+    <td>Catlyn Bowles</td>
+    <td>Irmak Erdem</td>
+    <td>Lidia Karpinski</td>
+    <td>Rachel Allen</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/catlynbowles">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/catlyn-bowles/">LinkedIn</a>
+    </td>
+    <td>
+      <a href="https://github.com/irmakerdem">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/irmakerdem/">LinkedIn</a>
+    </td>
+    <td>
+      <a href="https://github.com/lkarpins">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/lidia-karpinski/">LinkedIn</a>
+    </td>
+    <td>
+      <a href="https://github.com/Rallen13">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/rachel-lynn-allen/">LinkedIn</a>
+    </td>
+  </tr>
+</table>
+
+### Back End Team
+<table>
+  <tr>
+    <td><img src="https://avatars.githubusercontent.com/u/85247765?s=120&v=4"></td>
+    <td><img src="https://avatars.githubusercontent.com/u/98674727?s=120&v=4"></td>
+    <td><img src="https://avatars.githubusercontent.com/u/98676136?s=120&v=4"></td>
+  </tr>
+  <tr>
+    <td>Bryce Wein</td>
+    <td>Casey Fazio</td>
+    <td>Wesley Garcia</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/bwbolt">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/bryce-wein/">LinkedIn</a>
+    </td>
+    <td>
+      <a href="https://github.com/casefaz">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/casey-fazio-7ba04149/">LinkedIn</a>
+    </td>
+    <td>
+      <a href="https://github.com/wesatt">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/wesley-garcia-attech/">LinkedIn</a>
+    </td>
+  </tr>
+</table>
+
+### Instructor/Project Manager
+Mike Dao

@@ -1,9 +1,11 @@
+@import '../../Styles/variables.scss';
+
 .all-clinics-card-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column wrap;
-  padding: 1.5rem;
+  padding: $space-24;
 }
 
 .card-container {
@@ -12,24 +14,24 @@
   flex-direction: row;
   justify-content: center;
   align-content: center;
-  gap: 1.5rem;
+  gap: $space-24;
   padding-bottom: 3rem;
 }
 
 .authorized-card-container {
   .clinic-card {
-    background-color: #768ca0;
+    background-color: $blue;
   }
 }
 
 .misinformation-card-container {
   .clinic-card {
-    background-color: #df6349;
+    background-color: $red;
   }
 }
 
 .resource-card-container {
   .clinic-card {
-    background-color: #a46f89;
+    background-color: $purple;
   }
 }

@@ -1,5 +1,7 @@
+@import '../../Styles/variables.scss';
+
 .policy-body {
-  padding: 1.5rem;
+  padding: $space-24;
 }
 
 .content-body {
@@ -48,19 +50,19 @@
 }
 
 .clear {
-  background-color: #a46f89;
+  background-color: $purple;
 }
 
 .legal {
-  background-color: #768ca0;
+  background-color: $blue;
 }
 
 .illegal {
-  background-color: #df6349;
+  background-color: $red;
 }
 
 .at-risk {
-  background-color: #d27736;
+  background-color: $orange;
 }
 
 .empty {

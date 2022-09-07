@@ -1,3 +1,5 @@
+@import '../../Styles/variables.scss';
+
 .about-container {
   display: flex;
   flex-direction: column;
@@ -5,7 +7,7 @@
   justify-content: center;
   color: black;
   padding: 2rem;
-  gap: 1.5rem;
+  gap: $space-24;
 }
 
 .team-container {
@@ -15,7 +17,7 @@
   align-items: center;
   justify-content: center;
   padding: 0 0 2rem 0;
-  gap: 1.5rem;
+  gap: $space-24;
   img {
     width: 10rem;
   }
@@ -47,7 +49,7 @@
   align-items: center;
   justify-content: center;
   align-content: center;
-  gap: 1.5rem;
+  gap: $space-24;
 }
 
 .inclusivity-only {

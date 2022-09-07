@@ -1,3 +1,5 @@
+@import '../../Styles/variables.scss';
+
 .error-messaging {
   display: flex;
   flex-direction: column;
@@ -5,6 +7,6 @@
   h2,
   h3 {
     text-align: center;
-    margin: 1.5rem;
+    margin: $space-24;
   }
 }

@@ -1,12 +1,14 @@
+@import '../../Styles/variables.scss';
+
 .authorized-clinics-block {
-  border: 0.25rem solid #768ca0;
+  border: $blue-border;
   p {
     text-align: center;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem $space-24;
   }
   .authorized-header {
     color: #ffffff;
-    background-color: #768ca0;
+    background-color: $blue;
     padding-top: 0.05rem;
     text-align: center;
     padding: 0.75rem;
@@ -16,14 +18,14 @@
   }
 }
 .misinformation-centers-block {
-  border: 0.25rem solid #df6349;
+  border: $red-border;
   p {
     text-align: center;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem $space-24;
   }
   .misinformation-header {
     color: #ffffff;
-    background-color: #df6349;
+    background-color: $red;
     padding-top: 0.05rem;
     text-align: center;
     padding: 0.75rem;
