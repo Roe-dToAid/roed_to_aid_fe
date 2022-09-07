@@ -1,4 +1,6 @@
-<img align="center" width="162" alt="Screen Shot 2022-09-07 at 12 58 54 PM" src="https://user-images.githubusercontent.com/98505112/188956585-a0ee3aee-3dd1-410f-8832-bea009455933.png" />
+<div id="header" align="center">
+  <img width="162" alt="Screen Shot 2022-09-07 at 12 58 54 PM" src="https://user-images.githubusercontent.com/98505112/188956585-a0ee3aee-3dd1-410f-8832-bea009455933.png" />
+</div>
 
 <h1 align="center"> Welcome to Roe'd To Aid </h1>
 <h2 align="center">A safe space to find a safe place. </h2>
@@ -60,7 +62,7 @@ Our application includes the following core functionality:
 
 [Deployed Link](https://roed-to-aid.herokuapp.com/)
 
-[Functionality Video]()
+[Functionality Video](https://vimeo.com/747448767/4632ceb6ae)
 
 ## Technologies and Tools
 
