@@ -25,7 +25,7 @@ Roe'd To Aid was created to bring awareness and expand access to safe, authorize
 This repo is the Front End part of a project built by students at [Turing School of Software and Design](https://turing.edu/). The project itself is an original web app designed by combined Front End and Back End teams and its purpose is to help individuals seeking information on abortions in their state and help with identifying misinformation sites.
 
 Visit our Front End Site!
-- [Roe'd To Aid](https://roed-to-aide-fe.herokuapp.com/)
+- [Roe'd To Aid](https://roed-to-aid.herokuapp.com/)
 
 Our Back End is hosted here and requires an API key to access (we are not giving any API keys out at this time):
 - [Roe'd To Aid API](https://roed-to-aide-be.herokuapp.com/)
