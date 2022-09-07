@@ -30,7 +30,7 @@ describe("About", () => {
 
   it("Should route you to Clinics view when 'Find a Clinic' button clicked", () => {
     cy.dataCy("find-clinic-button")
-      .contains("Find A Clinic")
+      .contains("FIND A CLINIC")
       .click()
       .url()
       .should("include", "/clinics");
@@ -38,7 +38,7 @@ describe("About", () => {
 
   it("Should route you to Policies view when 'Check State Status' button clicked", () => {
     cy.dataCy("check-status-button")
-      .contains("Check State Status")
+      .contains("CHECK STATE STATUS")
       .click()
       .url()
       .should("include", "/states-policies");
@@ -46,7 +46,7 @@ describe("About", () => {
 
   it("Should route you to About view when 'Learn More' button clicked", () => {
     cy.dataCy("learn-more-button")
-      .contains("Learn More")
+      .contains("LEARN MORE")
       .click()
       .url()
       .should("include", "/about");
