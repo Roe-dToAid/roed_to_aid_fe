@@ -47,7 +47,7 @@ describe('Clinics View', () => {
 
   it('should contain a disclaimer', () => {
     cy.dataCy('clinics-view-disclaimer').contains(
-      'As this is an MVP project, we currently only have results for Indiana, New Mexico, and Texas. Please use one those states when using the search bar.'
+      'As this is an MVP project, we currently only have results for Indiana, New Mexico, and Texas. Please use one of those states when using the search bar.'
     );
   });
 

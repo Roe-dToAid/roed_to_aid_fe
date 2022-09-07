@@ -1,5 +1,5 @@
-import React from "react";
-import "./ClinicCard.scss";
+import React from 'react';
+import './ClinicCard.scss';
 
 const ClinicCard = ({
   name,
@@ -10,39 +10,62 @@ const ClinicCard = ({
   phone,
   services,
   url,
+  ariaStatus,
 }) => {
   return (
-    <div className="clinic-card" data-cy="clinic-card">
+    <div className="clinic-card" data-cy="clinic-card" tabIndex={0}>
+      <span aria-label={ariaStatus}></span>
+
       <h3 data-cy="clinic-name">{name}</h3>
       {address && (
-        <p data-cy="clinic-address" className="clinic-address">
-          <span className="material-symbols-outlined">location_on</span>{" "}
-          {address}{" "}
+        <p
+          data-cy="clinic-address"
+          className="clinic-address"
+          aria-label={`Location: ${address}.`}
+        >
+          <span className="material-symbols-outlined">location_on</span>{' '}
+          {address}{' '}
         </p>
       )}
       {city && state && zip && (
-        <p data-cy="clinic-city-state-zip" className="clinic-city-state-zip">
+        <p
+          data-cy="clinic-city-state-zip"
+          className="clinic-city-state-zip"
+          aria-label={`${city}, ${state} ${zip}.`}
+        >
           {city}, {state} {zip}
         </p>
       )}
       {!city && state && !zip && (
-        <p data-cy="clinic-state" className="clinic-address">
+        <p
+          data-cy="clinic-state"
+          className="clinic-address"
+          aria-label={`State: ${state}.`}
+        >
           <span className="material-symbols-outlined">location_on</span> {state}
         </p>
       )}
       {phone && (
-        <p data-cy="clinic-phone">
+        <p data-cy="clinic-phone" aria-label={`Phone: ${phone}.`}>
           <span className="material-symbols-outlined">phone</span> {phone}
         </p>
       )}
       {services && (
-        <p data-cy="clinic-services">
-          <span className="material-symbols-outlined">medical_services</span>{" "}
+        <p
+          data-cy="clinic-services"
+          aria-label={`Medical services: ${services}.`}
+        >
+          <span className="material-symbols-outlined">medical_services</span>{' '}
           {services}
         </p>
       )}
       {url && (
-        <a href={url} target="blank" data-cy="clinic-url">
+        <a
+          href={url}
+          target="blank"
+          data-cy="clinic-url"
+          aria-label="Open their website in a new tab"
+        >
           <span className="material-symbols-outlined">open_in_new</span> Visit
           their website
         </a>

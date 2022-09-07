@@ -82,13 +82,19 @@ const ClinicsView = () => {
 
   return (
     <main className="clinics-view-container">
-      <h1 data-cy="clinics-view-heading">Find a safe clinic</h1>
+      <h1 data-cy="clinics-view-heading" tabIndex={0}>
+        Find a safe clinic
+      </h1>
       <div className="heading-container">
         <ClinicKeyBlock />
         <div>
-          <p className="clinics-view-disclaimer" data-cy="clinics-view-disclaimer">
+          <p
+            className="clinics-view-disclaimer"
+            data-cy="clinics-view-disclaimer"
+            tabIndex={0}
+          >
             As this is an MVP project, we currently only have results for
-            Indiana, New Mexico, and Texas. Please use one those states when
+            Indiana, New Mexico, and Texas. Please use one of those states when
             using the search bar.
           </p>
           <SearchBar

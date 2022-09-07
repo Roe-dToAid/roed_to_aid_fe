@@ -47,6 +47,7 @@ const ClinicCardContainer = ({
           city={clinic.city}
           state={state.name}
           zip={clinic.zip}
+          ariaStatus="This is an unsafe place to go."
         />
       );
     });
@@ -65,6 +66,7 @@ const ClinicCardContainer = ({
           phone={clinic.phone}
           services={clinic.services}
           url={clinic.website}
+          ariaStatus="This is a safe place for help."
         />
       );
     });
@@ -79,6 +81,7 @@ const ClinicCardContainer = ({
           services={resource.service}
           url={resource.website}
           state={state.name}
+          ariaStatus="This is a safe resource."
         />
       );
     });
@@ -91,7 +94,7 @@ const ClinicCardContainer = ({
     >
       {(toggleSelected === 'authorized' || toggleSelected === 'all') && (
         <>
-          <h2>Authorized Clinics</h2>
+          <h2 tabIndex={0}>Authorized Clinics</h2>
           {authorized.length ? (
             <div
               className="card-container authorized-card-container"
@@ -109,7 +112,7 @@ const ClinicCardContainer = ({
       )}
       {(toggleSelected === 'resources' || toggleSelected === 'all') && (
         <>
-          <h2>State Resources</h2>
+          <h2 tabIndex={0}>State Resources</h2>
           {resources.length ? (
             <div
               className="card-container resource-card-container"
@@ -128,7 +131,7 @@ const ClinicCardContainer = ({
       {(toggleSelected === 'misinformationCenters' ||
         toggleSelected === 'all') && (
         <>
-          <h2>Misinformation Centers</h2>
+          <h2 tabIndex={0}>Misinformation Centers</h2>
           {misinformation.length ? (
             <div
               className="card-container misinformation-card-container"

@@ -1,5 +1,5 @@
-import React from "react";
-import "./IntroductionBlock.scss";
+import React from 'react';
+import './IntroductionBlock.scss';
 
 const IntroductionBlock = () => {
   return (

@@ -28,7 +28,8 @@
   min-width: 20rem;
 }
 
-.mission-container, .inclusivity-container {
+.mission-container,
+.inclusivity-container {
   text-align: center;
   padding: 2rem 0;
   max-width: 45%;
@@ -57,7 +58,7 @@
   text-align: center;
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   .inclusivity-only {
     flex-direction: row;
   }
