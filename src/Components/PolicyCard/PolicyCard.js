@@ -1,20 +1,21 @@
-import React from 'react';
-import './PolicyCard.scss';
+import React from "react";
+import { PropTypes } from "prop-types";
+import "./PolicyCard.scss";
 
 const PolicyCard = ({ name, legal, legalDescription }) => {
   const setColor = () => {
-    return legal === 'at risk'
-      ? '#D27736'
-      : legal === 'illegal'
-      ? '#DF6349'
-      : '#768CA0';
+    return legal === "at risk"
+      ? "#D27736"
+      : legal === "illegal"
+      ? "#DF6349"
+      : "#768CA0";
   };
 
   return (
     <article
       data-cy="info-strip"
       className="info-strip"
-      style={{ border: '.1rem solid' + setColor() }}
+      style={{ border: ".1rem solid" + setColor() }}
     >
       <div
         tabIndex="0"
@@ -32,3 +33,9 @@ const PolicyCard = ({ name, legal, legalDescription }) => {
 };
 
 export default PolicyCard;
+
+PolicyCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  legal: PropTypes.string.isRequired,
+  legalDescription: PropTypes.string.isRequired,
+};
