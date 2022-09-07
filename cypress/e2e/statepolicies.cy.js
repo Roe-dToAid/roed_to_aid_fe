@@ -24,7 +24,7 @@ describe('State Policies View', () => {
   })
 
   it('Should have a search bar', () => {
-    cy.dataCy('search').should('exist')
+    cy.dataCy('search-input').should('exist')
   })
 
   it('Should have a legend to search by legality, including an all states button', () => {

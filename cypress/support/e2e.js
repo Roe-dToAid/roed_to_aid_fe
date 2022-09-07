@@ -28,3 +28,4 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 beforeEach(() => {
   Cypress.config("interceptions", {});
 });
+

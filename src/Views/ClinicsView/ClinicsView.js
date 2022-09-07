@@ -1,14 +1,15 @@
-import React, { useEffect, useState, useRef } from "react";
-import { useQuery, gql } from "@apollo/client";
-import "./ClinicsView.scss";
-import ClinicKeyBlock from "../../Components/ClinicKeyBlock/ClinicKeyBlock";
-import ToggleClinicsButton from "../../Components/ToggleClinicsButton/ToggleClinicsButton";
-import SearchBar from "../../Components/SearchBar/SearchBar";
-import ClinicCardContainer from "../../Components/ClinicCardContainer/ClinicCardContainer";
-import Loading from "../../Components/Loading/Loading";
+import React, { useEffect, useState, useRef } from 'react';
+import { useQuery, gql } from '@apollo/client';
+import './ClinicsView.scss';
+import ClinicKeyBlock from '../../Components/ClinicKeyBlock/ClinicKeyBlock';
+import ToggleClinicsButton from '../../Components/ToggleClinicsButton/ToggleClinicsButton';
+import SearchBar from '../../Components/SearchBar/SearchBar';
+import ClinicCardContainer from '../../Components/ClinicCardContainer/ClinicCardContainer';
+import Loading from '../../Components/Loading/Loading';
+import Error from '../../Components/Error/Error';
 
 const GET_CLINICS = gql`
-  query {
+  query GetClinics {
     states {
       name
       id
@@ -49,12 +50,12 @@ const GET_CLINICS = gql`
 
 const ClinicsView = () => {
   let { data, loading, error } = useQuery(GET_CLINICS);
-  if (loading) console.log("Loading...") && <Loading/>;
-  if (error) console.log("error!", error.message);
+  if (loading) console.log('Loading...') && <Loading />;
+  if (error) console.log('error!', error.message);
 
   const [states, setStates] = useState([]);
-  const [toggleSelected, setToggleSelected] = useState("all");
-  const [searchInput, setSearchInput] = useState("");
+  const [toggleSelected, setToggleSelected] = useState('all');
+  const [searchInput, setSearchInput] = useState('');
   const [filteredResults, setFilteredResults] = useState([]);
   const inputRef = useRef(null);
 
@@ -75,25 +76,43 @@ const ClinicsView = () => {
       );
       setFilteredResults(filteredData);
     } else {
-      setFilteredResults([])
+      setFilteredResults([]);
     }
   }, [searchInput, states]);
 
   return (
-    <>
-      <h1>Find a safe clinic</h1>
+    <main className="clinics-view-container">
+      <h1 data-cy="clinics-view-heading">Find a safe clinic</h1>
       <div className="heading-container">
         <ClinicKeyBlock />
         <div>
+          <p className="clinics-view-disclaimer" data-cy="clinics-view-disclaimer">
+            As this is an MVP project, we currently only have results for
+            Indiana, New Mexico, and Texas. Please use one those states when
+            using the search bar.
+          </p>
           <SearchBar
             inputRef={inputRef}
             handleSearchChange={handleSearchChange}
           />
-          <ToggleClinicsButton setToggleSelected={setToggleSelected}/>
+          <ToggleClinicsButton setToggleSelected={setToggleSelected} />
         </div>
       </div>
-      {!loading && <ClinicCardContainer states={states} toggleSelected={toggleSelected} filteredResults={filteredResults}/>}
-    </>
+      {!error ? (
+        !loading ? (
+          <ClinicCardContainer
+            states={states}
+            toggleSelected={toggleSelected}
+            filteredResults={filteredResults}
+            searchInput={searchInput}
+          />
+        ) : (
+          <Loading />
+        )
+      ) : (
+        <Error />
+      )}
+    </main>
   );
 };
 

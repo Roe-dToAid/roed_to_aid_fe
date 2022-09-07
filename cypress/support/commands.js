@@ -36,3 +36,4 @@ Cypress.Commands.add('interceptGQL', (url, operation, data, alias) => {
     }
   });
 });
+
