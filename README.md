@@ -13,6 +13,16 @@
 
 ## Project Overview
 
+(Want to hire the devs that worked on this project? Click [this link](#contributors) to jump to our project contributors!)
+
+This repo is the Back End part of a project built by students at [Turing School of Software and Design](https://turing.edu/). The project itself is an original web app designed by combined Front End and Back End teams and its purpose is to help individuals seeking information on abortions in their state and help with identifying misinformation sites.
+
+Visit our Front End Site!
+- [Roe'd To Aid](https://roed-to-aide-fe.herokuapp.com/)
+
+Our Back End is hosted here and requires an API key to access (we are not giving any API keys out at this time):
+- [Roe'd To Aid API](https://roed-to-aide-be.herokuapp.com/)
+
 After the U.S. Supreme Court officially reversed Roe v. Wade in June of 2022, millions lost a fundamental constitutional protection, the right to abortion.
 
 Roe'd To Aid was created to bring awareness and expand access to safe, authorized clinics that provide necessary healthcare to all birthers. This application compiles current clinic information by state and clearly defines authorized clinics and distinguishes them from misinformation centers. Users can learn about current state policies as well as available resources in their state.
