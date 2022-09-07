@@ -36,9 +36,10 @@ Throughout this project, we took full advantage of React’s modular nature by c
 
 - Continue to gain competency with React Fundamentals
 - Create a multi-page UX using Router
-- Practice refactoring class based components to use react hooks
-- Continue to learn how to test React components & asynchronous JS
-- End to end testing with Cypress
+- Apollo GraphQL implementation with a React app
+- Testing asynchronous GraphQL queries with Cypress and properly stubbing and intercepting the data
+- More in depth understaing of SASS and responsiveness 
+
 
 Our application includes the following core functionality:
 
