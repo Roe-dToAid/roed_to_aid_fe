@@ -1,10 +1,10 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
-import HomeView from "../../Views/HomeView/HomeView";
-import AboutView from "../../Views/AboutView/AboutView";
-import ClinicsView from "../../Views/ClinicsView/ClinicsView";
-import StatePoliciesView from "../../Views/StatePoliciesView/StatePoliciesView";
-import Error from "../Error/Error";
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import HomeView from '../../Views/HomeView/HomeView';
+import AboutView from '../../Views/AboutView/AboutView';
+import ClinicsView from '../../Views/ClinicsView/ClinicsView';
+import StatePoliciesView from '../../Views/StatePoliciesView/StatePoliciesView';
+import Error from '../Error/Error';
 
 const Routes = () => {
   return (

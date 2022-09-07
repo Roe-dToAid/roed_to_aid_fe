@@ -16,12 +16,15 @@
   height: 15rem;
   button {
     background-color: #eab93d;
-    padding: 0.5rem;
-    font-family: "Rubik", sans-serif;
-    width: 10rem;
-    border: 0.125rem solid #768ca0;
+    padding: 0.5rem 2rem;
+    height: 3.25rem;
+    font-family: 'Rubik', sans-serif;
+    border: none;
     margin: auto;
     cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0px 2px 3px #768ca0;
   }
 
   button:hover {

@@ -1,3 +1,13 @@
-.empty {
+.no-results-card {
+  text-align: left;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  max-width: 20rem;
   height: 10rem;
+  padding: 0.75rem;
+  background-color: #f0d0a3;
 }

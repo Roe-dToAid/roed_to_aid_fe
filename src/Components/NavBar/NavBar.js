@@ -1,7 +1,7 @@
-import React from "react";
-import "./NavBar.scss";
-import logo from "./../../assets/roed-to-aid-logo.svg";
-import { Link } from "react-router-dom";
+import React from 'react';
+import './NavBar.scss';
+import logo from './../../assets/roed-to-aid-logo.svg';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (

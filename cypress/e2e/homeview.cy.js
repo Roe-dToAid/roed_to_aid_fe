@@ -10,12 +10,12 @@ describe("About", () => {
     cy.dataCy("state-tab").should("be.visible");
   });
 
-  it("Should display Roe'dToAid logo with image of a diverse group of people and a written introduction to the application", () => {
+  it("Should display Roe'd To Aid logo with image of a diverse group of people and a written introduction to the application", () => {
     cy.dataCy("group-image").should("be.visible");
-    cy.dataCy("app-title").contains("Welcome to Roe'dToAid");
+    cy.dataCy("app-title").contains("Welcome to Roe'd To Aid");
     cy.dataCy("app-phrase").contains("A safe space to find a safe place.");
     cy.dataCy("app-explanation").contains(
-      "After the U.S. Supreme Court officially reversed Roe v. Wade in June of 2022, millions lost a fundamental constitutional protection, the right to abortion.Roe'dToAid was created to bring awareness and expand access to safe, authorized clinics that provide necessary healthcare to all birthers. This application compiles current clinic information by state and clearly defines authorized clinics and distinguishes them from misinformation centers. Users can learn about current state policies as well as available resources in their state."
+      "After the U.S. Supreme Court officially reversed Roe v. Wade in June of 2022, millions lost a fundamental constitutional protection, the right to abortion.Roe'd To Aid was created to bring awareness and expand access to safe, authorized clinics that provide necessary healthcare to all birthers. This application compiles current clinic information by state and clearly defines authorized clinics and distinguishes them from misinformation centers. Users can learn about current state policies as well as available resources in their state."
     );
   });
 
@@ -30,7 +30,7 @@ describe("About", () => {
 
   it("Should route you to Clinics view when 'Find a Clinic' button clicked", () => {
     cy.dataCy("find-clinic-button")
-      .contains("Find A Clinic")
+      .contains("FIND A CLINIC")
       .click()
       .url()
       .should("include", "/clinics");
@@ -38,7 +38,7 @@ describe("About", () => {
 
   it("Should route you to Policies view when 'Check State Status' button clicked", () => {
     cy.dataCy("check-status-button")
-      .contains("Check State Status")
+      .contains("CHECK STATE STATUS")
       .click()
       .url()
       .should("include", "/states-policies");
@@ -46,7 +46,7 @@ describe("About", () => {
 
   it("Should route you to About view when 'Learn More' button clicked", () => {
     cy.dataCy("learn-more-button")
-      .contains("Learn More")
+      .contains("LEARN MORE")
       .click()
       .url()
       .should("include", "/about");

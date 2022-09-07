@@ -1,10 +1,10 @@
-import React from "react";
-import groupImage from "./../../assets/roed-to-aid-hero.jpg";
-import InformationBlock from "../../Components/InformationBlock/InformationBlock";
-import PreviewBlocks from "../../Components/PreviewBlocks/PreviewBlocks";
-import QuoteBlock from "../../Components/QuoteBlock/QuoteBlock";
-import "./HomeView.scss";
-import IntroductionBlock from "../../Components/IntroductionBlock/IntroductionBlock";
+import React from 'react';
+import groupImage from './../../assets/roed-to-aid-hero.jpg';
+import InformationBlock from '../../Components/InformationBlock/InformationBlock';
+import PreviewBlocks from '../../Components/PreviewBlocks/PreviewBlocks';
+import QuoteBlock from '../../Components/QuoteBlock/QuoteBlock';
+import './HomeView.scss';
+import IntroductionBlock from '../../Components/IntroductionBlock/IntroductionBlock';
 
 const HomeView = () => {
   return (

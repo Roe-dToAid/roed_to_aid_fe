@@ -1,5 +1,5 @@
-import React from "react";
-import "./QuoteBlock.scss";
+import React from 'react';
+import './QuoteBlock.scss';
 
 const QuoteBlock = () => {
   return (
