@@ -80,8 +80,8 @@ Our application includes the following core functionality:
 
 Future features could include:
 
-- Add functionality to allow a user to favorite meaningful spreads
-- Add feature to connect with other users and share spreads with friends
+- Add functionality for all states
+- Add feature for user to rate their clinic experience
 - Add login functionality 
 
 ## Setup to Run Locally
