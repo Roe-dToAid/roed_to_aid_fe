@@ -78,13 +78,13 @@ const ClinicCard = ({
 export default ClinicCard;
 
 ClinicCard.propTypes = {
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
   address: PropTypes.string,
   city: PropTypes.string,
-  state: PropTypes.string,
+  state: PropTypes.string.isRequired,
   zip: PropTypes.string,
   phone: PropTypes.string,
   services: PropTypes.string,
   url: PropTypes.string,
-  ariaStatus: PropTypes.string,
+  ariaStatus: PropTypes.string.isRequired,
 };
