@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+<img width="162" alt="Screen Shot 2022-09-07 at 12 58 54 PM" src="https://user-images.githubusercontent.com/98505112/188956585-a0ee3aee-3dd1-410f-8832-bea009455933.png">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Project Overview](#project-overview)
+- [Learning Goals](#learning-goals)
+- [Technologies and Tools](#technologies-and-tools)
+- [Roadmap](#roadmap)
+- [Setup](#setup)
+- [Contributors](#contributors)
 
-### `npm start`
+## Project Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Starting each day with a Tarot reading is a terrific way to get psyched for all the possibilities—and avoid possible pitfalls that the day may bring. WitchCraft Tarot helps you get your daily reading in order to obtain insight for the day ahead! It also allows you to get your 3-Card Spread reading in order to obtain insight about past, present, and future, or, situation, action, and outcome. Or, if you're doing a relationship reading, you can even designate the first card as yourself, the second as your partner (or potential partner), and the third as the relationship between you both. Additonally, users have the opportunity to explore the entire deck on the Explore The Deck View and filter the deck by major arcana or the minor suits (pentacles, swords, wands, and cups).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Throughout this project, I took full advantage of React’s modular nature by creating dynamically rendered components used on multiple views. This helped me keep the app small yet provided the user with a pleasant experience. Thoughtful architecture was implemented using assets, data, utilities, components, and views folders. I used Material UI components for the menu and filter buttons on the Explore The Deck View. Using shared classes and nested styling in SASS, I was able to reduce the amount of repeated CSS throughout the app. With a mobile-first development approach, I learned it requires much less CSS to modify the styling for larger viewports. To help with the design, I purchased an illustration assets pack from Dribbble so it would have a consistent look and feel. To provide context and instructions, I referenced https://www.astrology.com/tarot/daily.html for content. All words were taken from that site as placeholder text.
 
-### `npm test`
+## Learning Goals
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Continue to gain competency with React Fundamentals
+- Create a multi-page UX using Router
+- Practice refactoring class based components to use react hooks
+- Continue to learn how to test React components & asynchronous JS
+- End to end testing with Cypress
 
-### `npm run build`
+Our application includes the following core functionality:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Displays the data from the API in a way that applies directly to our audience
+- Ability for users to store/manipulate the data displayed in the application, such as filtering on the Explore The Deck view by major arcana and minor suits
+- Multiple views handled by Router
+- App deployment using Heroku
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Planning Documents
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[MVP proposal](https://docs.google.com/document/d/1eDzOwcUQOxsWh6uXOyawd2NmG0x2y0A1H9xh6m3zs7s/edit)
 
-### `npm run eject`
+[Design Inspo](https://docs.google.com/document/d/1iDrh_PzEPID617UXV8rjnBhG76k7Y7-3BH_rHk6suMc/edit)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+[Wireframes](https://drive.google.com/file/d/19KhIxJ7ZgmV0XLT8SNrTL9Igll_3zSd1/view?ths=true)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[Project Spec](https://frontend.turing.edu/projects/module-3/showcase.html)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Illustrations
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+[Deployed Link](https://witchcraft-tarot.herokuapp.com/)
 
-## Learn More
+[Functionality Video](https://vimeo.com/737363654/9e612fbefb)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Technologies and Tools
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- JavaScript
+- React
+- React Router
+- HTML
+- CSS
+- SASS
+- Cypress
+- Fetch API
+- NPM
+- Webpack
+- Heroku
 
-### Code Splitting
+## Roadmap
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Future features could include:
 
-### Analyzing the Bundle Size
+- Add functionality to allow a user to favorite meaningful spreads
+- Add feature to connect with other users and share spreads with friends
+- Add login functionality 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Setup to Run Locally
 
-### Making a Progressive Web App
+1. Fork and clone this repository
+2. Cd into the root directory and run `npm i`
+3. To run this server, run `npm start` in the terminal and React will start the development server. To stop the local server, use command `Control + C`.
+4. Open a browser window and go to http://localhost:3000 to view the website
+5. To run the testing suite, run `npm run cypress` and Cypress will open up.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## Contributors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**Rachel Allen**
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [LinkedIn](https://www.linkedin.com/in/rachel-lynn-allen/)
+- [GitHub](https://github.com/Rallen13)
