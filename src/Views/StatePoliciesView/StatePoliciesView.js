@@ -8,18 +8,8 @@ import NoResults from "../../Components/NoResults/NoResults";
 import SearchBar from "../../Components/SearchBar/SearchBar";
 import Error from "../../Components/Error/Error";
 import Loading from "../../Components/Loading/Loading";
+import { GET_POLICIES } from "../../Utilities/queries";
 import "./StatePolicies.scss";
-
-const GET_POLICIES = gql`
-  query GetPolicies {
-    states {
-      name
-      legal
-      legalDescription
-      abbreviation
-    }
-  }
-`;
 
 const StatePoliciesView = () => {
   const [states, setStates] = useState([]);

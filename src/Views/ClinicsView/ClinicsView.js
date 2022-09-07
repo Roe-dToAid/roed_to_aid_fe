@@ -7,46 +7,7 @@ import SearchBar from "../../Components/SearchBar/SearchBar";
 import ClinicCardContainer from "../../Components/ClinicCardContainer/ClinicCardContainer";
 import Loading from "../../Components/Loading/Loading";
 import Error from "../../Components/Error/Error";
-
-const GET_CLINICS = gql`
-  query GetClinics {
-    states {
-      name
-      id
-      abbreviation
-      resources {
-        id
-        stateId
-        name
-        website
-        service
-        active
-        bipocFocus
-      }
-      misinformationCenters {
-        id
-        stateId
-        name
-        address
-        source
-        city
-        zip
-      }
-      authorizedClinics {
-        id
-        stateId
-        name
-        city
-        zip
-        phone
-        services
-        website
-        address
-        source
-      }
-    }
-  }
-`;
+import { GET_CLINICS } from "../../Utilities/queries";
 
 const ClinicsView = () => {
   let { data, loading, error } = useQuery(GET_CLINICS);
