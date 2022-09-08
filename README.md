@@ -32,7 +32,17 @@ Our Back End is hosted here and requires an API key to access (we are not giving
 
 As this is an MVP project, we currently only have complete data for Indiana, New Mexico, and Texas. Please use these states when using the search bar on the Find a Clinic view. 
 
-Throughout this project, we took full advantage of React’s modular nature by creating dynamically rendered components used on multiple views. This helped us keep the app small yet provided the user with a pleasant experience. Thoughtful architecture was implemented using assets, utils (to store our GraphQL queries), styles, components, and views folders. We implemented Apollo Client as a state management library that simplified management of remote and local data with GraphQL. Apollo Client handles the request cycle from start to finish, including tracking loading and error states, which simplied constructing our loading and error components. We used the PropTypes library to validate the data type of props coming into a component; allowing for more specific, helpful error messages. We used Material UI components for the icons on the clinic cards and filter buttons on the Find a Clinic view. Using shared classes, SCSS variables, and nested styling in SASS, we were able to reduce the amount of repeated CSS throughout the app. With a mobile-first development approach, we learned it requires much less CSS to modify the styling for larger viewports. To help with the design, we purchased an illustration assets pack from Dribbble so it would have a consistent look and feel. It was also important to us as a team to utilize imagery that was diverse and inclusive. We implemented continuous integration (CI) through CircleCI in order to integrate changes made by all team members into a main, shared version frequently deployed (usually multiple times per day). Finally, we incorporated Agile scrum ceremonies for our project management which included morning standups, weekly retros and a shared organization project board used for refinement and planning.
+Taking full advantage of React's modular nature, we created dynamically rendered components that helped keep the app small yet provided the user with a pleasant experience.
+
+We implemented Apollo Client as a state management library that simplified the management of remote and local data with GraphQL. Apollo Client handles the request cycle from start to finish, including tracking lifecycle states and streamlining the construction of our loading and error components.
+
+We used the PropTypes library to validate the data type of props coming into a component, allowing for more specific, helpful error messages.
+
+We used Material UI components for the icons on the clinic cards and filter buttons on the Find a Clinic view. Using shared classes, SCSS variables, and nested styling in SASS, we efficiently wrote the SCSS throughout the app. With a mobile-first development approach, we learned it requires much less SCSS to modify the styling for larger viewports. To help with the design, we purchased an illustration assets pack from Dribbble so it would have a consistent look and feel. It was also important to us as a team to utilize diverse and inclusive imagery.
+
+We implemented continuous integration (CI) through CircleCI to integrate changes made by all team members into a central, shared version frequently deployed (usually multiple times per day).
+
+Finally, we incorporated Agile scrum ceremonies for our project management, including morning standups, weekly retros, and a shared organization project board used for refinement and planning.
 
 ## Learning Goals
 
@@ -78,7 +88,7 @@ Future features could include:
 
 - Add functionality for all states
 - Add feature for user to rate their clinic experience
-- Add login functionality 
+- Add transit options using a mapping feature
 
 ## Setup to Run Locally
 
