@@ -1,7 +1,7 @@
 <div id="header" align="center">
-  <img width="162" alt="Screen Shot 2022-09-07 at 12 58 54 PM" src="https://user-images.githubusercontent.com/98505112/188956585-a0ee3aee-3dd1-410f-8832-bea009455933.png" />
-</div>
 
+<img width="762" alt="Screen Shot 2022-09-08 at 7 25 01 PM" src="https://user-images.githubusercontent.com/99596577/189242825-52788db8-d892-49c1-be46-6ab4ab300d86.png">
+</div>
 <h1 align="center"> Welcome to Roe'd To Aid </h1>
 <h2 align="center">A safe space to find a safe place. </h2>
 
