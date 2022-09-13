@@ -23,6 +23,6 @@ const SearchBar = ({ inputRef, handleSearchChange }) => {
 export default SearchBar;
 
 SearchBar.propTypes = {
-  inputRef: PropTypes.func.isRequired,
+  inputRef: PropTypes.object.isRequired,
   handleSearchChange: PropTypes.func.isRequired,
 };

@@ -67,5 +67,5 @@ const ToggleClinicsButton = ({ setToggleSelected }) => {
 export default ToggleClinicsButton;
 
 ToggleClinicsButton.propTypes = {
-  setToggleSelected: PropTypes.string.isRequired,
+  setToggleSelected: PropTypes.func.isRequired,
 };
