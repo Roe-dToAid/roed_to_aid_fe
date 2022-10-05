@@ -22,7 +22,7 @@ Roe'd To Aid was created to bring awareness and expand access to safe, authorize
 
 (Want to hire the devs that worked on this project? Click [this link](#contributors) to jump to our project contributors!)
 
-This repo is the Front End part of a project built by students at [Turing School of Software and Design](https://turing.edu/). The project itself is an original web app designed by combined Front End and Back End teams and its purpose is to help individuals seeking information on abortions in their state and help with identifying misinformation sites.
+This repo is the Front End part of a project built by students at [Turing School of Software and Design](https://turing.edu/). You can find the Back End repo [HERE](https://github.com/Roe-dToAid/roed_to_aid_be) and see set-up instructions below. The project itself is an original web app designed by combined Front End and Back End teams and its purpose is to help individuals seeking information on abortions in their state and help with identifying misinformation sites.
 
 Visit our Front End Site!
 - [Roe'd To Aid](https://roed-to-aid.herokuapp.com/)
@@ -97,6 +97,9 @@ Future features could include:
 3. To run this server, run `npm start` in the terminal and React will start the development server. To stop the local server, use command `Control + C`.
 4. Open a browser window and go to http://localhost:3000 to view the website
 5. To run the testing suite, run `npm run cypress` and Cypress will open up.
+
+Pull down the [Back-End repo](https://github.com/Roe-dToAid/roed_to_aid_be). Set up instructions are in that repository's README.
+Do not nest this inside your front-end repository.
 
 
 ## Contributors
