@@ -1,6 +1,6 @@
 <div id="header" align="center">
 
-<img width="762" alt="Screen Shot 2022-09-08 at 7 25 01 PM" src="https://user-images.githubusercontent.com/99596577/189242825-52788db8-d892-49c1-be46-6ab4ab300d86.png">
+<img width="762" alt="Roe'd To Aid Logo" src="https://user-images.githubusercontent.com/99596577/189242825-52788db8-d892-49c1-be46-6ab4ab300d86.png">
 </div>
 <h1 align="center"> Welcome to Roe'd To Aid </h1>
 <h2 align="center">A safe space to find a safe place. </h2>
@@ -76,16 +76,16 @@ Finally, we incorporated Agile scrum ceremonies for our project management, incl
 
 Future features could include:
 
-- Add ability to add a review to review a clniic experience
+- Add ability to add a review to review a clinic experience
 - Add feature for user to rate their clinic experience
 - Add transit options using a mapping feature
 
 ## Setup to Run Locally
 
-1. Fork and clone this repository
-2. Cd into the root directory and run `npm i`
+1. Fork and clone this repository.
+2. Cd into the root directory and run `npm i`.
 3. To run this server, run `npm start` in the terminal and React will start the development server. To stop the local server, use command `Control + C`.
-4. Open a browser window and go to http://localhost:3000 to view the website
+4. Open a browser window and go to http://localhost:3000 to view the website.
 5. To run the testing suite, run `npm run cypress` and Cypress will open up.
 
 Pull down the [Back-End repo](https://github.com/Roe-dToAid/roed_to_aid_be). Set up instructions are in that repository's README.
