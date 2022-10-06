@@ -66,7 +66,7 @@ describe("About", () => {
     cy.dataCy("data-statement")
       .should("be.visible")
       .contains(
-        "The data on this website was last updated on September 6, 2022."
+        "The data on this website was last updated on October 5, 2022."
       );
     cy.dataCy("data-statement")
       .should("be.visible")
