@@ -30,17 +30,19 @@ Visit our Front End Site!
 Our Back End is hosted here and requires an API key to access (we are not giving any API keys out at this time):
 - [Roe'd To Aid API](https://roed-to-aide-be.herokuapp.com/)
 
-As this is an MVP project, we currently only have complete data for Indiana, New Mexico, and Texas. Please use these states when using the search bar on the Find a Clinic view. 
+To help with the design, we purchased an illustration assets pack from Dribbble so it would have a consistent look and feel. It was also important to us as a team to utilize diverse and inclusive imagery. We used FIGMA to construct our wireframes and imported GoogleFonts of different styles, sizes, and weights for our fonts.
 
-Taking full advantage of React's modular nature, we created dynamically rendered components that helped keep the app small yet provided the user with a pleasant experience.
+We chose React as our framework and took full advantage of React's modular nature by creating dynamically rendered components that helped keep the app small yet provided the user with a pleasant experience. We utilized React Router to route seamlessly to each view.
+
+We decided to write in JavaScript in conjunction with the React Prop Types Library in order to validate the data type of props coming into a component, allowing for more specific, helpful error messages.
+
+We utilized NPM as our package manager with Webpack as a module bundler. Material UI components were applied for the icons on the clinic cards and filter buttons on the Find a Clinic view. Using shared classes, SASS variables, and nested styling, we efficiently wrote the SCSS throughout the app. 
 
 We implemented Apollo Client as a state management library that simplified the management of remote and local data with GraphQL. Apollo Client handles the request cycle from start to finish, including tracking lifecycle states and streamlining the construction of our loading and error components.
 
-We used the PropTypes library to validate the data type of props coming into a component, allowing for more specific, helpful error messages.
+End-to-end testing with Cypress was applied to ensure that our application behaves as expected and that the flow of data is maintained for various user tasks and processes.
 
-We used Material UI components for the icons on the clinic cards and filter buttons on the Find a Clinic view. Using shared classes, SCSS variables, and nested styling in SASS, we efficiently wrote the SCSS throughout the app. With a mobile-first development approach, we learned it requires much less SCSS to modify the styling for larger viewports. To help with the design, we purchased an illustration assets pack from Dribbble so it would have a consistent look and feel. It was also important to us as a team to utilize diverse and inclusive imagery.
-
-We implemented continuous integration (CI) through CircleCI to integrate changes made by all team members into a central, shared version frequently deployed (usually multiple times per day).
+We adopted continuous integration (CI) through CircleCI to integrate changes made by all team members into a central, shared version frequently deployed (usually multiple times per day) on Heroku.
 
 Finally, we incorporated Agile scrum ceremonies for our project management, including morning standups, weekly retros, and a shared organization project board used for refinement and planning.
 
@@ -68,25 +70,13 @@ Finally, we incorporated Agile scrum ceremonies for our project management, incl
 
 ## Technologies and Tools
 
-- JavaScript
-- React
-- React Router
-- HTML
-- CSS
-- SASS
-- Cypress
-- Apollo GraphQL
-- CircleCI/CD
-- Agile/SCRUM Methodology
-- NPM
-- Webpack
-- Heroku
+<img width="737" alt="Screen Shot 2022-10-05 at 7 31 33 PM" src="https://user-images.githubusercontent.com/98505112/194194103-e35a23e6-709f-431f-b3c1-17d1ed802495.png">
 
 ## Roadmap
 
 Future features could include:
 
-- Add functionality for all states
+- Add ability to add a review to review a clniic experience
 - Add feature for user to rate their clinic experience
 - Add transit options using a mapping feature
 
