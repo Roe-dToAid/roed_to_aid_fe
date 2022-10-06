@@ -111,7 +111,7 @@ const AboutView = () => {
       <div data-cy="data-statement" className="data-statement">
         <p>
           <strong>
-            The data on this website was last updated on September 6, 2022.
+            The data on this website was last updated on October 5th, 2022.
           </strong>
           <br />
           Roe'd To Aid attempts to provide access to information in one place by
