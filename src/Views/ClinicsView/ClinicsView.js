@@ -53,15 +53,6 @@ const ClinicsView = () => {
       <div className="heading-container">
         <ClinicKeyBlock />
         <div>
-          <p
-            className="clinics-view-disclaimer"
-            data-cy="clinics-view-disclaimer"
-            tabIndex={0}
-          >
-            As this is an MVP project, we currently only have results for
-            Indiana, New Mexico, and Texas. Please use one of those states when
-            using the search bar.
-          </p>
           <SearchBar
             inputRef={inputRef}
             handleSearchChange={handleSearchChange}
