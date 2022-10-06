@@ -13,6 +13,8 @@ Roe'd To Aid was created to bring awareness and expand access to safe, authorize
 
 - [Project Overview](#project-overview)
 - [Learning Goals](#learning-goals)
+- [Planning Documents](#planning-documents)
+- [Illustrations](#illustrations)
 - [Technologies and Tools](#technologies-and-tools)
 - [Roadmap](#roadmap)
 - [Setup](#setup)
@@ -80,7 +82,7 @@ Future features could include:
 - Add feature for user to rate their clinic experience
 - Add transit options using a mapping feature
 
-## Setup to Run Locally
+## Setup
 
 1. Fork and clone this repository.
 2. Cd into the root directory and run `npm i`.
